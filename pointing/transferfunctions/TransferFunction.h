@@ -25,6 +25,12 @@
 #include <iostream>
 #include <list>
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 namespace pointing {
 
   /**
@@ -35,7 +41,7 @@ namespace pointing {
    * transfer functions or transfer functions conforming to a certain law.
    * It uses URIs to specify the object type.
    */
-  class TransferFunction {
+  class LIBPOINTING_API TransferFunction {
 
   protected:
 

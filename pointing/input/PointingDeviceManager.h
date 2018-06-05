@@ -36,11 +36,17 @@
 #ifndef POINTINGDEVICEMANAGER_H
 #define POINTINGDEVICEMANAGER_H
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 namespace pointing
 {
-    class SystemPointingDevice;
+    class LIBPOINTING_API SystemPointingDevice;
 
-    struct PointingDeviceDescriptor
+    struct LIBPOINTING_API PointingDeviceDescriptor
     {
         URI devURI;
 
@@ -84,7 +90,7 @@ namespace pointing
      *
      * Provides functionality to handle newly added or removed devices.
      */
-    class PointingDeviceManager
+    class LIBPOINTING_API PointingDeviceManager
     {
       friend class SystemPointingDevice;
 

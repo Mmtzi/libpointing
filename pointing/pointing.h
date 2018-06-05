@@ -16,6 +16,12 @@
 #ifndef libpointing_h
 #define libpointing_h
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
  // Doxygen main page documentation
  /**
   * \mainpage Libpointing

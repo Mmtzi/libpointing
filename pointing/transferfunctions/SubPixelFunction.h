@@ -18,6 +18,12 @@
 
 #include <pointing/transferfunctions/TransferFunction.h>
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 namespace pointing
 {
   /**
@@ -27,7 +33,7 @@ namespace pointing
    * The implementation is based on the paper of N. Roussel, G. Casiez, J. Aceituno and D. Vogel.
    * "Giving a hand to the eyes: leveraging input accuracy for subpixel interaction."
    */
-  class SubPixelFunction : public TransferFunction
+  class LIBPOINTING_API SubPixelFunction : public TransferFunction
   {
     PointingDevice *input;
     DisplayDevice *output;

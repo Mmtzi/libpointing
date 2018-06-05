@@ -16,6 +16,12 @@
 #ifndef DummyPointingDevice_h
 #define DummyPointingDevice_h
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 #include <pointing/input/PointingDevice.h>
 
 namespace pointing {
@@ -27,7 +33,7 @@ namespace pointing {
    * It can be instantiated with PointingDevice::create function with the following URI:
    * dummy:?cpi=800&hz=125
    */
-  class DummyPointingDevice : public PointingDevice {
+  class LIBPOINTING_API DummyPointingDevice : public PointingDevice {
 
     int cpi, hz ;
 

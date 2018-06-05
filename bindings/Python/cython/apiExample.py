@@ -13,8 +13,8 @@ ddev=DisplayDevice.create("any:")
 tfct=TransferFunction.create("system:", pdev, ddev)
 
 print("========= Testing DisplayDevice =========")
-print("getURI: "+str(ddev.getURI()))
-print("getURI (w/ property): "+str(ddev.uri))
+#print("getURI: "+str(ddev.getURI()))
+#print("getURI (w/ property): "+str(ddev.uri))
 print("getBounds (in pixels): "+str(ddev.getBounds()))
 print("getBounds (w/ property):"+str(ddev.bounds))
 print("getSize (in mm): "+str(ddev.getSize()))
@@ -42,8 +42,8 @@ class ObjectCB(object):
     def done(self):
         return self.done_
 
-print("  getURI: "+str(pdev.getURI()))
-print("  getURI (w/ property): "+str(pdev.uri))
+#print("  getURI: "+str(pdev.getURI()))
+#print("  getURI (w/ property): "+str(pdev.uri))
 print("  getResolution (in ppi): "+str(pdev.getResolution()))
 print("  getResolution (w/ property): "+str(pdev.resolution))
 print("  frequency (in Hz): "+str(pdev.getUpdateFrequency()))

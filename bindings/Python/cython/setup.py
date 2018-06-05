@@ -36,9 +36,9 @@ elif system == 'Windows':
                          language="c++",
                          libraries=['pointing', "user32", "advapi32", "setupapi", "hid"],
                          include_dirs=[
-                            libpointing
+                            libpointing, 'C:/Program Files (x86)/Windows Kits/10/Include/10.0.10586.0/ucrt'
                             ],
-                         library_dirs=["./"]
+                         library_dirs=["./", 'C:/Program Files (x86)/Windows Kits/10/Lib/10.0.10586.0/ucrt/x64']
                          )]
 else:
     ext_modules = [Extension(

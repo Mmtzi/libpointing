@@ -19,9 +19,15 @@
 #ifndef DISPLAYDEVICEMANAGER_H
 #define DISPLAYDEVICEMANAGER_H
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 namespace pointing
 {
-    struct DisplayDeviceDescriptor
+    struct LIBPOINTING_API DisplayDeviceDescriptor
     {
         std::string devURI;
         std::string name;

@@ -26,6 +26,12 @@
 #include <stdint.h>
 #include <cstring>
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 namespace pointing {
 
   /**
@@ -33,7 +39,7 @@ namespace pointing {
    *
    * It is an abstract class which creates an instance using create factory method.
    */
-  class PointingDevice {
+  class LIBPOINTING_API PointingDevice {
 
   protected:
 

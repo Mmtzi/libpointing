@@ -18,6 +18,12 @@
 
 #include <pointing/input/PointingDevice.h>
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 namespace pointing {
 
   /**
@@ -25,7 +31,7 @@ namespace pointing {
    *
    * It defines general behavior for all three platforms.
    */
-  class SystemPointingDevice : public PointingDevice
+  class LIBPOINTING_API SystemPointingDevice : public PointingDevice
   {
   protected:
     friend class PointingDeviceManager;

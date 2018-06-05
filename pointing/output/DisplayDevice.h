@@ -16,6 +16,12 @@
 #ifndef DisplayDevice_h
 #define DisplayDevice_h
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 #include <pointing/utils/URI.h>
 
 #include <iostream>
@@ -28,7 +34,7 @@ namespace pointing {
    * It is an abstract class which creates an instance of its platform-specific
    * subclass.
    */
-  class DisplayDevice {
+  class LIBPOINTING_API DisplayDevice {
 
   protected:
 

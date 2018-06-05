@@ -16,6 +16,12 @@
 #ifndef URI_h
 #define URI_h
 
+#ifdef LIBPOINTING_EXPORTS
+#define LIBPOINTING_API __declspec(dllexport)
+#else
+#define LIBPOINTING_API __declspec(dllimport)
+#endif
+
 /*
 
   Based on:
@@ -34,7 +40,7 @@
 #include <sstream>
 
 namespace pointing {
-  struct URI {
+  struct LIBPOINTING_API URI {
 
     /**
      * @brief Scheme is used to represent the type of the device or transfer function.
