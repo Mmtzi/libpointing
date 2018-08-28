@@ -9,7 +9,7 @@ cdef extern from "pointing/input/PointingDevice.h" namespace "pointing::Pointing
     ctypedef long long int	 inttime "pointing::TimeStamp::inttime" 
 
     ctypedef void (*PointingCallback)(void *context, 
-                                      inttime timestamp, 
+                                      int timestamp,
                                       int dx, int dy, 
                                       int buttons)
 

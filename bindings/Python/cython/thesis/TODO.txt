@@ -1,0 +1,11 @@
+WE 18.6.-25.6.
+Plot different Transferfunctions. Linux/Mac/Windows/naive/sigmoid etc... done
+Create own Transferfunction done
+Create Pointer which simulates the transferfunction. done
+Change fitts law game: random targetposition, size min is the size between ll or ii done
+dependent on display size done
+track distance/direction/size/time, array of samples must have the same length. done
+make a crosshair as targetpoint. done
+create two different threads one with the game and the other with the neural net. update after each sampleset.
+
+
