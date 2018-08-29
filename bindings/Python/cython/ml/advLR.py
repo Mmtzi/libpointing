@@ -107,6 +107,7 @@ class Simulator(Thread):
         myValidDataList = np.array(myValidDataList)
         myValidInData = myValidDataList[:, 9:56]
         myValidOutData = myValidDataList[:, 0:2]
+        #print(myValidInData)
         predictions = model.predict(myValidInData)
         #print(myValidInData)
         predictedDX = []

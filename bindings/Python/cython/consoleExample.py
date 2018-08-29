@@ -2,7 +2,7 @@
 
 from pylibpointing import PointingDevice, DisplayDevice, TransferFunction
 from pylibpointing import PointingDeviceManager, PointingDeviceDescriptor
-from bindings.Python.cython.thesis import plotData
+#from bindings.Python.cython.thesis import plotData
 import time
 
 import sys
@@ -63,7 +63,7 @@ def cb_fct(timestamp, dx, dy, button):
     if len(mySampleDataX) == 1000:
         print("enough Samples")
         print("Samples per Second: "+str(1000/timestamp))
-        plotData.plotData(mySampleDataX, mySampleDataY, shortName, dpi, hertz)
+        #plotData.plotData(mySampleDataX, mySampleDataY, shortName, dpi, hertz)
         sys.exit()
 
 

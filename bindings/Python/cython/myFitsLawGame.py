@@ -6,7 +6,7 @@ import csv
 import math
 import random
 import pyautogui
-from bindings.Python.cython.thesis.crosshair import crosshair
+from thesis.crosshair import crosshair
 from threading import Thread
 import numpy as np
 
@@ -101,7 +101,7 @@ class Game(Thread):
         pyautogui.moveTo(self.screen_width / 2, self.screen_height / 2)
         self.startCursorPos = pyautogui.position()
         self.initCursorPos = self.startCursorPos
-        self.cursor = crosshair(self.startCursorPos[0], self.startCursorPos[1], scale=self.cursorScale)
+        self.cursor = crosshair(self.startCursorPos[0], self.startCursorPos[1], scale=self.cursorScale, sw=self.screen_width, sh=self.screen_height)
         pyautogui.moveTo(self.startCursorPos[0],
                          self.startCursorPos[1])
         pygame.mouse.set_visible(False)
@@ -122,7 +122,7 @@ class Game(Thread):
     #callback of the mouse
     def cb_fct(self, timestamp, dx0, dy0, button):
         newTimestamp =(timestamp / 1000000000 - self.startTime)
-        rx0,ry0=self.tfct.applyd(dx0, dy0, timestamp)
+        rx0,ry0=self.tfct.applyd(dx0, dy0, timestamp) #timestamp unnecassary
         self.cursor.move(rx0,ry0)
         #print("%s: %d %d %d -> %.2f %.2f"%(str(newTimestamp), dx, dy, button, rx, ry ))
         direction = (self.targetPosition[0] - self.getCursorPos()[0], self.targetPosition[1] - self.getCursorPos()[1])

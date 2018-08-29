@@ -1,12 +1,13 @@
 import _thread
-import myFitsLawGame
+import myFitsLawGame, SimulatorTest
 from ml import advLR, recurrentSim
 from queue import Queue
 
 def main():
-    dataQueue = Queue()
-    collectData(dataQueue)
-    trainSimulator(dataQueue)
+    #dataQueue = Queue()
+    #collectData(dataQueue)
+    #trainSimulator(dataQueue)
+    testSimulator()
 
 
 
@@ -33,6 +34,15 @@ def trainSimulator(dataQueue):
     except:
         print("unable to start Simulator thread")
 
+def testSimulator():
+    try:
+        print("trying to init SimTest thread")
+        simTestThread = SimulatorTest.SimTest()
+        print("trying to start SimTest thread")
+        simTestThread.start()
+        print("SimTest thread started")
+    except:
+        print("unable to start SimTest thread")
 
 if __name__ == '__main__':
     main()
