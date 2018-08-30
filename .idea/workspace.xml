@@ -2,17 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d38d2b1-fe99-4ed7-b794-c45be943a071" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libpointing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libpointing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/consoleExample.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/consoleExample.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_adv_lr_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_adv_lr_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pointing/pointing.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/pointing/pointing.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160024.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160139.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160344.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160425.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160616.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160817.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829160932.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161101.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161131.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161311.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161546.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161654.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161805.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829161940.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829162119.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829162212.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829162226.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829162615.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163036.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163136.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163234.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163332.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163442.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163646.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829163740.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829164304.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829164444.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829164523.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829164825.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829164954.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829165154.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829165323.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829165441.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829165900.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170104.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170202.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170300.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170340.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170418.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170444.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170530.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170544.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170723.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170758.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829170924.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829172034.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829172058.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829172551.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/simTest/system_1_true_easy_1800_125mouseData_timestamp20180829172623.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +68,7 @@
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame__1_.coverage" NAME="myFitsLawGame (1) Coverage Results" MODIFIED="1534260531203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame.coverage" NAME="myFitsLawGame Coverage Results" MODIFIED="1535106966636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$consoleExample__1_.coverage" NAME="consoleExample (1) Coverage Results" MODIFIED="1529491121421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/libpointingjs/libpointing-1.0.7/libpointing-1.0.7/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1535465136344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1535639246933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$envExample.coverage" NAME="envExample Coverage Results" MODIFIED="1533807317253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$simpleLRworking.coverage" NAME="simpleLRworking Coverage Results" MODIFIED="1535464947186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$apiExample.coverage" NAME="apiExample Coverage Results" MODIFIED="1529488084711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
@@ -48,12 +91,12 @@
     <session id="1566594586">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="8" />
+          <entry key="project.open.time.4" value="9" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -66,7 +109,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="176" />
-          <entry key="py" value="2362" />
+          <entry key="py" value="3432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -78,7 +121,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2538" />
+          <entry key="Python" value="3608" />
         </counts>
       </usages-collector>
     </session>
@@ -88,8 +131,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -110,7 +153,7 @@
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -118,8 +161,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="120" column="24" lean-forward="true" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
+            <state relative-caret-position="214">
+              <caret line="177" column="70" selection-start-line="177" selection-start-column="70" selection-end-line="177" selection-end-column="70" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -130,10 +173,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
-              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="86">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+                <marker date="1535639246926" expanded="true" signature="122:127" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,7 +186,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="-118">
               <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
             </state>
           </provider>
@@ -151,8 +195,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="115" column="87" selection-start-line="115" selection-start-column="87" selection-end-line="115" selection-end-column="87" />
+            <state relative-caret-position="323">
+              <caret line="19" column="108" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="108" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -198,8 +242,8 @@
       <find>env_specs</find>
       <find>reward</find>
       <find>cursor</find>
-      <find>print</find>
       <find>new target</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,10 +282,10 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
       </list>
     </option>
@@ -261,16 +305,15 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1932" />
-    <option name="height" value="1045" />
+    <option name="width" value="1940" />
+    <option name="height" value="1167" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,7 +359,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,7 +399,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Test">
+  <component name="RunManager" selected="Python.mainTF">
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="libpointing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -501,9 +543,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mainTF" />
         <item itemvalue="Python.Test" />
         <item itemvalue="Python.simpleLRwithoutScale" />
-        <item itemvalue="Python.mainTF" />
         <item itemvalue="Python.simpleLRworking" />
         <item itemvalue="Python.myFitsLawGame" />
       </list>
@@ -523,21 +565,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1940" height="1167" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29113248" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2930851" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7427083" weight="0.33223686" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7427083" weight="0.33172148" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49791667" weight="0.37760702" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27562863" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.25729167" side_tool="true" weight="0.24807903" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="11" visible="true" weight="0.32930845" />
@@ -672,49 +713,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/bindings/Python/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/saving.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -729,6 +733,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/pylibpointing.pyx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -736,20 +747,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1972">
+          <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="115" column="87" selection-start-line="115" selection-start-column="87" selection-end-line="115" selection-end-column="87" />
+        <state relative-caret-position="323">
+          <caret line="19" column="108" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="108" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
@@ -758,25 +783,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        <state relative-caret-position="68">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py">
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="86">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1535639246926" expanded="true" signature="122:127" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="120" column="24" lean-forward="true" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
+        <state relative-caret-position="214">
+          <caret line="177" column="70" selection-start-line="177" selection-start-column="70" selection-end-line="177" selection-end-column="70" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

@@ -76,7 +76,7 @@ class Game(Thread):
             'w', newline='')
 
         # header of the logfile
-        self.mouse_field = ['dx', 'dy', 'rx', 'ry', 'button', 'time',  'distance',
+        self.mouse_field = ['dx', 'dy', 'button', 'rx', 'ry', 'time',  'distance',
                             'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID']
         # mouse_field = ['dx', 'rx']
 
@@ -127,17 +127,15 @@ class Game(Thread):
         #print("%s: %d %d %d -> %.2f %.2f"%(str(newTimestamp), dx, dy, button, rx, ry ))
         direction = (self.targetPosition[0] - self.getCursorPos()[0], self.targetPosition[1] - self.getCursorPos()[1])
         distance = math.sqrt(pow(direction[0], 2) + pow(direction[1], 2))-int(self.pointSize/2)
-        #'dx', 'dy', 'rx', 'ry', 'button', 'time', 'distance',
+        #'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
         #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
-        mySample = (dx0, dy0, rx0, ry0, button, newTimestamp, distance, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
+        mySample = (dx0, dy0, button, rx0, ry0, newTimestamp, distance, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
                     self.pointSize, self.initCursorPos[0], self.initCursorPos[1], self.targetID)
         #print(mySample)
         self.mySampleData.append(mySample)
         #print(mySample)
         self.dataQueue.put(mySample)
 
-        self.pastDir = (direction[0],direction[1])
-        self.pastDistance = distance
         sys.stdout.flush()
 
 
@@ -190,9 +188,9 @@ class Game(Thread):
                         # 'dx', 'dy', 'rx', 'ry', 'button', 'time', 'distance',
                         # 'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
                         self.writerMouse.writerow({ 'dx': str(dataPoint[0]), 'dy': str(dataPoint[1]),
-                                                    'rx': str(dataPoint[2]), 'ry': str(dataPoint[3]),
-                                                    'button': str(dataPoint[4]), 'time': str(dataPoint[5]),
-                                                    'distance': str(dataPoint[6]),
+                                                    'button': str(dataPoint[2]),
+                                                    'rx': str(dataPoint[3]), 'ry': str(dataPoint[4]),
+                                                    'time': str(dataPoint[5]),'distance': str(dataPoint[6]),
                                                     'directionX': str(dataPoint[7]), 'directionY': str(dataPoint[8]),
                                                     'targetX': str(dataPoint[9]), 'targetY': str(dataPoint[10]),
                                                     'targetSize': str(dataPoint[11]),

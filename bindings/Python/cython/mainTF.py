@@ -5,8 +5,8 @@ from queue import Queue
 
 def main():
     #dataQueue = Queue()
-    #collectData(dataQueue)
     #trainSimulator(dataQueue)
+    #collectData(dataQueue)
     testSimulator()
 
 

@@ -12,7 +12,7 @@ from threading import Thread
 import numpy as np
 from queue import Queue
 import os
-
+import ctypes
 import sys
 
 from pylibpointing import PointingDevice, DisplayDevice, TransferFunction
@@ -23,10 +23,10 @@ class SimTest(Thread):
         super().__init__()
         #self.setDaemon(True)
         # used transferfunction
+        self.screensize = ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)
         self.tf = "system:?slider=1&epp=true"
         # alias for data name, include afterwards please dpi and samplerate
         self.tf_short = "system_1_true_easy_1800_125"
-
         self.pm = PointingDeviceManager()
         PointingDevice.idle(100)
 
@@ -35,7 +35,7 @@ class SimTest(Thread):
         self.tfct = TransferFunction.create(self.tf, self.pdev, self.ddev)
         # time
         # dt has to be adjusted to the sample rate of the mouse
-        self.desiredFPS = 125
+        self.desiredFPS = 10
 
         # userSettings
         # how many sessions a user has to do
@@ -52,14 +52,17 @@ class SimTest(Thread):
         self.PAUSE = False
         self.END = False
         self.ISRUNNING = False
-
-        self.pastMouseMovement = [0]*40
+        self.pastTimeSteps = 10
+        self.pastMouseMovement = [0]*self.pastTimeSteps*2
+        self.pastDistanceList = [self.screensize[0], self.screensize[1]] * self.pastTimeSteps
         self.mySampleData = []
 
-        if os.path.exists('ml\\models/sim_adv_lr_model.h5'):
-            self.model = load_model('ml\\models/sim_adv_lr_model.h5')
+        if os.path.exists('ml\\models\\sim_10dx_dist.h5'):
+            self.model = load_model('ml\\models\\sim_10dx_dist.h5')
             self.model._make_predict_function()
             print("loaded model")
+        else:
+            print("couldnt load model")
 
     def run(self):
 
@@ -82,7 +85,7 @@ class SimTest(Thread):
             'w', newline='')
 
         # header of the logfile
-        self.mouse_field = ['targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID', 'pdx', 'pdy']
+        self.mouse_field = ['targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID', 'pdx', 'pdy', 'btn']
         # mouse_field = ['dx', 'rx']
 
         self.writerMouse = csv.DictWriter(self.outfile, fieldnames=self.mouse_field)
@@ -128,37 +131,51 @@ class SimTest(Thread):
     def startGame(self):
 
         while True:
-            events = pygame.event.get()
-            for event in events:
 
-                if self.START:
-                    self.screen.fill((255, 255, 255))
-                    self.screen.blit(self.cursor.image, self.cursor.pos)
-                    if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
-                        self.PLAY = True
-                        self.START = False
-                    break
+            if self.PLAY:
+                self.timeMS += self.clock.get_time()
+                self.frames +=1
+                pygame.display.update()
+                self.screen.fill((255, 255, 255))
 
-                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 2:
-                    print(event.button, "close")
-                    print("TimeInSeconds: " + str(self.timeMS / 1000) + " Frames: " + str(self.frames) + " FPS: " + str(
-                        int(self.frames / (self.timeMS / 1000))))
-                    for dataPoint in self.mySampleData:
-                        # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID', 'pdx', 'pdy'
-                        self.writerMouse.writerow({ 'targetX': str(dataPoint[0]), 'targetY': str(dataPoint[1]),
-                                                    'targetSize': str(dataPoint[2]),
-                                                    'initMouseX': str(dataPoint[3]),'initMouseY': str(dataPoint[4]),
-                                                    'targetID': str(dataPoint[5]),
-                                                    'pdx': str(dataPoint[6]), 'pdy': str(dataPoint[7])
-                                                  })
-                    print("saved data")
+                #print(i, xPos,yPos)
+                pygame.gfxdraw.aacircle(self.screen, self.targetPosition[0], self.targetPosition[1], max(self.pointSize * 3, self.pointSize + 35), (200, 0, 0))
+                pygame.gfxdraw.aacircle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
+                pygame.gfxdraw.filled_circle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
 
-                    pygame.quit()
-                    sys.exit()
+                #print(self.pastMouseMovement)
+                print(self.pastData + self.pastDistanceList +self.pastMouseMovement)
 
+                myInput = np.array([self.pastData + self.pastDistanceList+ self.pastMouseMovement])
+                #print(myInput)
+                #print(np.shape(myInput))
+                predictions = self.model.predict(myInput)
+                pdx = int(round(predictions[0][0],0))
+                pdy = int(round(predictions[0][1],0))
+                self.button = int(round(predictions[0][2],0))
+
+                self.writeline = self.pastData + [pdx] + [pdy] + [self.button]
+                self.mySampleData.append(self.writeline)
+                print(predictions)
+                rx0, ry0 = self.tfct.applyd(pdx, pdy, 0)
+                self.cursor.move(rx0, ry0)
+                self.pastMouseMovement.pop(0)
+                self.pastMouseMovement.pop(0)
+                self.pastMouseMovement.append(pdx)
+                self.pastMouseMovement.append(pdy)
+                self.pastDistanceList.pop(0)
+                self.pastDistanceList.pop(0)
+                self.pastDistanceList.append(self.targetPosition[0] - self.getCursorPos()[0])
+                self.pastDistanceList.append(self.targetPosition[1]- self.getCursorPos()[1])
+                #print(len(self.pastMouseMovement))
+                #print(len(self.pastData))
+
+                self.screen.blit(self.cursor.image, self.getCursorPos())
+
+                # Mouse Click Event
 
             # check targetHit
-            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0):
+            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0): #and self.button == 1:
                 print("startCursorPosition:" + str(self.initCursorPos))
                 self.targetID += 1
                 self.oldTarget = self.targetPosition
@@ -175,46 +192,34 @@ class SimTest(Thread):
                       " new Size: " + str(self.pointSize))
                 self.pastData = [self.targetPosition[0], self.targetPosition[1], self.pointSize, self.initCursorPos[0], self.initCursorPos[1], self.targetID]
                 self.startTime = time.time()
+            events = pygame.event.get()
+            for event in events:
+                if self.START:
+                    self.screen.fill((255, 255, 255))
+                    self.screen.blit(self.cursor.image, self.cursor.pos)
+                    if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
+                        self.PLAY = True
+                        self.START = False
+                    break
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 2:
+                    print(event.button, "close")
+                    print("TimeInSeconds: " + str(self.timeMS / 1000) + " Frames: " + str(self.frames) + " FPS: " + str(
+                        int(self.frames / (self.timeMS / 1000))))
+                    for dataPoint in self.mySampleData:
+                        # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID', 'pdx', 'pdy'
+                        #print(dataPoint)
+                        self.writerMouse.writerow({ 'targetX': str(dataPoint[0]), 'targetY': str(dataPoint[1]),
+                                                    'targetSize': str(dataPoint[2]),
+                                                    'initMouseX': str(dataPoint[3]),'initMouseY': str(dataPoint[4]),
+                                                    'targetID': str(dataPoint[5]),
+                                                    'pdx': str(dataPoint[6]), 'pdy': str(dataPoint[7]),
+                                                    'btn': str(dataPoint[8])
+                                                  })
+                    print("saved data")
 
+                    pygame.quit()
+                    sys.exit()
 
-            if self.PLAY:
-                self.timeMS += self.clock.get_time()
-                self.frames +=1
-                pygame.display.update()
-                self.screen.fill((255, 255, 255))
-
-                #print(i, xPos,yPos)
-                pygame.gfxdraw.aacircle(self.screen, self.targetPosition[0], self.targetPosition[1], max(self.pointSize * 3, self.pointSize + 35), (200, 0, 0))
-                pygame.gfxdraw.aacircle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
-                pygame.gfxdraw.filled_circle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
-
-                #print(self.pastMouseMovement)
-                print(self.pastData + self.pastMouseMovement)
-
-                myInput = np.array([self.pastData + self.pastMouseMovement])
-                print(len(self.pastMouseMovement))
-                print(len(self.pastData))
-                #print(myInput)
-                #print(np.shape(myInput))
-                predictions = self.model.predict(myInput)
-                pdx = predictions[0][0]
-                pdy = predictions[0][1]
-
-                self.writeline = self.pastData + pdx + pdy
-                self.mySampleData.append(self.writeline)
-                print(predictions)
-                rx0, ry0 = self.tfct.applyd(pdx, pdy, 0)
-                self.cursor.move(rx0, ry0)
-                self.pastMouseMovement.pop(0)
-                self.pastMouseMovement.pop(0)
-                self.pastMouseMovement.append(pdx)
-                self.pastMouseMovement.append(pdy)
-                print(len(self.pastMouseMovement))
-                print(len(self.pastData))
-
-                self.screen.blit(self.cursor.image, self.getCursorPos())
-
-                # Mouse Click Event
 
             pygame.display.flip()
             self.clock.tick(self.desiredFPS)

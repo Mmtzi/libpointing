@@ -12,16 +12,22 @@ import numpy as np
 from threading import Thread
 from queue import Queue
 import time
+import ctypes
+
 
 class Simulator(Thread):
     def __init__(self, q):
-        self.epochs = 10
+        self.screensize = ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)
+        self.epochs = 200
         self.dataQueue = q
         self.sleepInterval = 0.2
-        self.pastTimeSteps = 20
-        self.trainSize = 500
+        self.pastTimeSteps = 10
+        self.trainSize = 900
         self.validSize = 100
         self.pastDxDyList = [0]*self.pastTimeSteps*2
+        self.pastDistanceList = [self.screensize[0], self.screensize[1]]*self.pastTimeSteps
+        print(self.pastDistanceList)
+        print(self.screensize)
         super().__init__()
 
 
@@ -36,7 +42,7 @@ class Simulator(Thread):
     def run(self):
         while True:
             # load Data
-            # 'dx', 'dy', 'rx', 'ry', 'button', 'time', 'distance', 'directionX', 'directionY',
+            # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'directionX', 'directionY',
             # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
 
             myTrainDataList = []
@@ -53,22 +59,22 @@ class Simulator(Thread):
 
             myTrainDataList = np.array(myTrainDataList)
             myTrainInData = myTrainDataList[:, 9:56]
-            myTrainOutData = myTrainDataList[:,0:2]
+            myTrainOutData = myTrainDataList[:,0:3]
+            print(myTrainOutData)
 
             # define and fit the final model
 
-            if os.path.exists('ml\\models/sim_adv_lr_model.h5'):
-                model = load_model('ml\\models/sim_adv_lr_model.h5')
+            if os.path.exists('ml\\models/sim_10dx_dist.h5'):
+                model = load_model('ml\\models/sim_10dx_dist.h5')
                 print("loaded model")
             else:
                 model = Sequential()
-                model.add(Dense(16, input_dim=46, activation='relu', kernel_regularizer=regularizers.l2(0.00001)))
-                model.add(Dense(8, activation='relu', kernel_regularizer=regularizers.l2(0.00001)))
-                model.add(Dense(2, activation='linear'))
+                model.add(Dense(24, input_dim=46, activation='relu', kernel_regularizer=regularizers.l2(0.00001)))
+                model.add(Dense(3, activation='linear'))
                 model.compile(Adam(lr=0.001), loss='mse')
 
-            model.fit(myTrainInData, myTrainOutData, epochs=self.epochs, verbose=2, batch_size=20, shuffle=True)
-            model.save('ml\\models\\sim_adv_lr_model.h5')
+            model.fit(myTrainInData, myTrainOutData, epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
+            model.save('ml\\models\\sim_10dx_dist.h5')
 
             self.predictMyData(model)
 
@@ -93,12 +99,12 @@ class Simulator(Thread):
         ax.scatter(realDX, predictedDX, color="b")
         # ax.scatter(plotDX, plotPred, color="r", marker='x')
         i = 1
-        while os.path.exists('ml\\logs\\sim_adv_epochs_new_bla_' + str(self.epochs) + '-Iterations_' + str(i) + '.png'):
+        while os.path.exists('ml\\logs\\sim_adv_dist_dx_epochs_' + str(self.epochs) + '-Iterations_' + str(i) + '.png'):
             i += 1
         else:
             try:
-                plt.savefig('ml\\logs\\sim_adv_epochs_new_bla_' + str(self.epochs) + '-Iterations_' + str(i) + '.png')
-                print("saved plot as: sim_adv_epochs_new_bla_" + str(self.epochs) + '-Iterations_' + str(i) + '.png')
+                plt.savefig('ml\\logs\\sim_adv_dist_dx_epochs_' + str(self.epochs) + '-Iterations_' + str(i) + '.png')
+                print("saved plot as: sim_adv_dist_dx_epochs_" + str(self.epochs) + '-Iterations_' + str(i) + '.png')
             except:
                 print("couldnt save plot...")
 
@@ -106,15 +112,17 @@ class Simulator(Thread):
         self.createValidSet(myValidDataList)
         myValidDataList = np.array(myValidDataList)
         myValidInData = myValidDataList[:, 9:56]
-        myValidOutData = myValidDataList[:, 0:2]
+        myValidOutData = myValidDataList[:, 0:3]
         #print(myValidInData)
         predictions = model.predict(myValidInData)
         #print(myValidInData)
         predictedDX = []
         realDX = []
+        k = 0
         for i in range(len(myValidDataList)):
-            predictedRaw = (int(round(predictions[i][0],0)), int(round(predictions[i][1],0)))
-            print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, myValidInData[i], predictedRaw, myValidOutData[i]))
+            predictedRaw = (int(round(predictions[i][0],0)), int(round(predictions[i][1],0)), int(round(predictions[i][2],0)))
+            if i%20==0 or myValidOutData[i][2] ==1:
+                print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, myValidInData[i], predictedRaw, myValidOutData[i]))
             predictedDX.append(predictions[i][0])
             realDX.append(myValidOutData[i][0])
         return predictedDX, realDX
@@ -134,35 +142,49 @@ class Simulator(Thread):
              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         ]
 
-        myData = np.array(myData)
+        #myData = np.array(myData)
         #print(myData)
-        myPredictedData = model.predict(myData)
-        for i in range(len(myData)):
-            predictedRaw = (int(round(myPredictedData[i][0],0)), int(round(myPredictedData[i][1],0)))
-            print("line=%s, XY=%s, Predicted=%s" % (i, myData[i], predictedRaw))
+        #myPredictedData = model.predict(myData)
+        #for i in range(len(myData)):
+            #predictedRaw = (int(round(myPredictedData[i][0],0)), int(round(myPredictedData[i][1],0)))
+            #print("line=%s, XY=%s, Predicted=%s" % (i, myData[i], predictedRaw))
 
     def createValidSet(self, myValidDataList):
         for i in range(0, self.validSize):
             myTempSample = list(self.dataQueue.get())
-            myTempSample.extend(self.pastDxDyList)
+
+            myTempSample.extend(self.pastDxDyList + self.pastDistanceList)
+
             self.pastDxDyList.pop(0)
             self.pastDxDyList.pop(0)
+            self.pastDistanceList.pop(0)
+            self.pastDistanceList.pop(0)
+
             self.pastDxDyList.append(myTempSample[0])
             self.pastDxDyList.append(myTempSample[1])
+            self.pastDistanceList.append(myTempSample[7])
+            self.pastDistanceList.append(myTempSample[8])
+
             myValidDataList.append(myTempSample)
 
     def createTrainSet(self, myTrainDataList):
         for i in range(0, self.trainSize):
             myTempSample = list(self.dataQueue.get())
-            #print("1"+str(myTempSample))
-            myTempSample.extend(self.pastDxDyList)
-            #print("2"+str(myTempSample))
+
+            myTempSample.extend(self.pastDxDyList + self.pastDistanceList)
+
             self.pastDxDyList.pop(0)
             self.pastDxDyList.pop(0)
-            #print(self.pastDxDyList)
+            self.pastDistanceList.pop(0)
+            self.pastDistanceList.pop(0)
+
             self.pastDxDyList.append(myTempSample[0])
             self.pastDxDyList.append(myTempSample[1])
-            #print(self.pastDxDyList)
+            self.pastDistanceList.append(myTempSample[7])
+            self.pastDistanceList.append(myTempSample[8])
+
+            #print(myTempSample)
+
             myTrainDataList.append(myTempSample)
-            #print(myTrainDataList)
+
             # print(myTempSample, len(myTempSample))
