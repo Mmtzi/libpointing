@@ -4,7 +4,7 @@ from ml import advLR, recurrentSim
 from queue import Queue
 
 def main():
-    #dataQueue = Queue()
+    dataQueue = Queue()
     #trainSimulator(dataQueue)
     #collectData(dataQueue)
     testSimulator()

@@ -12,22 +12,18 @@ import numpy as np
 from threading import Thread
 from queue import Queue
 import time
-import ctypes
 
 
 class Simulator(Thread):
     def __init__(self, q):
-        self.screensize = ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1)
         self.epochs = 200
         self.dataQueue = q
         self.sleepInterval = 0.2
-        self.pastTimeSteps = 10
+        self.pastTimeSteps = 20
         self.trainSize = 900
         self.validSize = 100
         self.pastDxDyList = [0]*self.pastTimeSteps*2
-        self.pastDistanceList = [self.screensize[0], self.screensize[1]]*self.pastTimeSteps
-        print(self.pastDistanceList)
-        print(self.screensize)
+        self.pastDistanceList = []
         super().__init__()
 
 
@@ -42,8 +38,8 @@ class Simulator(Thread):
     def run(self):
         while True:
             # load Data
-            # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'directionX', 'directionY',
-            # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
+            # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'targetID', 'directionX', 'directionY',
+            # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY',
 
             myTrainDataList = []
             myValidDataList = []
@@ -58,25 +54,25 @@ class Simulator(Thread):
             self.createTrainSet(myTrainDataList)
 
             myTrainDataList = np.array(myTrainDataList)
-            myTrainInData = myTrainDataList[:, 9:56]
+            myTrainInData = myTrainDataList[:, 14:95]
             myTrainOutData = myTrainDataList[:,0:3]
-            print(myTrainOutData)
-
             # define and fit the final model
 
-            if os.path.exists('ml\\models/sim_10dx_dist.h5'):
-                model = load_model('ml\\models/sim_10dx_dist.h5')
+            if os.path.exists('ml\\models/sim_20dx_20dist_sizeo.h5'):
+                model = load_model('ml\\models/sim_20dx_20dist_sizeo.h5')
                 print("loaded model")
             else:
                 model = Sequential()
-                model.add(Dense(24, input_dim=46, activation='relu', kernel_regularizer=regularizers.l2(0.00001)))
+                model.add(Dense(42, input_dim=81, activation='relu', kernel_regularizer=regularizers.l2(0.0001)))
+                model.add(Dense(9, activation='relu'))
                 model.add(Dense(3, activation='linear'))
                 model.compile(Adam(lr=0.001), loss='mse')
 
+            model.summary()
             model.fit(myTrainInData, myTrainOutData, epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-            model.save('ml\\models\\sim_10dx_dist.h5')
+            model.save('ml\\models\\sim_20dx_20dist_sizeo.h5')
 
-            self.predictMyData(model)
+            #self.predictMyData(model)
 
             predictedDX, realDX = self.predictTrainData(model, myValidDataList)
 
@@ -111,7 +107,7 @@ class Simulator(Thread):
     def predictTrainData(self, model, myValidDataList):
         self.createValidSet(myValidDataList)
         myValidDataList = np.array(myValidDataList)
-        myValidInData = myValidDataList[:, 9:56]
+        myValidInData = myValidDataList[:, 14:95]
         myValidOutData = myValidDataList[:, 0:3]
         #print(myValidInData)
         predictions = model.predict(myValidInData)
@@ -120,7 +116,7 @@ class Simulator(Thread):
         realDX = []
         k = 0
         for i in range(len(myValidDataList)):
-            predictedRaw = (int(round(predictions[i][0],0)), int(round(predictions[i][1],0)), int(round(predictions[i][2],0)))
+            predictedRaw = (int(round(predictions[i][0],0)), int(round(predictions[i][1],0)), (int(round(predictions[i][2],0)), predictions[i][2]))
             if i%20==0 or myValidOutData[i][2] ==1:
                 print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, myValidInData[i], predictedRaw, myValidOutData[i]))
             predictedDX.append(predictions[i][0])
@@ -152,7 +148,8 @@ class Simulator(Thread):
     def createValidSet(self, myValidDataList):
         for i in range(0, self.validSize):
             myTempSample = list(self.dataQueue.get())
-
+            if len(self.pastDistanceList) == 0:
+                self.pastDistanceList = [myTempSample[8], myTempSample[9]]* self.pastTimeSteps
             myTempSample.extend(self.pastDxDyList + self.pastDistanceList)
 
             self.pastDxDyList.pop(0)
@@ -162,15 +159,17 @@ class Simulator(Thread):
 
             self.pastDxDyList.append(myTempSample[0])
             self.pastDxDyList.append(myTempSample[1])
-            self.pastDistanceList.append(myTempSample[7])
             self.pastDistanceList.append(myTempSample[8])
+            self.pastDistanceList.append(myTempSample[9])
 
             myValidDataList.append(myTempSample)
 
     def createTrainSet(self, myTrainDataList):
         for i in range(0, self.trainSize):
             myTempSample = list(self.dataQueue.get())
-
+            if len(self.pastDistanceList) == 0:
+                self.pastDistanceList = [myTempSample[8], myTempSample[9]]* self.pastTimeSteps
+                print(self.pastDistanceList)
             myTempSample.extend(self.pastDxDyList + self.pastDistanceList)
 
             self.pastDxDyList.pop(0)
@@ -180,8 +179,8 @@ class Simulator(Thread):
 
             self.pastDxDyList.append(myTempSample[0])
             self.pastDxDyList.append(myTempSample[1])
-            self.pastDistanceList.append(myTempSample[7])
             self.pastDistanceList.append(myTempSample[8])
+            self.pastDistanceList.append(myTempSample[9])
 
             #print(myTempSample)
 

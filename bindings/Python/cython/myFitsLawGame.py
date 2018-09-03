@@ -20,9 +20,9 @@ class Game(Thread):
         super().__init__()
         #self.setDaemon(True)
         # used transferfunction
-        self.tf = "system:?slider=1&epp=true"
+        self.tf = "system:?slider=1&epp=false"
         # alias for data name, include afterwards please dpi and samplerate
-        self.tf_short = "system_0_true_easy_1800_125"
+        self.tf_short = "system_1_false_easy_1800_125"
 
         self.pm = PointingDeviceManager()
         PointingDevice.idle(100)
@@ -77,7 +77,7 @@ class Game(Thread):
 
         # header of the logfile
         self.mouse_field = ['dx', 'dy', 'button', 'rx', 'ry', 'time',  'distance',
-                            'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID']
+                            'targetID', 'directionX', 'directionY', 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize']
         # mouse_field = ['dx', 'rx']
 
         self.writerMouse = csv.DictWriter(self.outfile, fieldnames=self.mouse_field)
@@ -129,8 +129,8 @@ class Game(Thread):
         distance = math.sqrt(pow(direction[0], 2) + pow(direction[1], 2))-int(self.pointSize/2)
         #'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
         #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
-        mySample = (dx0, dy0, button, rx0, ry0, newTimestamp, distance, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
-                    self.pointSize, self.initCursorPos[0], self.initCursorPos[1], self.targetID)
+        mySample = (dx0, dy0, button, rx0, ry0, newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
+                    self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
         #print(mySample)
         self.mySampleData.append(mySample)
         #print(mySample)
@@ -191,11 +191,11 @@ class Game(Thread):
                                                     'button': str(dataPoint[2]),
                                                     'rx': str(dataPoint[3]), 'ry': str(dataPoint[4]),
                                                     'time': str(dataPoint[5]),'distance': str(dataPoint[6]),
-                                                    'directionX': str(dataPoint[7]), 'directionY': str(dataPoint[8]),
-                                                    'targetX': str(dataPoint[9]), 'targetY': str(dataPoint[10]),
-                                                    'targetSize': str(dataPoint[11]),
-                                                    'initMouseX': str(dataPoint[12]),'initMouseY': str(dataPoint[13]),
-                                                    'targetID': str(dataPoint[14])
+                                                    'targetID': str(dataPoint[7]),
+                                                    'directionX': str(dataPoint[8]), 'directionY': str(dataPoint[9]),
+                                                    'targetX': str(dataPoint[10]), 'targetY': str(dataPoint[11]),
+                                                    'initMouseX': str(dataPoint[12]), 'initMouseY': str(dataPoint[13]),
+                                                    'targetSize': str(dataPoint[14])
                                                   })
                     print("saved data")
 
