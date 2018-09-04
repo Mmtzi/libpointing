@@ -56,8 +56,8 @@ class SimTest(Thread):
         self.pastMouseMovement = [0]*self.pastTimeSteps*2
         self.mySampleData = []
 
-        if os.path.exists('ml\\models\\sim_20dx_20dist_sizeo.h5'):
-            self.model = load_model('ml\\models\\sim_20dx_20dist_sizeo.h5')
+        if os.path.exists('ml\\models\\sim_par_20dx_20dist_sizeo.h5'):
+            self.model = load_model('ml\\models\\sim_par_20dx_20dist_sizeo.h5')
             self.model._make_predict_function()
             print("loaded model")
         else:
@@ -146,10 +146,9 @@ class SimTest(Thread):
                 #print(self.pastMouseMovement)
                 #print(self.pastData + self.pastMouseMovement + self.pastDistanceList)
                 myInput = np.array([self.pastData + self.pastMouseMovement + self.pastDistanceList ])
-                print(myInput)
+                #print(myInput)
                 #print(np.shape(myInput))
-
-                predictions = self.model.predict(myInput)
+                predictionsDxDy, predictButton = self.model.predict(myInput)
                 # if predictions[0][0] >0:
                 #     pdx = int(math.ceil(predictions[0][0]))
                 # else:
@@ -159,11 +158,11 @@ class SimTest(Thread):
                 # else:
                 #     pdy = int(math.floor(predictions[0][1]))
 
-                pdx = int(round(predictions[0][0],0))
-                pdy = int(round(predictions[0][1],0))
-                self.button = int(round(predictions[0][2],0))
+                pdx = int(round(predictionsDxDy[0][0],0))
+                pdy = int(round(predictionsDxDy[0][1],0))
+                self.button = round(predictButton[0][0],1)
 
-                print(predictions, pdx, pdy, self.button)
+
                 rx0, ry0 = self.tfct.applyd(pdx, pdy, 0)
                 self.cursor.move(rx0, ry0)
                 if (self.getCursorPos()[0] == 1 or self.getCursorPos()[0] == self.screen_width-1):
@@ -171,6 +170,9 @@ class SimTest(Thread):
                 if (self.getCursorPos()[1] == 1 or self.getCursorPos()[1] == self.screen_height-1):
                     pdy = 0
                 self.writeline = self.pastData + [pdx] + [pdy] + [self.button]
+                if self.button >0.1 :
+                    print(predictionsDxDy, predictButton, pdx, pdy, self.button)
+                    print(self.pastMouseMovement, self.pastDistanceList)
                 self.mySampleData.append(self.writeline)
                 self.pastMouseMovement.pop(0)
                 self.pastMouseMovement.pop(0)
@@ -180,7 +182,7 @@ class SimTest(Thread):
                 self.pastDistanceList.pop(0)
                 self.pastDistanceList.append(self.targetPosition[0] - self.getCursorPos()[0])
                 self.pastDistanceList.append(self.targetPosition[1]- self.getCursorPos()[1])
-                print(self.pastMouseMovement, self.pastDistanceList)
+
                 #print(len(self.pastMouseMovement))
                 #print(len(self.pastData))
 
@@ -189,7 +191,7 @@ class SimTest(Thread):
                 # Mouse Click Event
 
             # check targetHit
-            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0):#  and self.button == 1:
+            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0) and self.button >0.1:
                 print("startCursorPosition:" + str(self.initCursorPos))
                 self.targetID += 1
                 self.oldTarget = self.targetPosition

@@ -1,12 +1,12 @@
-from keras.models import Sequential, load_model
-from keras.layers import Dense
+from keras.models import Sequential, load_model, Model
+from keras.layers import Dense, Input, Softmax, Conv1D
 from keras.optimizers import Adam
 from keras import regularizers
 from keras.layers.recurrent import LSTM, GRU
 from numpy import genfromtxt
 from sklearn.datasets import make_regression
 from sklearn.preprocessing import MinMaxScaler
-from matplotlib import pyplot as plt
+from thesis import plotData
 import os
 import numpy as np
 from threading import Thread
@@ -56,21 +56,27 @@ class Simulator(Thread):
             myTrainDataList = np.array(myTrainDataList)
             myTrainInData = myTrainDataList[:, 14:95]
             myTrainOutData = myTrainDataList[:,0:3]
+            labelDxDy = myTrainOutData[:,0:2]
+            labelButton = myTrainOutData[:,2:3]
+
             # define and fit the final model
 
-            if os.path.exists('ml\\models/sim_20dx_20dist_sizeo.h5'):
-                model = load_model('ml\\models/sim_20dx_20dist_sizeo.h5')
+            if os.path.exists('ml\\models/sim_par_20dx_20dist_sizeo.h5'):
+                model = load_model('ml\\models/sim_par_20dx_20dist_sizeo.h5')
                 print("loaded model")
             else:
-                model = Sequential()
-                model.add(Dense(42, input_dim=81, activation='relu', kernel_regularizer=regularizers.l2(0.0001)))
-                model.add(Dense(9, activation='relu'))
-                model.add(Dense(3, activation='linear'))
-                model.compile(Adam(lr=0.001), loss='mse')
+                main_input = Input(shape=(81,), dtype='float32', name='main_input')
+                x = Co
+                x = Dense(42, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(main_input)
+                x = Dense(9, activation='relu')(x)
+                outDxDy = Dense(2, activation='linear')(x)
+                outButton = Dense(1, activation='sigmoid')(x)
+                model=Model(main_input, [outDxDy, outButton])
+                model.compile(Adam(lr=0.0005), loss=['mse', 'binary_crossentropy'])
 
             model.summary()
-            model.fit(myTrainInData, myTrainOutData, epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-            model.save('ml\\models\\sim_20dx_20dist_sizeo.h5')
+            model.fit(myTrainInData, [labelDxDy, labelButton], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
+            model.save('ml\\models\\sim_par_20dx_20dist_sizeo.h5')
 
             #self.predictMyData(model)
 
@@ -87,39 +93,26 @@ class Simulator(Thread):
             #     plotDX.append(predictedAllDX[j][0])
             #     plotPred.append(allDX[j][0])
 
-            self.plotResults(predictedDX, realDX)
-
-    def plotResults(self, predictedDX, realDX):
-        print("ploting results...")
-        fig, ax = plt.subplots()
-        ax.scatter(realDX, predictedDX, color="b")
-        # ax.scatter(plotDX, plotPred, color="r", marker='x')
-        i = 1
-        while os.path.exists('ml\\logs\\sim_adv_dist_dx_epochs_' + str(self.epochs) + '-Iterations_' + str(i) + '.png'):
-            i += 1
-        else:
-            try:
-                plt.savefig('ml\\logs\\sim_adv_dist_dx_epochs_' + str(self.epochs) + '-Iterations_' + str(i) + '.png')
-                print("saved plot as: sim_adv_dist_dx_epochs_" + str(self.epochs) + '-Iterations_' + str(i) + '.png')
-            except:
-                print("couldnt save plot...")
+            plotData.plotResults(predictedDX, realDX, self.epochs)
 
     def predictTrainData(self, model, myValidDataList):
         self.createValidSet(myValidDataList)
         myValidDataList = np.array(myValidDataList)
         myValidInData = myValidDataList[:, 14:95]
         myValidOutData = myValidDataList[:, 0:3]
+        validDxDy = myValidOutData[:, 0:2]
+        myValidButton = myValidOutData[:, 2:3]
         #print(myValidInData)
-        predictions = model.predict(myValidInData)
+        predictedDXDY, predictedButton = model.predict(myValidInData)
         #print(myValidInData)
         predictedDX = []
         realDX = []
         k = 0
         for i in range(len(myValidDataList)):
-            predictedRaw = (int(round(predictions[i][0],0)), int(round(predictions[i][1],0)), (int(round(predictions[i][2],0)), predictions[i][2]))
-            if i%20==0 or myValidOutData[i][2] ==1:
-                print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, myValidInData[i], predictedRaw, myValidOutData[i]))
-            predictedDX.append(predictions[i][0])
+            predictedRaw = (int(round(predictedDXDY[i][0],0)), int(round(predictedDXDY[i][1],0)), int(round(predictedButton[i][0],0)))
+            if i%20==0 or myValidButton[i] ==1:
+                print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, myValidInData[i], predictedRaw, (validDxDy[i], myValidButton[i])))
+            predictedDX.append(predictedDXDY[i][0])
             realDX.append(myValidOutData[i][0])
         return predictedDX, realDX
 

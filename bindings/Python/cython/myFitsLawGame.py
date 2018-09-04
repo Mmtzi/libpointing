@@ -7,6 +7,7 @@ import math
 import random
 import pyautogui
 from thesis.crosshair import crosshair
+from thesis import plotData
 from threading import Thread
 import numpy as np
 
@@ -31,6 +32,8 @@ class Game(Thread):
         self.pdev = PointingDevice.create("any:")
         self.ddev = DisplayDevice.create("any:")
         self.tfct = TransferFunction.create(self.tf, self.pdev, self.ddev)
+        self.dpi = self.pdev.getResolution()
+        self.hertz = self.pdev.getUpdateFrequency()
         # time
         # dt has to be adjusted to the sample rate of the mouse
         self.desiredFPS = 125
@@ -52,6 +55,7 @@ class Game(Thread):
         self.ISRUNNING = False
 
         self.mySampleData = []
+        self.myPlotDx = []
 
         self.dataQueue = q
 
@@ -131,6 +135,7 @@ class Game(Thread):
         #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
         mySample = (dx0, dy0, button, rx0, ry0, newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
                     self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
+        self.myPlotDx.append(dx0)
         #print(mySample)
         self.mySampleData.append(mySample)
         #print(mySample)
@@ -198,7 +203,7 @@ class Game(Thread):
                                                     'targetSize': str(dataPoint[14])
                                                   })
                     print("saved data")
-
+                    plotData.plotHistogramm(self.myPlotDx, self.dpi, self.hertz)
                     pygame.quit()
                     sys.exit()
                 if self.PLAY and event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and (
@@ -260,6 +265,7 @@ class Game(Thread):
             pygame.display.flip()
             self.clock.tick(self.desiredFPS)
                 #sampleFlag=False
+
 
 #if __name__ == '__main__':
     #print("Hello")
