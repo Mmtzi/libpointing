@@ -53,15 +53,18 @@ class SimTest(Thread):
         self.END = False
         self.ISRUNNING = False
         self.pastTimeSteps = 20
-        self.pastMouseMovement = [0]*self.pastTimeSteps*2
+        self.pastList = []
         self.mySampleData = []
-
-        if os.path.exists('ml\\models\\sim_par_20dx_20dist_sizeo.h5'):
-            self.model = load_model('ml\\models\\sim_par_20dx_20dist_sizeo.h5')
-            self.model._make_predict_function()
-            print("loaded model")
+        print("loading model...")
+        if os.path.exists('ml\\models\\sim_conv_20dx_20dist_sizeo.h5'):
+            try:
+                self.model = load_model('ml\\models\\sim_conv_20dx_20dist_sizeo.h5')
+                self.model._make_predict_function()
+                print("loaded model")
+            except:
+                print("couldnt load model")
         else:
-            print("couldnt load model")
+            print("couldnt find model")
 
     def run(self):
 
@@ -101,7 +104,6 @@ class SimTest(Thread):
         # targetPoint boundary conditions
         self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize), random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
         self.pastDir = (int(self.targetPosition[0] - self.oldTarget[0]), int(self.targetPosition[1] - self.oldTarget[1]))
-        self.pastDistanceList = [self.pastDir[0], self.pastDir[1]] * self.pastTimeSteps
         self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2))-int(self.pointSize/2)
         # size of the
         self.cursorScale = 0.2
@@ -145,10 +147,16 @@ class SimTest(Thread):
 
                 #print(self.pastMouseMovement)
                 #print(self.pastData + self.pastMouseMovement + self.pastDistanceList)
-                myInput = np.array([self.pastData + self.pastMouseMovement + self.pastDistanceList ])
+                if len(self.pastList) ==0:
+                    self.pastList = [0,0,self.pastDir[0], self.pastDir[1]]*self.pastTimeSteps
+
+                timeSeries= np.array(self.pastList)
+                timeSeries = np.reshape(timeSeries, (-1, 4))
                 #print(myInput)
                 #print(np.shape(myInput))
-                predictionsDxDy, predictButton = self.model.predict(myInput)
+
+                predictionsDxDy, predictButton = self.model.predict([timeSeries, np.array(self.pointSize)])
+
                 if predictionsDxDy[0][0] >0:
                     pdx = int(math.ceil(predictionsDxDy[0][0]))
                 else:
@@ -169,19 +177,17 @@ class SimTest(Thread):
                     pdx = 0
                 if (self.getCursorPos()[1] == 1 or self.getCursorPos()[1] == self.screen_height-1):
                     pdy = 0
-                self.writeline = self.pastData + [pdx] + [pdy] + [self.button]
-                if self.button >0.5 :
-                    print(predictionsDxDy, predictButton, pdx, pdy, self.button)
-                    print(self.pastMouseMovement, self.pastDistanceList)
+                self.writeline = self.pointSize + [pdx] + [pdy] + [self.button]
+
                 self.mySampleData.append(self.writeline)
-                self.pastMouseMovement.pop(0)
-                self.pastMouseMovement.pop(0)
-                self.pastMouseMovement.append(pdx)
-                self.pastMouseMovement.append(pdy)
-                self.pastDistanceList.pop(0)
-                self.pastDistanceList.pop(0)
-                self.pastDistanceList.append(self.targetPosition[0] - self.getCursorPos()[0])
-                self.pastDistanceList.append(self.targetPosition[1]- self.getCursorPos()[1])
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.append(pdx)
+                self.pastList.append(pdy)
+                self.pastList.append(self.targetPosition[0] - self.getCursorPos()[0])
+                self.pastList.append(self.targetPosition[1]- self.getCursorPos()[1])
 
                 #print(len(self.pastMouseMovement))
                 #print(len(self.pastData))
