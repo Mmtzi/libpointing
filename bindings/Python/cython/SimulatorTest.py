@@ -149,17 +149,17 @@ class SimTest(Thread):
                 #print(myInput)
                 #print(np.shape(myInput))
                 predictionsDxDy, predictButton = self.model.predict(myInput)
-                # if predictions[0][0] >0:
-                #     pdx = int(math.ceil(predictions[0][0]))
-                # else:
-                #     pdx = int(math.floor(predictions[0][0]))
-                # if predictions[0][1] >0:
-                #     pdy = int(math.ceil(predictions[0][1]))
-                # else:
-                #     pdy = int(math.floor(predictions[0][1]))
+                if predictionsDxDy[0][0] >0:
+                    pdx = int(math.ceil(predictionsDxDy[0][0]))
+                else:
+                    pdx = int(math.floor(predictionsDxDy[0][0]))
+                if predictionsDxDy[0][1] >0:
+                    pdy = int(math.ceil(predictionsDxDy[0][1]))
+                else:
+                    pdy = int(math.floor(predictionsDxDy[0][1]))
 
-                pdx = int(round(predictionsDxDy[0][0],0))
-                pdy = int(round(predictionsDxDy[0][1],0))
+                #pdx = int(round(predictionsDxDy[0][0],0))
+                #pdy = int(round(predictionsDxDy[0][1],0))
                 self.button = round(predictButton[0][0],1)
 
 
@@ -170,7 +170,7 @@ class SimTest(Thread):
                 if (self.getCursorPos()[1] == 1 or self.getCursorPos()[1] == self.screen_height-1):
                     pdy = 0
                 self.writeline = self.pastData + [pdx] + [pdy] + [self.button]
-                if self.button >0.1 :
+                if self.button >0.5 :
                     print(predictionsDxDy, predictButton, pdx, pdy, self.button)
                     print(self.pastMouseMovement, self.pastDistanceList)
                 self.mySampleData.append(self.writeline)
@@ -191,7 +191,7 @@ class SimTest(Thread):
                 # Mouse Click Event
 
             # check targetHit
-            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0) and self.button >0.1:
+            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0):# and self.button >0.1:
                 print("startCursorPosition:" + str(self.initCursorPos))
                 self.targetID += 1
                 self.oldTarget = self.targetPosition

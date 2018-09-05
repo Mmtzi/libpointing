@@ -1,7 +1,9 @@
 import numpy as np
-import tensorflow
 
 
-myData = [[200, 200, 40, 100, 100, 1],[-300, 100, 20 , -200, 30, 2]]
+myData = [0, 1, 0, 1, 0, 1, -300, 100, -300 , 100, -300, 100]
 myData = np.array(myData)
 print(myData)
+reshapedData = np.reshape(myData,(-1, 2))
+#reshapedData = np.reshape(myData)
+print(reshapedData)

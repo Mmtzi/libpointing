@@ -1,5 +1,5 @@
 from keras.models import Sequential, load_model, Model
-from keras.layers import Dense, Input, Softmax, Conv1D
+from keras.layers import Dense, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten
 from keras.optimizers import Adam
 from keras import regularizers
 from keras.layers.recurrent import LSTM, GRU
@@ -22,8 +22,7 @@ class Simulator(Thread):
         self.pastTimeSteps = 20
         self.trainSize = 900
         self.validSize = 100
-        self.pastDxDyList = [0]*self.pastTimeSteps*2
-        self.pastDistanceList = []
+        self.pastList = []
         super().__init__()
 
 
@@ -39,9 +38,8 @@ class Simulator(Thread):
         while True:
             # load Data
             # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'targetID', 'directionX', 'directionY',
-            # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY',
+            # 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize'
 
-            myTrainDataList = []
             myValidDataList = []
             sleepTime = 0
             print(self.dataQueue.qsize())
@@ -51,32 +49,39 @@ class Simulator(Thread):
                 sleepTime +=self.sleepInterval
 
 
-            self.createTrainSet(myTrainDataList)
+            convInputSet, sizeInputSet, outDxDySet, outButtonSet = self.createInputSet()
+            convInputSet = np.array(convInputSet)
+            sizeInputSet = np.array(sizeInputSet)
+            outDxDySet = np.array(outDxDySet)
+            outButtonSet = np.array(outButtonSet)
+            print(convInputSet.shape, convInputSet)
+            print(sizeInputSet.shape)
+            print(outDxDySet.shape, outDxDySet)
+            print(outButtonSet.shape)
 
-            myTrainDataList = np.array(myTrainDataList)
-            myTrainInData = myTrainDataList[:, 14:95]
-            myTrainOutData = myTrainDataList[:,0:3]
-            labelDxDy = myTrainOutData[:,0:2]
-            labelButton = myTrainOutData[:,2:3]
 
             # define and fit the final model
 
-            if os.path.exists('ml\\models/sim_par_20dx_20dist_sizeo.h5'):
-                model = load_model('ml\\models/sim_par_20dx_20dist_sizeo.h5')
+            if os.path.exists('ml\\models/sim_conv_20dx_20dist_sizeo.h5'):
+                model = load_model('ml\\models/sim_conv_20dx_20dist_sizeo.h5')
                 print("loaded model")
             else:
-                main_input = Input(shape=(81,), dtype='float32', name='main_input')
-                x = Co
-                x = Dense(42, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(main_input)
-                x = Dense(9, activation='relu')(x)
+                convInput = Input(shape=(900, 20, 4) , dtype='float32', name='convInput')
+                conv1 = Conv2D(kernel_size=(1, 4), data_format="channels_last", strides=1, filters=1 , activation='relu')(convInput)
+                max2 = MaxPooling2D(pool_size=(1,1))(conv1)
+                flat = Flatten()(max2)
+                print(flat)
+                sizeInput = Input(shape=(20, ), name='sizeInput')
+                x = concatenate([flat, sizeInput], axis=1)
+                x = Dense(10, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(x)
                 outDxDy = Dense(2, activation='linear')(x)
                 outButton = Dense(1, activation='sigmoid')(x)
-                model=Model(main_input, [outDxDy, outButton])
+                model=Model([convInput, sizeInput], [outDxDy, outButton])
                 model.compile(Adam(lr=0.0005), loss=['mse', 'binary_crossentropy'])
 
             model.summary()
-            model.fit(myTrainInData, [labelDxDy, labelButton], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-            model.save('ml\\models\\sim_par_20dx_20dist_sizeo.h5')
+            model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
+            model.save('ml\\models\\sim_conv_20dx_20dist_sizeo.h5')
 
             #self.predictMyData(model)
 
@@ -96,24 +101,26 @@ class Simulator(Thread):
             plotData.plotResults(predictedDX, realDX, self.epochs)
 
     def predictTrainData(self, model, myValidDataList):
-        self.createValidSet(myValidDataList)
-        myValidDataList = np.array(myValidDataList)
-        myValidInData = myValidDataList[:, 14:95]
-        myValidOutData = myValidDataList[:, 0:3]
-        validDxDy = myValidOutData[:, 0:2]
-        myValidButton = myValidOutData[:, 2:3]
-        #print(myValidInData)
-        predictedDXDY, predictedButton = model.predict(myValidInData)
+        convInputSet, sizeInputSet, outDxDySet, outButtonSet = self.createValidSet()
+        convInputSet = np.array(convInputSet)
+        sizeInputSet = np.array(sizeInputSet)
+        outDxDySet = np.array(outDxDySet)
+        outButtonSet = np.array(outButtonSet)
+        print(convInputSet.shape, convInputSet)
+        print(sizeInputSet.shape)
+        print(outDxDySet.shape, outDxDySet)
+        print(outButtonSet.shape)
+        predictedDXDY, predictedButton = model.predict([convInputSet, sizeInputSet])
         #print(myValidInData)
         predictedDX = []
         realDX = []
         k = 0
         for i in range(len(myValidDataList)):
             predictedRaw = (int(round(predictedDXDY[i][0],0)), int(round(predictedDXDY[i][1],0)), int(round(predictedButton[i][0],0)))
-            if i%20==0 or myValidButton[i] ==1:
-                print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, myValidInData[i], predictedRaw, (validDxDy[i], myValidButton[i])))
+            if i%20==0 or outButtonSet[0][i] ==1:
+                print("line=%s, XY=%s, Predicted=%s, Real=%s" % (i, (convInputSet[i], sizeInputSet[i][0]), (predictedRaw[i]), (outDxDySet[i][0], outButtonSet[i][1])))
             predictedDX.append(predictedDXDY[i][0])
-            realDX.append(myValidOutData[i][0])
+            realDX.append(outDxDySet[i][0])
         return predictedDX, realDX
 
     def predictMyData(self, model):
@@ -138,45 +145,64 @@ class Simulator(Thread):
             #predictedRaw = (int(round(myPredictedData[i][0],0)), int(round(myPredictedData[i][1],0)))
             #print("line=%s, XY=%s, Predicted=%s" % (i, myData[i], predictedRaw))
 
-    def createValidSet(self, myValidDataList):
+    def createValidSet(self):
+        convInputList = []
+        sizeInputList = []
+        outDxDyList = []
+        outButtonList = []
         for i in range(0, self.validSize):
             myTempSample = list(self.dataQueue.get())
-            if len(self.pastDistanceList) == 0:
-                self.pastDistanceList = [myTempSample[8], myTempSample[9]]* self.pastTimeSteps
-            myTempSample.extend(self.pastDxDyList + self.pastDistanceList)
+            if len(self.pastList) == 0:
+                self.pastList = [0, 0, myTempSample[8], myTempSample[9]] * self.pastTimeSteps
+            else:
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.pop(0)
 
-            self.pastDxDyList.pop(0)
-            self.pastDxDyList.pop(0)
-            self.pastDistanceList.pop(0)
-            self.pastDistanceList.pop(0)
+                self.pastList.append(myPreTempSample[0])
+                self.pastList.append(myPreTempSample[1])
+                self.pastList.append(myPreTempSample[8])
+                self.pastList.append(myPreTempSample[9])
 
-            self.pastDxDyList.append(myTempSample[0])
-            self.pastDxDyList.append(myTempSample[1])
-            self.pastDistanceList.append(myTempSample[8])
-            self.pastDistanceList.append(myTempSample[9])
+            sizeInputList.append([myTempSample[14]])
+            outDxDyList.append([myTempSample[0], myTempSample[1]])
+            outButtonList.append([myTempSample[2]])
+            timeSeries = np.array(self.pastList)
+            timeSeries = np.reshape(timeSeries, (-1, 4))
+            print(timeSeries)
+            convInputList.append(timeSeries)
+            myPreTempSample = myTempSample
 
-            myValidDataList.append(myTempSample)
+        return convInputList, sizeInputList, outDxDyList, outButtonList
 
-    def createTrainSet(self, myTrainDataList):
+    def createInputSet(self):
+        convInputList = []
+        sizeInputList = []
+        outDxDyList = []
+        outButtonList = []
         for i in range(0, self.trainSize):
             myTempSample = list(self.dataQueue.get())
-            if len(self.pastDistanceList) == 0:
-                self.pastDistanceList = [myTempSample[8], myTempSample[9]]* self.pastTimeSteps
-                print(self.pastDistanceList)
-            myTempSample.extend(self.pastDxDyList + self.pastDistanceList)
+            if len(self.pastList) == 0:
+                self.pastList = [0 , 0, myTempSample[8], myTempSample[9]]* self.pastTimeSteps
+            else:
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.pop(0)
+                self.pastList.pop(0)
 
-            self.pastDxDyList.pop(0)
-            self.pastDxDyList.pop(0)
-            self.pastDistanceList.pop(0)
-            self.pastDistanceList.pop(0)
+                self.pastList.append(myPreTempSample[0])
+                self.pastList.append(myPreTempSample[1])
+                self.pastList.append(myPreTempSample[8])
+                self.pastList.append(myPreTempSample[9])
 
-            self.pastDxDyList.append(myTempSample[0])
-            self.pastDxDyList.append(myTempSample[1])
-            self.pastDistanceList.append(myTempSample[8])
-            self.pastDistanceList.append(myTempSample[9])
+            sizeInputList.append([myTempSample[14]])
+            outDxDyList.append([myTempSample[0], myTempSample[1]])
+            outButtonList.append([myTempSample[2]])
+            timeSeries = np.array(self.pastList)
+            timeSeries = np.reshape(timeSeries, (-1,4))
+            print(timeSeries)
+            convInputList.append(timeSeries)
+            myPreTempSample = myTempSample
 
-            #print(myTempSample)
-
-            myTrainDataList.append(myTempSample)
-
-            # print(myTempSample, len(myTempSample))
+        return convInputList, sizeInputList, outDxDyList, outButtonList
