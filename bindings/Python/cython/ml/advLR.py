@@ -62,24 +62,24 @@ class Simulator(Thread):
 
             # define and fit the final model
 
-            if os.path.exists('ml\\models/sim_conv_20dx_20dist_sizeo.h5'):
-                model = load_model('ml\\models/sim_conv_20dx_20dist_sizeo.h5')
+            if os.path.exists('ml\\models/sim_lstm_20dx_20dist_sizeo.h5'):
+                model = load_model('ml\\models/sim_lstm_20dx_20dist_sizeo.h5')
                 print("loaded model")
             else:
-                convInput = Input(shape=(20, 4) , dtype='float32', name='convInput')
-                pastDense = Dense(40, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(convInput)
-                flat = Flatten()(pastDense)
+                timeInput = Input(shape=(20, 4) , dtype='float32', name='convInput')
+                lstm = LSTM(10)(timeInput)
+                #flat = Flatten()(lstm)
                 sizeInput = Input(shape=(1, ), name='sizeInput')
-                x = concatenate([flat, sizeInput])
+                x = concatenate([lstm, sizeInput])
                 x = Dense(10, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(x)
                 outDxDy = Dense(2, activation='linear')(x)
                 outButton = Dense(1, activation='sigmoid')(x)
-                model=Model([convInput, sizeInput], [outDxDy, outButton])
+                model=Model([timeInput, sizeInput], [outDxDy, outButton])
                 model.compile(Adam(lr=0.0005), loss=['mse', 'binary_crossentropy'])
 
             model.summary()
             model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-            model.save('ml\\models\\sim_conv_20dx_20dist_sizeo.h5')
+            model.save('ml\\models\\sim_lstm_20dx_20dist_sizeo.h5')
 
             #self.predictMyData(model)
             predictedDX, realDX = self.predictTrainData(model)
@@ -107,6 +107,8 @@ class Simulator(Thread):
         print(sizeInputSet.shape)
         print(outDxDySet.shape)
         print(outButtonSet.shape)
+        print(convInputSet)
+        print(sizeInputSet)
         predictedDXDY, predictedButton = model.predict([convInputSet, sizeInputSet])
         #print(myValidInData)
         predictedDX = []
@@ -127,27 +129,6 @@ class Simulator(Thread):
             realDX.append(outDxDySet[i][0])
         return predictedDX, realDX
 
-    def predictMyData(self, model):
-        # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
-        myData = [
-            [200, 200, 40, 100, 100, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [-300, 100, 20, -200, 30, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [811,932, 12, -301, 590,3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [-500, -732, 44, 32, 500, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [811, 932, 12, -301, 590, 3, 5, 3, 3, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        ]
-
-        #myData = np.array(myData)
-        #print(myData)
-        #myPredictedData = model.predict(myData)
-        #for i in range(len(myData)):
-            #predictedRaw = (int(round(myPredictedData[i][0],0)), int(round(myPredictedData[i][1],0)))
-            #print("line=%s, XY=%s, Predicted=%s" % (i, myData[i], predictedRaw))
 
     def createValidSet(self):
         convInputList = []

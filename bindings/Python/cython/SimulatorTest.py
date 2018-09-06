@@ -56,9 +56,9 @@ class SimTest(Thread):
         self.pastList = []
         self.mySampleData = []
         print("loading model...")
-        if os.path.exists('ml\\models\\sim_conv_20dx_20dist_sizeo.h5'):
+        if os.path.exists('ml\\models\\sim_lstm_20dx_20dist_sizeo.h5'):
             try:
-                self.model = load_model('ml\\models\\sim_conv_20dx_20dist_sizeo.h5')
+                self.model = load_model('ml\\models\\sim_lstm_20dx_20dist_sizeo.h5')
                 self.model._make_predict_function()
                 print("loaded model")
             except:
@@ -150,12 +150,17 @@ class SimTest(Thread):
                 if len(self.pastList) ==0:
                     self.pastList = [0,0,self.pastDir[0], self.pastDir[1]]*self.pastTimeSteps
 
-                timeSeries= np.array(self.pastList)
+                timeSeries = []
+                timeSeries.append(self.pastList)
                 timeSeries = np.reshape(timeSeries, (-1, 4))
-                #print(myInput)
-                #print(np.shape(myInput))
+                timeSeries = np.expand_dims(timeSeries, axis=0)
+                timeSeries = np.array(timeSeries)
 
-                predictionsDxDy, predictButton = self.model.predict([timeSeries, np.array(self.pointSize)])
+                sizeInput =[]
+                sizeInput.append([self.pointSize])
+                sizeInput = np.array(sizeInput)
+
+                predictionsDxDy, predictButton = self.model.predict([timeSeries, sizeInput])
 
                 if predictionsDxDy[0][0] >0:
                     pdx = int(math.ceil(predictionsDxDy[0][0]))
@@ -177,7 +182,7 @@ class SimTest(Thread):
                     pdx = 0
                 if (self.getCursorPos()[1] == 1 or self.getCursorPos()[1] == self.screen_height-1):
                     pdy = 0
-                self.writeline = self.pointSize + [pdx] + [pdy] + [self.button]
+                self.writeline = [self.pointSize] + [pdx] + [pdy] + [self.button]
 
                 self.mySampleData.append(self.writeline)
                 self.pastList.pop(0)
