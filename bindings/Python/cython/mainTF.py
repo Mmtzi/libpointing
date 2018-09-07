@@ -2,14 +2,14 @@ import _thread
 import myFitsLawGame, SimulatorTest
 from ml import advLR, recurrentSim
 from queue import Queue
+import time
 
 def main():
+    #dataQueue with sample data from fitsLawGame, every Thread has Acces to
     dataQueue = Queue()
-    #trainSimulator(dataQueue)
-    #collectData(dataQueue)
-    testSimulator()
-
-
+    #trainSimThread = trainSimulator(dataQueue)
+    #gameThread = collectData(dataQueue)
+    testSimThread = testSimulator()
 
 def collectData(dataQueue):
     try:
@@ -18,6 +18,7 @@ def collectData(dataQueue):
         print("trying to start Game thread")
         gameThread.start()
         print("Game thread started")
+        return gameThread
 
     except:
         print("unable to start Gaming thread")

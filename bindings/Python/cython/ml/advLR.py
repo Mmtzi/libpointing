@@ -107,8 +107,8 @@ class Simulator(Thread):
         print(sizeInputSet.shape)
         print(outDxDySet.shape)
         print(outButtonSet.shape)
-        print(convInputSet)
-        print(sizeInputSet)
+        #print(convInputSet)
+        #print(sizeInputSet)
         predictedDXDY, predictedButton = model.predict([convInputSet, sizeInputSet])
         #print(myValidInData)
         predictedDX = []
@@ -153,8 +153,10 @@ class Simulator(Thread):
             sizeInputList.append([myTempSample[14]])
             outDxDyList.append([myTempSample[0], myTempSample[1]])
             outButtonList.append([myTempSample[2]])
+
             timeSeries = np.array(self.pastList)
             timeSeries = np.reshape(timeSeries, (-1, 4))
+
             #print(timeSeries)
             convInputList.append(timeSeries)
             self.myPreTempSample = myTempSample

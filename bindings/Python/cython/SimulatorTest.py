@@ -22,39 +22,34 @@ from pylibpointing import PointingDeviceManager, PointingDeviceDescriptor
 class SimTest(Thread):
     def __init__(self):
         super().__init__()
-        #self.setDaemon(True)
         # used transferfunction
         self.tf = "system:?slider=1&epp=false"
-        # alias for data name, include afterwards please dpi and samplerate
+        # alias for tf name, include dpi and samplerate
         self.tf_short = "system_1_false_easy_1800_125"
-        self.pm = PointingDeviceManager()
-        PointingDevice.idle(100)
 
+        #init tf
         self.pdev = PointingDevice.create("any:")
         self.ddev = DisplayDevice.create("any:")
         self.tfct = TransferFunction.create(self.tf, self.pdev, self.ddev)
-        # time
+
         # dt has to be adjusted to the sample rate of the mouse
         self.desiredFPS = 125
 
-        # userSettings
-        # how many sessions a user has to do
-        self.session = 1
-        self.sessions = 8
-        # how long a session will take in Minutes
-        self.sessionTargets = 100
-
-        # sampleFlag = True
+        #for stats
         self.timeMS = 0
         self.frames = 0
+
+        #PLAYSTATES
+
         self.START = True
         self.PLAY = False
         self.PAUSE = False
         self.END = False
-        self.ISRUNNING = False
+
         self.pastTimeSteps = 20
         self.pastList = []
         self.mySampleData = []
+
         print("loading model...")
         if os.path.exists('ml\\models\\sim_lstm_20dx_20dist_sizeo.h5'):
             try:
@@ -87,52 +82,82 @@ class SimTest(Thread):
             'w', newline='')
 
         # header of the logfile
-        self.mouse_field = ['targetSize', 'pdx', 'pdy', 'btn']
+        self.mouse_field = ['dx', 'dy', 'button', 'rx', 'ry', 'time',  'distance',
+                            'targetID', 'directionX', 'directionY', 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize']
+            #['targetSize', 'pdx', 'pdy', 'btn']
         # mouse_field = ['dx', 'rx']
 
         self.writerMouse = csv.DictWriter(self.outfile, fieldnames=self.mouse_field)
         self.writerMouse.writeheader()
 
-        # settings and first initialization for the study
-        self.pointArray = []
-        # first pointsize
-        self.pointSize = 20
-        # first target
-        self.targetID = 1
-        # starting in the middle
-        self.oldTarget = (int(self.screen_width / 2), int(self.screen_height / 2))
-        # targetPoint boundary conditions
-        self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize), random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
-        self.pastDir = (int(self.targetPosition[0] - self.oldTarget[0]), int(self.targetPosition[1] - self.oldTarget[1]))
-        self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2))-int(self.pointSize/2)
-        # size of the
-        self.cursorScale = 0.2
-        # start middle
-        pyautogui.moveTo(self.screen_width / 2, self.screen_height / 2)
-        self.startCursorPos = pyautogui.position()
-        self.initCursorPos = self.startCursorPos
-        self.cursor = crosshair(self.startCursorPos[0], self.startCursorPos[1], scale=self.cursorScale, sw=self.screen_width, sh=self.screen_height)
-        pyautogui.moveTo(self.startCursorPos[0],
-                         self.startCursorPos[1])
-        pygame.mouse.set_visible(False)
-
-
-        self.startTime = time.time()
-
-        self.pastData = [self.pointSize]
-        print(self.pastData)
-
-
         self.startGame()
 
 
     def getCursorPos(self):
-        #print(self.cursor.pos[0],self.cursor.pos[1])
         return int(self.cursor.pos[0]), int(self.cursor.pos[1])
 
     def startGame(self):
 
         while True:
+
+            events = pygame.event.get()
+            for event in events:
+                if self.START:
+
+                    # initializing PointingObject and first TargetData
+                    self.cursorScale = 0.2
+                    # start middle
+                    pyautogui.moveTo(self.screen_width / 2, self.screen_height / 2)
+                    self.cursor = crosshair(pyautogui.position()[0], pyautogui.position()[1], scale=self.cursorScale,
+                                            sw=self.screen_width, sh=self.screen_height)
+                    # position where a stroke starts
+                    self.initCursorPos = self.cursor.pos
+                    pygame.mouse.set_visible(False)
+
+                    # first pointsize
+                    self.pointSize = 20
+                    # first target
+                    self.targetID = 1
+                    # starting in the middle
+                    self.oldTarget = (int(self.screen_width / 2), int(self.screen_height / 2))
+                    # targetPoint with boundary conditions
+                    self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize),
+                                           random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
+                    # direction/distance to Target
+                    self.pastDir = (
+                        int(self.targetPosition[0] - self.oldTarget[0]),
+                        int(self.targetPosition[1] - self.oldTarget[1]))
+                    self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
+                        self.pointSize / 2)
+
+                    self.pastData = [self.pointSize]
+
+                    self.screen.fill((255, 255, 255))
+                    self.screen.blit(self.cursor.image, self.cursor.pos)
+                    if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
+                        self.PLAY = True
+                        self.START = False
+                        self.startTime = time.time()
+                    break
+
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 2:
+                    print(event.button, "close")
+                    print("TimeInSeconds: " + str(self.timeMS / 1000) + " Frames: " + str(self.frames) + " FPS: " + str(
+                        int(self.frames / (self.timeMS / 1000))))
+                    for dataPoint in self.mySampleData:
+                        self.writerMouse.writerow({ 'dx': str(dataPoint[0]), 'dy': str(dataPoint[1]),
+                                                    'button': str(dataPoint[2]),
+                                                    'rx': str(dataPoint[3]), 'ry': str(dataPoint[4]),
+                                                    'time': str(dataPoint[5]),'distance': str(dataPoint[6]),
+                                                    'targetID': str(dataPoint[7]),
+                                                    'directionX': str(dataPoint[8]), 'directionY': str(dataPoint[9]),
+                                                    'targetX': str(dataPoint[10]), 'targetY': str(dataPoint[11]),
+                                                    'initMouseX': str(dataPoint[12]), 'initMouseY': str(dataPoint[13]),
+                                                    'targetSize': str(dataPoint[14])
+                                                  })
+                    print("saved data")
+                    pygame.quit()
+                    sys.exit()
 
             if self.PLAY:
                 self.timeMS += self.clock.get_time()
@@ -145,21 +170,23 @@ class SimTest(Thread):
                 pygame.gfxdraw.aacircle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
                 pygame.gfxdraw.filled_circle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
 
-                #print(self.pastMouseMovement)
-                #print(self.pastData + self.pastMouseMovement + self.pastDistanceList)
-                if len(self.pastList) ==0:
+                #init pastDataList
+                if len(self.pastList) == 0:
                     self.pastList = [0,0,self.pastDir[0], self.pastDir[1]]*self.pastTimeSteps
 
+                #convert pastList to a np array with one Element which has 4 columns and 20 rows (dx, dy, distanceX2Target, distanceY2Target)
                 timeSeries = []
                 timeSeries.append(self.pastList)
                 timeSeries = np.reshape(timeSeries, (-1, 4))
                 timeSeries = np.expand_dims(timeSeries, axis=0)
                 timeSeries = np.array(timeSeries)
 
+                #sizeInput needs to be shaped also as np array with one element [[size]]
                 sizeInput =[]
                 sizeInput.append([self.pointSize])
                 sizeInput = np.array(sizeInput)
 
+                #predict next output with the data from the past 20 timesteps
                 predictionsDxDy, predictButton = self.model.predict([timeSeries, sizeInput])
 
                 if predictionsDxDy[0][0] >0:
@@ -171,35 +198,60 @@ class SimTest(Thread):
                 else:
                     pdy = int(math.floor(predictionsDxDy[0][1]))
 
-                #pdx = int(round(predictionsDxDy[0][0],0))
-                #pdy = int(round(predictionsDxDy[0][1],0))
-                self.button = round(predictButton[0][0],1)
+                #output
+                # pdx = int(round(predictionsDxDy[0][0],0))
+                # pdy = int(round(predictionsDxDy[0][1],0))
+                self.button = round(predictButton[0][0],0)
 
+                #useTF on output
+                prx, pry = self.tfct.applyd(pdx, pdy, 0)
+                #move cursor with tf output
+                self.cursor.move(prx, pry)
 
-                rx0, ry0 = self.tfct.applyd(pdx, pdy, 0)
-                self.cursor.move(rx0, ry0)
+                #if the cursor is on the border change dx/rx or. dy/ry to 0
                 if (self.getCursorPos()[0] == 1 or self.getCursorPos()[0] == self.screen_width-1):
                     pdx = 0
+                    prx = 0
                 if (self.getCursorPos()[1] == 1 or self.getCursorPos()[1] == self.screen_height-1):
                     pdy = 0
-                self.writeline = [self.pointSize] + [pdx] + [pdy] + [self.button]
+                    pry = 0
 
+                # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
+                # 'targetID', 'directionX', 'directionY', 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize'
+
+                self.pastDir = (self.targetPosition[0] - self.getCursorPos()[0], self.targetPosition[1]- self.getCursorPos()[1])
+
+                #create data for csv
+                self.writeline = []
+                self.writeline.append(pdx)
+                self.writeline.append(pdy)
+                self.writeline.append(self.button)
+                self.writeline.append(prx)
+                self.writeline.append(pry)
+                self.writeline.append(time.time()-self.startTime)
+                self.writeline.append(math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
+                        self.pointSize / 2))
+                self.writeline.append(self.targetID)
+                self.writeline.append(self.pastDir[0])
+                self.writeline.append(self.pastDir[1])
+                self.writeline.append(self.targetPosition[0])
+                self.writeline.append(self.targetPosition[1])
+                self.writeline.append(self.initCursorPos[0])
+                self.writeline.append(self.initCursorPos[1])
+                self.writeline.append(self.pointSize)
                 self.mySampleData.append(self.writeline)
+
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.append(pdx)
                 self.pastList.append(pdy)
-                self.pastList.append(self.targetPosition[0] - self.getCursorPos()[0])
-                self.pastList.append(self.targetPosition[1]- self.getCursorPos()[1])
+                self.pastList.append(self.pastDir[0])
+                self.pastList.append(self.pastDir[1])
 
-                #print(len(self.pastMouseMovement))
-                #print(len(self.pastData))
-
+                print(self.pastList)
                 self.screen.blit(self.cursor.image, self.getCursorPos())
-
-                # Mouse Click Event
 
             # check targetHit
             if self.screen.get_at(self.getCursorPos()) == (255, 0, 0):# and self.button >0.1:
@@ -219,35 +271,7 @@ class SimTest(Thread):
                       " new Size: " + str(self.pointSize))
                 self.pastData = [self.pointSize]
                 self.startTime = time.time()
-            events = pygame.event.get()
-            for event in events:
-                if self.START:
-                    self.screen.fill((255, 255, 255))
-                    self.screen.blit(self.cursor.image, self.cursor.pos)
-                    if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
-                        self.PLAY = True
-                        self.START = False
-                    break
-                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 2:
-                    print(event.button, "close")
-                    print("TimeInSeconds: " + str(self.timeMS / 1000) + " Frames: " + str(self.frames) + " FPS: " + str(
-                        int(self.frames / (self.timeMS / 1000))))
-                    for dataPoint in self.mySampleData:
-                        # 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID', 'pdx', 'pdy'
-                        #print(dataPoint)
-                        self.writerMouse.writerow({ 'targetSize': str(dataPoint[0]),
-                                                    'pdx': str(dataPoint[1]), 'pdy': str(dataPoint[2]),
-                                                    'btn': str(dataPoint[3])
-                                                  })
-                    print("saved data")
-
-                    pygame.quit()
-                    sys.exit()
 
 
             pygame.display.flip()
             self.clock.tick(self.desiredFPS)
-                #sampleFlag=False
-
-#if __name__ == '__main__':
-    #print("Hello")
