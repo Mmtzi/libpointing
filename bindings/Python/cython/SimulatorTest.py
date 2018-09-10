@@ -51,9 +51,9 @@ class SimTest(Thread):
         self.mySampleData = []
 
         print("loading model...")
-        if os.path.exists('ml\\models\\sim_lstm_20dx_20dist_sizeo.h5'):
+        if os.path.exists('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5'):
             try:
-                self.model = load_model('ml\\models\\sim_lstm_20dx_20dist_sizeo.h5')
+                self.model = load_model('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5')
                 self.model._make_predict_function()
                 print("loaded model")
             except:
@@ -189,18 +189,18 @@ class SimTest(Thread):
                 #predict next output with the data from the past 20 timesteps
                 predictionsDxDy, predictButton = self.model.predict([timeSeries, sizeInput])
 
-                if predictionsDxDy[0][0] >0:
-                    pdx = int(math.ceil(predictionsDxDy[0][0]))
-                else:
-                    pdx = int(math.floor(predictionsDxDy[0][0]))
-                if predictionsDxDy[0][1] >0:
-                    pdy = int(math.ceil(predictionsDxDy[0][1]))
-                else:
-                    pdy = int(math.floor(predictionsDxDy[0][1]))
+                # if predictionsDxDy[0][0] >0:
+                #     pdx = int(math.ceil(predictionsDxDy[0][0]))
+                # else:
+                #     pdx = int(math.floor(predictionsDxDy[0][0]))
+                # if predictionsDxDy[0][1] >0:
+                #     pdy = int(math.ceil(predictionsDxDy[0][1]))
+                # else:
+                #     pdy = int(math.floor(predictionsDxDy[0][1]))
 
                 #output
-                # pdx = int(round(predictionsDxDy[0][0],0))
-                # pdy = int(round(predictionsDxDy[0][1],0))
+                pdx = int(round(predictionsDxDy[0][0],0))
+                pdy = int(round(predictionsDxDy[0][1],0))
                 self.button = round(predictButton[0][0],0)
 
                 #useTF on output
@@ -241,6 +241,8 @@ class SimTest(Thread):
                 self.writeline.append(self.pointSize)
                 self.mySampleData.append(self.writeline)
 
+                print(pdx, pdy, self.button)
+
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
@@ -250,7 +252,6 @@ class SimTest(Thread):
                 self.pastList.append(self.pastDir[0])
                 self.pastList.append(self.pastDir[1])
 
-                print(self.pastList)
                 self.screen.blit(self.cursor.image, self.getCursorPos())
 
             # check targetHit
