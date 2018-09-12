@@ -59,6 +59,7 @@ class Game(Thread):
         self.mySampleData = []
         #list for plot dx
         self.myPlotDx = []
+        self.scorePlotList =[]
 
         self.dataQueue = q
 
@@ -104,7 +105,7 @@ class Game(Thread):
 
     #callback of the mouse
     def cb_fct(self, timestamp, dx0, dy0, button):
-        newTimestamp =(timestamp / 1000000000 - self.startTime)
+        self.newTimestamp =(timestamp / 1000000000 - self.startTime)
         rx0,ry0=self.tfct.applyd(dx0, dy0, timestamp) #timestamp unnecassary
         self.cursor.move(rx0,ry0)
         #print("%s: %d %d %d -> %.2f %.2f"%(str(newTimestamp), dx, dy, button, rx, ry ))
@@ -112,7 +113,7 @@ class Game(Thread):
         distance = math.sqrt(pow(direction[0], 2) + pow(direction[1], 2))-int(self.pointSize/2)
         #'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
         #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
-        mySample = (dx0, dy0, button, rx0, ry0, newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
+        mySample = (dx0, dy0, button, rx0, ry0, self.newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
                     self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
         self.myPlotDx.append(dx0)
         #add data only in playstate
@@ -191,13 +192,16 @@ class Game(Thread):
                                                   })
                     print("saved data")
                     #plot Histogramm of dx
-                    plotData.plotHistogramm(self.myPlotDx, self.dpi, self.hertz)
+                    #plotData.plotHistogramm(self.myPlotDx, self.dpi, self.hertz)
+                    plotData.plotFitsDependencies(self.scorePlotList, self.dpi, self.hertz)
                     self.END = True
                     self.PLAY = False
 
                 # if target was hit:
                 if self.PLAY and event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and (
                         self.screen.get_at(self.getCursorPos()) == (255, 0, 0)):
+                    self.scorePlotList.append((math.log2(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2))/self.pointSize*2), self.newTimestamp))
+                    print("score:" +str(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2)) / (self.newTimestamp*self.pointSize)))
                     #print position or. new start stroke position
                     self.initCursorPos = self.getCursorPos()
                     print("startCursorPosition:"+str(self.initCursorPos))
@@ -209,8 +213,8 @@ class Game(Thread):
                     while (abs(self.targetPosition[0] - self.oldTarget[0]) <= self.pointSize) or ((abs(self.targetPosition[1] - self.oldTarget[1]) <= self.pointSize)):
                         self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize), random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
 
-                    print(event.button, "new targetX: " + str(self.targetPosition[0]) + " new targetY: " + str(self.targetPosition[1]) +
-                          " distance: " + str(math.sqrt(pow(self.targetPosition[0], 2) + pow(self.targetPosition[1], 2))) + " new Size: " + str(self.pointSize))
+                    print("oldtime:"+str(self.newTimestamp)+ "new targetX: " + str(self.targetPosition[0]) + " new targetY: " + str(self.targetPosition[1]) +
+                          " distance: " + str(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2))) + " new Size: " + str(self.pointSize))
                     #start new timer for new stroke
                     self.startTime = time.time()
 

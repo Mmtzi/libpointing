@@ -51,9 +51,9 @@ class SimTest(Thread):
         self.mySampleData = []
 
         print("loading model...")
-        if os.path.exists('ml\\models\\sim_dense_fitg_20dx_20dist_sizeo.h5'):
+        if os.path.exists('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5'):
             try:
-                self.model = load_model('ml\\models\\sim_dense_fitg_20dx_20dist_sizeo.h5')
+                self.model = load_model('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5')
                 self.model._make_predict_function()
                 print("loaded model")
             except:

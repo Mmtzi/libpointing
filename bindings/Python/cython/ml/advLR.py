@@ -45,15 +45,15 @@ class Simulator(Thread):
 
         # define and fit the final model
 
-        if os.path.exists('ml\\models/sim_lstm_fitg_20dx_20dist_sizeo.h5'):
-            model = load_model('ml\\models/sim_lstm_fitg_20dx_20dist_sizeo.h5')
+        if os.path.exists('ml\\models/sim_dense_fitg_20dx_20dist_sizeo.h5'):
+            model = load_model('ml\\models/sim_dense_fitg_20dx_20dist_sizeo.h5')
             print("loaded model")
         else:
             timeInput = Input(shape=(20, 4) , dtype='float32', name='timeInput')
-            lstm = LSTM(40)(timeInput)
-            #flat = Flatten()(lstm)
-            sizeInput = Input(shape=(1, ), name='sizeInput')
-            x = concatenate([lstm, sizeInput])
+            dense = Dense(40)(timeInput)
+            flat = Flatten()(dense)
+            sizeInput = Input(shape=(1,), name='sizeInput')
+            x = concatenate([flat, sizeInput])
             x = Dense(20, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(x)
             outDxDy = Dense(2, activation='linear')(x)
             outButton = Dense(1, activation='sigmoid')(x)
@@ -64,11 +64,11 @@ class Simulator(Thread):
 
         while self.dataQueue.qsize() >= self.batchSize:
             print(self.dataQueue.qsize())
-            model.fit_generator(self.generator(self.pastTSInputList, self.sizeInputList, self.labelDxDyList, self.labelButtonList, self.batchSize), steps_per_epoch=int(len(self.pastTSInputList)/self.batchSize), epochs=5, verbose=1)
+            model.fit_generator(self.generator(self.pastTSInputList, self.sizeInputList, self.labelDxDyList, self.labelButtonList, self.batchSize), steps_per_epoch=int(len(self.pastTSInputList)/self.batchSize), epochs=5, verbose=2)
             self.createInputSet()
 
         # model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-        model.save('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5')
+        model.save('ml\\models\\sim_dense_fitg_20dx_20dist_sizeo.h5')
 
         #model.predict_generator(self.validGenerator(self.pastTSInputList, self.sizeInputList, self.batchSize), verbose=2)
 

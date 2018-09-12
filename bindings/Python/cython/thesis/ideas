@@ -1,0 +1,7 @@
+actor/critic model:
+reward wird berechnet pro sample und/oder pro stroke
+pro sample: score = abweichung von luftlinie zum Ziel gibt strafe, click der nicht target trift gibt strafe, erhöhung der distanz zum ziel(z.b.overshoot) gibt strafe
+wenn zeit über soll zeit ist gibt strafe
+pro stroke: score = wenn zeit zur vervollständigung länger als bisher errechneter durchschnitt ist gibt es strafe, wenn nicht fließt die bewegungszeit in die neue Berechnung der MeanMovementTime ein.
+berechne mit lr neue MeanMovementTime
+nur mit tf trainieren

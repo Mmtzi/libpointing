@@ -7,9 +7,9 @@ import time
 def main():
     #dataQueue with sample data from fitsLawGame, every Thread has Acces to
     dataQueue = Queue()
-    #trainSimThread = trainSimulator(dataQueue)
-    #gameThread = collectData(dataQueue)
-    testSimThread = testSimulator()
+    trainSimThread = trainSimulator(dataQueue)
+    gameThread = collectData(dataQueue)
+    #testSimThread = testSimulator()
 
 def collectData(dataQueue):
     try:
