@@ -8,6 +8,7 @@ import random
 import pyautogui
 from thesis.crosshair import crosshair
 from thesis import plotData
+from ml import calcScore
 from threading import Thread
 import numpy as np
 import threading
@@ -17,7 +18,7 @@ from pylibpointing import PointingDevice, DisplayDevice, TransferFunction
 from pylibpointing import PointingDeviceManager, PointingDeviceDescriptor
 
 class Game(Thread):
-    def __init__(self, q):
+    def __init__(self, qsimu, qactor):
         super().__init__()
 
         # used transferfunction
@@ -61,7 +62,8 @@ class Game(Thread):
         self.myPlotDx = []
         self.scorePlotList =[]
 
-        self.dataQueue = q
+        self.queueSimu = qsimu
+        self.queueActor = qactor
 
     def run(self):
 
@@ -110,16 +112,21 @@ class Game(Thread):
         self.cursor.move(rx0,ry0)
         #print("%s: %d %d %d -> %.2f %.2f"%(str(newTimestamp), dx, dy, button, rx, ry ))
         direction = (self.targetPosition[0] - self.getCursorPos()[0], self.targetPosition[1] - self.getCursorPos()[1])
-        distance = math.sqrt(pow(direction[0], 2) + pow(direction[1], 2))-int(self.pointSize/2)
+        distance = math.sqrt(pow(direction[0], 2) + pow(direction[1], 2))
         #'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
         #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
-        mySample = (dx0, dy0, button, rx0, ry0, self.newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
+        sampleSimu = (dx0, dy0, button, rx0, ry0, self.newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
+                    self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
+        sampleActor = (dx0, dy0, button, rx0, ry0, self.newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
                     self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
         self.myPlotDx.append(dx0)
         #add data only in playstate
         if self.PLAY:
-            self.mySampleData.append(mySample)
-            self.dataQueue.put(mySample)
+            self.mySampleData.append(sampleSimu)
+            self.queueSimu.put(sampleSimu)
+            self.queueActor.put(sampleActor)
+            calcScore.calcScoreOfAction(self.getCursorPos(), self.oldCursorPos, distance, self.targetPosition, self.pointSize)
+            self.oldCursorPos = self.getCursorPos()
         sys.stdout.flush()
 
     def getCursorPos(self):
@@ -146,6 +153,7 @@ class Game(Thread):
                                             sw=self.screen_width, sh=self.screen_height)
                     # position where a stroke starts
                     self.initCursorPos = self.cursor.pos
+                    self.oldCursorPos = self.cursor.pos
                     pygame.mouse.set_visible(False)
 
                     # first pointsize
@@ -194,6 +202,8 @@ class Game(Thread):
                     #plot Histogramm of dx
                     #plotData.plotHistogramm(self.myPlotDx, self.dpi, self.hertz)
                     plotData.plotFitsDependencies(self.scorePlotList, self.dpi, self.hertz)
+                    calcScore.estimate_coef(*zip(*self.scorePlotList))
+
                     self.END = True
                     self.PLAY = False
 

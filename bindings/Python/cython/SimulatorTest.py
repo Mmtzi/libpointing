@@ -20,7 +20,7 @@ from pylibpointing import PointingDevice, DisplayDevice, TransferFunction
 from pylibpointing import PointingDeviceManager, PointingDeviceDescriptor
 
 class SimTest(Thread):
-    def __init__(self):
+    def __init__(self, qactor):
         super().__init__()
         # used transferfunction
         self.tf = "system:?slider=1&epp=false"
@@ -49,6 +49,8 @@ class SimTest(Thread):
         self.pastTimeSteps = 20
         self.pastList = []
         self.mySampleData = []
+
+        self.actorQueue = qactor
 
         print("loading model...")
         if os.path.exists('ml\\models\\sim_dense_fitg_20dx_20dist_sizeo.h5'):
@@ -240,6 +242,8 @@ class SimTest(Thread):
                 self.writeline.append(self.initCursorPos[1])
                 self.writeline.append(self.pointSize)
                 self.mySampleData.append(self.writeline)
+
+                self.actorQueue.put(self.writeline)
 
                 print(pdx, pdy, self.button)
 

@@ -56,3 +56,5 @@ def plotFitsDependencies(scorePlotList, dpi, hertz):
             print("saved plot as: fits_DPI="+str(dpi)+"_Hertz="+str(hertz)+"_"+str(i)+".png")
         except:
             print("couldnt save plot...")
+
+
