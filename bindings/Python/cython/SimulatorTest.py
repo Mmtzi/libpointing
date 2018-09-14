@@ -185,7 +185,7 @@ class SimTest(Thread):
 
                 #sizeInput needs to be shaped also as np array with one element [[size]]
                 sizeInput =[]
-                sizeInput.append([self.pointSize])
+                sizeInput.append([self.pointSize]*20)
                 sizeInput = np.array(sizeInput)
 
                 #predict next output with the data from the past 20 timesteps

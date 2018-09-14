@@ -2,6 +2,7 @@ import _thread
 import myFitsLawGame, SimulatorTest
 from ml import advLR, recurrentSim, actorTF
 from queue import Queue
+#import itertools,collections
 import time
 
 def main():
@@ -9,9 +10,9 @@ def main():
     simuQueue = Queue()
     actorQueueUser = Queue()
     actorQueueSimu = Queue()
-    trainSimThread = trainSimulator(simuQueue)
-    gameThread = collectData(simuQueue, actorQueueUser)
-    #testSimThread = testSimulator(actorQueueSimu)
+    #trainSimThread = trainSimulator(simuQueue)
+    #gameThread = collectData(simuQueue, actorQueueUser)
+    testSimThread = testSimulator(actorQueueSimu)
 
 def collectData(dataQueue, actorQueue):
     try:

@@ -125,8 +125,9 @@ class Game(Thread):
             self.mySampleData.append(sampleSimu)
             self.queueSimu.put(sampleSimu)
             self.queueActor.put(sampleActor)
-            calcScore.calcScoreOfAction(self.getCursorPos(), self.oldCursorPos, distance, self.targetPosition, self.pointSize)
-            self.oldCursorPos = self.getCursorPos()
+            calcScore.calcScoreOfAction(self.getCursorPos(), self.pastCursorPos, distance, self.pastDistance, self.targetPosition, self.pointSize)
+            self.pastCursorPos = self.getCursorPos()
+            self.pastDistance = distance
         sys.stdout.flush()
 
     def getCursorPos(self):
@@ -153,7 +154,7 @@ class Game(Thread):
                                             sw=self.screen_width, sh=self.screen_height)
                     # position where a stroke starts
                     self.initCursorPos = self.cursor.pos
-                    self.oldCursorPos = self.cursor.pos
+                    self.pastCursorPos = self.cursor.pos
                     pygame.mouse.set_visible(False)
 
                     # first pointsize
@@ -166,10 +167,9 @@ class Game(Thread):
                     self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize),
                                            random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
                     # direction/distance to Target
-                    self.pastDir = (
+                    self.lastDir = (
                     int(self.targetPosition[0] - self.oldTarget[0]), int(self.targetPosition[1] - self.oldTarget[1]))
-                    self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
-                        self.pointSize / 2)
+                    self.pastDistance = math.sqrt(pow(self.lastDir[0], 2) + pow(self.lastDir[1], 2))
 
                     self.screen.fill((255, 255, 255))
                     self.screen.blit(self.cursor.image, self.cursor.pos)
@@ -202,7 +202,7 @@ class Game(Thread):
                     #plot Histogramm of dx
                     #plotData.plotHistogramm(self.myPlotDx, self.dpi, self.hertz)
                     plotData.plotFitsDependencies(self.scorePlotList, self.dpi, self.hertz)
-                    calcScore.estimate_coef(*zip(*self.scorePlotList))
+                    calcScore.calcRegressionLine(*zip(*self.scorePlotList))
 
                     self.END = True
                     self.PLAY = False

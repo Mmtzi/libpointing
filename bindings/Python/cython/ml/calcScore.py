@@ -1,6 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
-from math import pow, sqrt, acos
+from math import pow, sqrt, acos, log2
 
 def calcRegressionLine(x, y):
     # number of observations/points
@@ -44,22 +44,22 @@ def plot_regression_line(x, y, b):
     # function to show plot
     plt.show()
 
-def calcScoreOfAction(actCursorPos, oldCursorPos, distance, targetPosition, targetSize):
-    old_dir = targetPosition[0] -oldCursorPos[0] , targetPosition[1] -oldCursorPos[1]
-    new_dir = targetPosition[0] -actCursorPos[0] , targetPosition[1] -actCursorPos[1]
-    act_dir = actCursorPos[0] - oldCursorPos[0] , actCursorPos[1]- oldCursorPos[1]
-    skOldNew = old_dir[0]* new_dir[0] + old_dir[1]* new_dir[1]
-    skOldAct = old_dir[0]* act_dir[0] + old_dir[1]* act_dir[1]
-    length_old_dir = sqrt(pow(old_dir[0],2)+pow(old_dir[1],2))
-    length_new_dir = sqrt(pow(new_dir[0],2)+pow(new_dir[1],2))
-    length_act_dir = sqrt(pow(act_dir[0],2)+pow(act_dir[1],2))
-    if length_act_dir > 0 and length_old_dir > 0:
-        angleactold = acos(min(abs(skOldAct) / (length_old_dir * length_act_dir),1))
+def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetPosition, targetSize):
+    old_beeline = targetPosition[0] -oldCursorPos[0] , targetPosition[1] -oldCursorPos[1]
+    new_beeline = targetPosition[0] -actCursorPos[0] , targetPosition[1] -actCursorPos[1]
+    movement = actCursorPos[0] - oldCursorPos[0] , actCursorPos[1]- oldCursorPos[1]
+    sk_old_new = old_beeline[0]* new_beeline[0] + old_beeline[1]* new_beeline[1]
+    sk_old_mvt = old_beeline[0]* movement[0] + old_beeline[1]* movement[1]
+    length_old_beeline = sqrt(pow(old_beeline[0],2)+pow(old_beeline[1],2))
+    length_new_beeline = sqrt(pow(new_beeline[0],2)+pow(new_beeline[1],2))
+    length_movement = sqrt(pow(movement[0],2)+pow(movement[1],2))
+    if length_movement > 0 and length_old_beeline > 0:
+        angle_atStart = np.abs(np.rad2deg(acos(min(abs(sk_old_mvt) / (length_old_beeline * length_movement),1))))
     else:
-        angleactold = None
-    if length_old_dir > 0 and length_new_dir >0:
-        angleoldnew =acos(min(abs(skOldNew) / (length_old_dir*length_new_dir),1))
+        angle_atStart = 0
+    if length_old_beeline > 0 and length_new_beeline >0:
+        angle_atTarget =np.abs(np.rad2deg(acos(min(abs(sk_old_new) / (length_old_beeline*length_new_beeline),1))))
     else:
-        angleoldnew = None
-    print(angleactold, angleoldnew)
-
+        angle_atTarget = 0
+    #print(angle_atStart, angle_atTarget)
+    #print((angle_atStart+angle_atTarget) + 10/log2(distance+1.01) * max(0.0001, 1/abs(olddistance-distance)))
