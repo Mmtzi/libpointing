@@ -44,7 +44,7 @@ def plot_regression_line(x, y, b):
     # function to show plot
     plt.show()
 
-def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetPosition, targetSize):
+def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetPosition, targetSize, time):
     old_beeline = targetPosition[0] -oldCursorPos[0] , targetPosition[1] -oldCursorPos[1]
     new_beeline = targetPosition[0] -actCursorPos[0] , targetPosition[1] -actCursorPos[1]
     movement = actCursorPos[0] - oldCursorPos[0] , actCursorPos[1]- oldCursorPos[1]
@@ -61,5 +61,18 @@ def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetP
         angle_atTarget =np.abs(np.rad2deg(acos(min(abs(sk_old_new) / (length_old_beeline*length_new_beeline),1))))
     else:
         angle_atTarget = 0
-    #print(angle_atStart, angle_atTarget)
-    #print((angle_atStart+angle_atTarget) + 10/log2(distance+1.01) * max(0.0001, 1/abs(olddistance-distance)))
+    distFkt = pow(log2(distance/100+1.01)+1,2)
+
+    movement = length_old_beeline-length_new_beeline
+    if (movement) <= 0:
+        movementToTargetPenalty = abs(length_old_beeline-length_new_beeline)
+    else:
+        movementToTargetPenalty = 1 / (length_old_beeline-length_new_beeline)
+    movementToTargetPenalty = movementToTargetPenalty*distFkt
+
+    print("angleAtStart: "+str(round(angle_atStart,2)) + "  angleAtTarget: "+str(round(angle_atTarget,2)) +"  distance: "+str(round(distance,2))
+                + "  distFkt: "+str(round(distFkt,2)) +"  rx: "+str(round(actCursorPos[0]-oldCursorPos[0],2)) + "  ry: "+str(round(actCursorPos[1]- oldCursorPos[1],2))
+                + "  movement2target: "+str(round(movementToTargetPenalty,2))+ "  size: "+str(targetSize)+ "  time: "+str(time))
+    score = round(angle_atStart/distFkt+ angle_atTarget *distFkt + movementToTargetPenalty*log2(targetSize)+1,2)
+
+    print(score)

@@ -1,8 +1,10 @@
 from keras.models import Sequential, load_model, Model
-from keras.layers import Dense, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten
+from keras.layers import Dense, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
 from keras.optimizers import Adam
 from keras import regularizers
 from keras.layers.recurrent import LSTM, GRU
+from keras.callbacks import TensorBoard
+import tensorboard
 from numpy import genfromtxt
 from sklearn.datasets import make_regression
 from sklearn.preprocessing import MinMaxScaler
@@ -30,6 +32,7 @@ class Simulator(Thread):
         #labelLists
         self.labelDxDyList = [] #x*2
         self.labelButtonList = [] #x*1
+        self.validData = genfromtxt('thesis\\logData\\myValData.csv', delimiter=',', skip_header=1)
         super().__init__()
 
     def run(self):
@@ -45,15 +48,15 @@ class Simulator(Thread):
 
         # load or define the model
 
-        if os.path.exists('ml\\models/sim_lstm_fitg_20dx_20dist_sizeo.h5'):
-            model = load_model('ml\\models/sim_lstm_fitg_20dx_20dist_sizeo.h5')
+        if os.path.exists('ml\\models/sim_tconv_fitg_20dx_20dist_sizeo.h5'):
+            model = load_model('ml\\models/sim_tconv_fitg_20dx_20dist_sizeo.h5')
             print("loaded model")
         else:
-            timeInput = Input(shape=(20, 4) , dtype='float32', name='timeInput')
-            lstm = LSTM(20)(timeInput)
-            #flat = Flatten()(lstm)
+            timeInput = Input(shape=(None, 20,4, 1) , dtype='float32', name='timeInput')
+            conv = TimeDistributed(Conv2D(32, (2,2), strides=1 , padding='same', activation='relu'))(timeInput)
+            flat = Flatten()(conv)
             sizeInput = Input(shape=(1,), name='sizeInput')
-            x = concatenate([lstm, sizeInput])
+            x = concatenate([flat, sizeInput])
             x = Dense(20, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(x)
             outDxDy = Dense(2, activation='linear')(x)
             outButton = Dense(1, activation='sigmoid')(x)
@@ -65,13 +68,13 @@ class Simulator(Thread):
         #fit_generator as long as dataqueue has enough elements, always create a new input set from which generator chooses random samples
         #while self.dataQueue.qsize() >= self.batchSize:
         #    print(self.dataQueue.qsize())
-        model.fit_generator(self.generator(),
+        model.fit_generator(generator=self.generator(),
                             steps_per_epoch=500000/self.batchSize,
-                            nb_epoch=50, verbose=1)
+                            nb_epoch=50, verbose=1, validation_data=self.validGenerator(), validation_steps=50000/self.batchSize)
 
 
         # model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-        model.save('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5')
+        model.save('ml\\models\\sim_tconv_fitg_20dx_20dist_sizeo.h5')
 
         #model.predict_generator(self.validGenerator(self.pastTSInputList, self.sizeInputList, self.batchSize), verbose=2)
 
@@ -92,7 +95,7 @@ class Simulator(Thread):
                 batchsample = np.array(l[start : start + self.pastTimeSteps + 1])
                 #print(batchsample.shape)
 
-                batch_pointSize.append(batchsample[20, 14])
+                batch_pointSize.append(batchsample[19, 14])
                 #print("sizeShape:"+str(np.array(batch_pointSize).shape))
 
                 batch_button.append(batchsample[20, 2])
@@ -103,6 +106,33 @@ class Simulator(Thread):
                 #print(batchsample[:20, [0,1,8,9]], batchsample[20, [0,1]])
                 batch_dxdy.append(batchsample[20, [0,1]])
                 #print("dxdyShappe:"+str(np.array(batch_dxdy).shape))
+
+            yield [np.array(pastTSInputList), np.array(batch_pointSize)], [np.array(batch_dxdy), np.array(batch_button)]
+
+
+    def validGenerator(self):
+        l = list(self.validData)
+        while True:
+            pastTSInputList = []
+            batch_pointSize = []
+            batch_dxdy = []
+            batch_button = []
+            for i in range(self.batchSize):
+                start = randint(0, len(l) - self.pastTimeSteps - 1)
+                batchsample = np.array(l[start: start + self.pastTimeSteps + 1])
+                # print(batchsample.shape)
+
+                batch_pointSize.append(batchsample[19, 14])
+                # print("sizeShape:"+str(np.array(batch_pointSize).shape))
+
+                batch_button.append(batchsample[20, 2])
+                # print("buttonShape:"+str(np.array(batch_button).shape))
+
+                pastTSInputList.append(batchsample[:20, [0, 1, 8, 9]])
+                # print("pastTSSape:"+str(np.array(pastTSInputList).shape))
+                # print(batchsample[:20, [0,1,8,9]], batchsample[20, [0,1]])
+                batch_dxdy.append(batchsample[20, [0, 1]])
+                # print("dxdyShappe:"+str(np.array(batch_dxdy).shape))
 
             yield [np.array(pastTSInputList), np.array(batch_pointSize)], [np.array(batch_dxdy), np.array(batch_button)]
 
@@ -170,7 +200,7 @@ class Simulator(Thread):
 
 
     # TODO not done jet
-    def validGenerator(self, pastTSInputList, sizeInputList, batch_size):
+    def validGenerator2(self, pastTSInputList, sizeInputList, batch_size):
 
         # Create empty arrays to contain batch of features and labels#
 

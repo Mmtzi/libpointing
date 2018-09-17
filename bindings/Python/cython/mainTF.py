@@ -10,9 +10,9 @@ def main():
     simuQueue = Queue()
     actorQueueUser = Queue()
     actorQueueSimu = Queue()
-    #trainSimThread = trainSimulator(simuQueue)
-    #gameThread = collectData(simuQueue, actorQueueUser)
-    testSimThread = testSimulator(actorQueueSimu)
+    trainSimThread = trainSimulator(simuQueue)
+    gameThread = collectData(simuQueue, actorQueueUser)
+    #testSimThread = testSimulator(actorQueueSimu)
 
 def collectData(dataQueue, actorQueue):
     try:

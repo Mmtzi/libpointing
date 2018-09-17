@@ -125,7 +125,7 @@ class Game(Thread):
             self.mySampleData.append(sampleSimu)
             self.queueSimu.put(sampleSimu)
             self.queueActor.put(sampleActor)
-            calcScore.calcScoreOfAction(self.getCursorPos(), self.pastCursorPos, distance, self.pastDistance, self.targetPosition, self.pointSize)
+            calcScore.calcScoreOfAction(self.getCursorPos(), self.pastCursorPos, distance, self.pastDistance, self.targetPosition, self.pointSize, self.newTimestamp)
             self.pastCursorPos = self.getCursorPos()
             self.pastDistance = distance
         sys.stdout.flush()

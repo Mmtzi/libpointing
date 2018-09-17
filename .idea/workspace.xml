@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_dense_fitg_20dx_20dist_sizeo.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_dense_fitg_20dx_20dist_sizeo.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_lstm_fitg_20dx_20dist_sizeo.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_lstm_fitg_20dx_20dist_sizeo.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" afterDir="false" />
     </list>
@@ -20,7 +20,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame__1_.coverage" NAME="myFitsLawGame (1) Coverage Results" MODIFIED="1534260531203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$consoleExample__1_.coverage" NAME="consoleExample (1) Coverage Results" MODIFIED="1529491121421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/libpointingjs/libpointing-1.0.7/libpointing-1.0.7/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1536930523297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1537199322729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$kerasTest__1_.coverage" NAME="kerasTest (1) Coverage Results" MODIFIED="1530706565950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/TensorFlow" />
     <SUITE FILE_PATH="coverage/libpointing$SimulatorTest.coverage" NAME="SimulatorTest Coverage Results" MODIFIED="1536161950329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$myActorCritic.coverage" NAME="myActorCritic Coverage Results" MODIFIED="1533809843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
@@ -40,7 +40,7 @@
     <SUITE FILE_PATH="coverage/libpointing$consoleExample.coverage" NAME="consoleExample Coverage Results" MODIFIED="1536574629747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$actorCriticTest.coverage" NAME="actorCriticTest Coverage Results" MODIFIED="1533805070386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$testAdv.coverage" NAME="testAdv Coverage Results" MODIFIED="1533558525769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
-    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1536580385428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1537179383638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrTest.coverage" NAME="lrTest Coverage Results" MODIFIED="1533552448074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrNewTest.coverage" NAME="lrNewTest Coverage Results" MODIFIED="1533558213359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
   </component>
@@ -66,8 +66,8 @@
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="17" />
-          <entry key="project.open.time.5" value="6" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.open.time.5" value="7" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,7 +75,7 @@
           <entry key="groovy" value="1" />
           <entry key="ideas" value="1" />
           <entry key="pxd" value="1" />
-          <entry key="py" value="35" />
+          <entry key="py" value="40" />
           <entry key="pyx" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -85,7 +85,7 @@
           <entry key="Python Console" value="342" />
           <entry key="dummy" value="52" />
           <entry key="ideas" value="788" />
-          <entry key="py" value="18986" />
+          <entry key="py" value="20443" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -93,14 +93,14 @@
         <counts>
           <entry key="Cython" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="35" />
+          <entry key="Python" value="40" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="840" />
-          <entry key="Python" value="19328" />
+          <entry key="Python" value="20785" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -112,39 +112,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="2159">
+              <caret line="127" column="164" selection-start-line="127" selection-start-column="164" selection-end-line="127" selection-end-column="164" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
-                <marker date="1536840457373" expanded="true" signature="1726:1727" ph="..." />
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1537190836509" expanded="true" signature="5155:5161" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="127" column="67" selection-start-line="127" selection-start-column="67" selection-end-line="127" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1536916038355" expanded="true" signature="5136:5142" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="261" column="72" selection-start-line="261" selection-start-column="72" selection-end-line="261" selection-end-column="72" />
+            <state relative-caret-position="153">
+              <caret line="198" column="35" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1536930536514" expanded="true" signature="1791:2978" ph="..." />
+                <marker date="1537187925046" expanded="true" signature="1789:2976" ph="..." />
               </folding>
             </state>
           </provider>
@@ -153,11 +140,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-282">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1536930350766" expanded="true" signature="1542:1853" ph="..." />
+                <marker date="1537192736548" expanded="true" signature="1541:1852" ph="..." />
               </folding>
             </state>
           </provider>
@@ -172,32 +159,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-531">
-              <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+            <state relative-caret-position="353">
+              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
+                <marker date="1537199316514" expanded="true" signature="4867:5998" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_utils.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2159">
-              <caret line="136" selection-start-line="136" selection-end-line="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_generator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3179">
-              <caret line="201" selection-start-line="201" selection-end-line="201" />
+            <state relative-caret-position="218">
+              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -205,8 +187,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            <state relative-caret-position="554">
+              <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -281,7 +275,6 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/a3c.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/a3cTest.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/models/mya3c.py" />
@@ -289,11 +282,12 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/ideas" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/actorTF.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
       </list>
     </option>
   </component>
@@ -608,8 +602,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calcScore" />
         <item itemvalue="Python.Test" />
+        <item itemvalue="Python.calcScore" />
         <item itemvalue="Python.consoleExample" />
         <item itemvalue="Python tests.Unittests in mainTF.py" />
         <item itemvalue="Python.simpleLRwithoutScale" />
@@ -639,13 +633,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1977612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.30980393" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.30980393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -678,12 +673,14 @@
           <url>file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/__init__.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/envs/registration.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/core.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/wrappers/time_limit.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/envs/mujoco/inverted_pendulum.py" />
@@ -711,13 +708,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyautogui/__init__.py" />
     <entry file="file://F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython/myFitsLawGame.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/layers/recurrent.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bindings/__init__.py" />
     <entry file="file://$PROJECT_DIR$/bindings/Python/__init__.py" />
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
@@ -768,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/a3cTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -785,13 +768,6 @@
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/models/mya3c.py" />
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/TODO.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/ideas">
       <provider selected="true" editor-type-id="text-editor">
@@ -821,26 +797,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_utils.py">
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3179">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="1003">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1536840457373" expanded="true" signature="1726:1727" ph="..." />
           </folding>
         </state>
       </provider>
@@ -852,34 +815,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="127" column="67" selection-start-line="127" selection-start-column="67" selection-end-line="127" selection-end-column="67" />
+        <state relative-caret-position="340">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1536916038355" expanded="true" signature="5136:5142" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-531">
-          <caret line="54" column="37" lean-forward="true" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1536840457373" expanded="true" signature="1726:1727" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -891,24 +832,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-282">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1536930350766" expanded="true" signature="1542:1853" ph="..." />
-          </folding>
+        <state relative-caret-position="619">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="261" column="72" selection-start-line="261" selection-start-column="72" selection-end-line="261" selection-end-column="72" />
+        <state relative-caret-position="153">
+          <caret line="198" column="35" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1536930536514" expanded="true" signature="1791:2978" ph="..." />
+            <marker date="1537187925046" expanded="true" signature="1789:2976" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/core/framework/graph_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/lrTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="127" column="164" selection-start-line="127" selection-start-column="164" selection-end-line="127" selection-end-column="164" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1537190836509" expanded="true" signature="5155:5161" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1537192736548" expanded="true" signature="1541:1852" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1537199316514" expanded="true" signature="4867:5998" ph="..." />
           </folding>
         </state>
       </provider>
