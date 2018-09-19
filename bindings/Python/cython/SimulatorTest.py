@@ -20,9 +20,10 @@ from pylibpointing import PointingDevice, DisplayDevice, TransferFunction
 from pylibpointing import PointingDeviceManager, PointingDeviceDescriptor
 
 class SimTest(Thread):
-    def __init__(self, qactor):
+    def __init__(self, qactor, modelname):
         super().__init__()
         # used transferfunction
+        self.modelname = modelname
         self.tf = "system:?slider=1&epp=false"
         # alias for tf name, include dpi and samplerate
         self.tf_short = "system_1_false_easy_1800_125"
@@ -53,15 +54,15 @@ class SimTest(Thread):
         self.actorQueue = qactor
 
         print("loading model...")
-        if os.path.exists('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5'):
+        if os.path.exists('ml\\models\\'+str(self.modelname)):
             try:
-                self.model = load_model('ml\\models\\sim_lstm_fitg_20dx_20dist_sizeo.h5')
+                self.model = load_model('ml\\models\\'+str(self.modelname))
                 self.model._make_predict_function()
-                print("loaded model")
+                print("loaded model: "+str(self.modelname))
             except:
-                print("couldnt load model")
+                print("couldnt load model: "+str(self.modelname))
         else:
-            print("couldnt find model")
+            print("couldnt find model: "+str(self.modelname))
 
     def run(self):
 
@@ -187,23 +188,23 @@ class SimTest(Thread):
                 sizeInput =[]
                 sizeInput.append(self.pointSize)
                 sizeInput = np.array(sizeInput)
-                print(timeSeries, sizeInput)
+                #print(timeSeries, sizeInput)
                 #predict next output with the data from the past 20 timesteps
                 predictionsDxDy, predictButton = self.model.predict([timeSeries, sizeInput])
 
-                if predictionsDxDy[0][0] >0:
-                    pdx = int(math.ceil(predictionsDxDy[0][0]))
-                else:
-                    pdx = int(math.floor(predictionsDxDy[0][0]))
-                if predictionsDxDy[0][1] >0:
-                    pdy = int(math.ceil(predictionsDxDy[0][1]))
-                else:
-                    pdy = int(math.floor(predictionsDxDy[0][1]))
+                # if predictionsDxDy[0][0] >0:
+                #     pdx = int(math.ceil(predictionsDxDy[0][0]))
+                # else:
+                #     pdx = int(math.floor(predictionsDxDy[0][0]))
+                # if predictionsDxDy[0][1] >0:
+                #     pdy = int(math.ceil(predictionsDxDy[0][1]))
+                # else:
+                #     pdy = int(math.floor(predictionsDxDy[0][1]))
 
                 #output
-                # pdx = int(round(predictionsDxDy[0][0],0))
-                # pdy = int(round(predictionsDxDy[0][1],0))
-                self.button = round(predictButton[0][0],0)
+                pdx = int(round(predictionsDxDy[0][0],0))
+                pdy = int(round(predictionsDxDy[0][1],0))
+                self.button = round(predictButton[0][0],2)
 
                 #useTF on output
                 prx, pry = self.tfct.applyd(pdx, pdy, 0)
@@ -245,7 +246,7 @@ class SimTest(Thread):
 
                 self.actorQueue.put(self.writeline)
 
-                #print(pdx, pdy, self.button)
+                print(pdx, pdy, self.pastDir[0], self.pastDir[1], self.button)
 
                 self.pastList.pop(0)
                 self.pastList.pop(0)

@@ -173,7 +173,11 @@ class Game(Thread):
 
                     self.screen.fill((255, 255, 255))
                     self.screen.blit(self.cursor.image, self.cursor.pos)
-
+                    self.mySampleData = []
+                    for i in range (0,20):
+                        self.mySampleData.append((0, 0, 0, 0, 0, 0, self.pastDistance, self.targetID, self.lastDir[0], self.lastDir[1],
+                                              self.targetPosition[0], self.targetPosition[1],
+                                              self.initCursorPos[0], self.initCursorPos[1], self.pointSize)*20)
                     if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
                         self.PLAY = True
                         self.START = False

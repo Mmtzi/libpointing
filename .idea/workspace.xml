@@ -8,8 +8,390 @@
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_lstm_fitg_20dx_20dist_sizeo.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_lstm_fitg_20dx_20dist_sizeo.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_dense_fitg_20dx_20dist_sizeo.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/sim_dense_fitg_20dx_20dist_sizeo.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-124111.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-124201.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-124233.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-124500.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-124537.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-124638.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-131738.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-131805.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-132044.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-132055.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-132242.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-132253.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-132318.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133016.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133121.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133138.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133429.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133805.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133823.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133839.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-133953.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-134025.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-134043.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-134054.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-134148.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-134234.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-152833.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-153016.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-153554.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-153604.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-153627.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-154247.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-154834.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-154931.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155028.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155404.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155515.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155708.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155723.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155802.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155845.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-155954.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-161440.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-161501.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-161642.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-161708.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/mouseData_timestamp20180702-165002.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_false_easymouseData_timestamp20180705-113825.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_false_easymouseData_timestamp20180705-114002.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180719-134221.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180719-134759.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808-130017.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808-130033.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808-130443.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808-130458.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808132535.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808132542.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808141018.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808141217.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142049.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142115.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142148.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142221.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142312.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142505.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142652.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808142714.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151306.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151315.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151542.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151618.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151645.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151857.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808151918.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808152134.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808152212.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808152935.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808153911.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808153948.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808154205.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808154329.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808154452.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808154527.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808154550.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808162131.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808162249.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808162614.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808162746.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808162750.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808162909.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808163007.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808163016.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180808163043.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809153455.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809153516.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809153744.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809153837.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809153905.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809154010.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809154203.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809154718.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809155212.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809155250.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809155347.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809155604.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809163439.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809163918.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164029.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164154.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164548.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164639.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164711.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164808.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164852.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180809164929.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813144800.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813150857.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813151122.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813151225.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813151355.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813151637.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180813151721.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815135257.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815135331.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815140214.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815140250.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815140430.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815142152.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815143921.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815144004.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815144042.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815144157.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815144429.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815144539.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815145049.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815145157.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815151507.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815153541.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815154009.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815154416.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815154457.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815161029.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815161134.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815161604.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815163012.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815163317.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815163423.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815163540.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815180458.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815180617.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815181030.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815181242.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815181759.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180815182223.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180821115428.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180821115515.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180821152712.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180821152826.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180821153053.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180821153215.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822135435.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822140754.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822141131.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822141229.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822141718.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822142348.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822145839.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822150102.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822150613.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822151505.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822152125.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822153929.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822154657.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822154806.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822154953.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822155303.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822155453.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822155939.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822160358.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822160422.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822160504.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822160818.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822161115.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822161128.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822161153.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822161221.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822161233.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822161441.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822162011.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822162311.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822162326.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822162433.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180822165415.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823105825.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823105901.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823110011.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823110319.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823114919.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823115008.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823115354.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823115435.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823121217.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823122434.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823123645.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823150032.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823150432.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823151523.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823151621.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823151800.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180823151949.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824101920.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824113359.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824114105.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824114615.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824115809.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824115916.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824120156.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824120256.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824120535.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824124701.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824125926.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824130905.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824131024.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824131140.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824131326.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824131745.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824132646.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824152814.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824153138.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824153551.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824154448.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824154522.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824155152.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824155737.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824160000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824160705.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824161107.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824161321.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824161740.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824164519.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824165004.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824165053.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824165330.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824165643.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824165731.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824171356.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824171511.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824171759.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824172335.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824172506.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824172711.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824172803.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824172937.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824173226.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824173420.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824173546.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824173859.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824174354.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824174753.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180824174827.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827110452.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827110527.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827110843.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827111102.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827111224.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827111447.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827111612.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827111710.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827112017.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827113315.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827134955.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827135118.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827135326.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827135849.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827140521.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827140642.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827141748.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827141922.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827142207.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827143408.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827143434.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827143645.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827143712.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827143936.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827144500.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827144717.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827145057.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827145243.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827145327.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827145810.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827145905.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827150016.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827150116.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827150223.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827150707.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827150812.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827151811.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827152253.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827152545.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827153521.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180827154519.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829141055.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829141454.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829145325.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829145444.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829145858.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829145953.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829155445.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180829155545.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830113442.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830113608.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830114418.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830115554.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830120109.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830120655.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830121142.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830122144.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830122425.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830123348.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830125242.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830125509.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830125903.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830130701.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830130912.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830131209.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830131534.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830151641.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830155339.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830155637.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830155846.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830162059.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830162303.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180830162516.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903110831.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903111048.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903111400.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903111634.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903120319.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903121218.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903121713.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903123453.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903123736.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903131711.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903131958.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903132231.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903133749.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903134403.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903135037.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903135322.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903135535.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903140556.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903141149.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903141818.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903142513.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903142727.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903142938.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903150226.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903150437.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903150743.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903152658.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_500mouseData_timestamp20180719-134031.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-112602.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-112829.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-112927.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-113104.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-113207.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-113334.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-113506.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-113845.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-114240.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-114324.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-115016.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_truemouseData_timestamp20180704-115528.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903160448.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180906105407.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180906105822.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907114905.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_true_easymouseData_timestamp20180705-114318.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_true_easymouseData_timestamp20180705-114327.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_true_easymouseData_timestamp20180705-114657.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_2_false_easymouseData_timestamp20180705-114143.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +402,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame__1_.coverage" NAME="myFitsLawGame (1) Coverage Results" MODIFIED="1534260531203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$consoleExample__1_.coverage" NAME="consoleExample (1) Coverage Results" MODIFIED="1529491121421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/libpointingjs/libpointing-1.0.7/libpointing-1.0.7/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1537199322729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1537373713157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$kerasTest__1_.coverage" NAME="kerasTest (1) Coverage Results" MODIFIED="1530706565950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/TensorFlow" />
     <SUITE FILE_PATH="coverage/libpointing$SimulatorTest.coverage" NAME="SimulatorTest Coverage Results" MODIFIED="1536161950329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$myActorCritic.coverage" NAME="myActorCritic Coverage Results" MODIFIED="1533809843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
@@ -37,10 +419,10 @@
     <SUITE FILE_PATH="coverage/libpointing$tfFunctionWriter.coverage" NAME="tfFunctionWriter Coverage Results" MODIFIED="1530533405809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/thesis" />
     <SUITE FILE_PATH="coverage/libpointing$pendulum.coverage" NAME="pendulum Coverage Results" MODIFIED="1533812894845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$Unittests_in_mainTF_py.coverage" NAME="Unittests in mainTF.py Coverage Results" MODIFIED="1536225433480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$consoleExample.coverage" NAME="consoleExample Coverage Results" MODIFIED="1536574629747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$consoleExample.coverage" NAME="consoleExample Coverage Results" MODIFIED="1537346218372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$actorCriticTest.coverage" NAME="actorCriticTest Coverage Results" MODIFIED="1533805070386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$testAdv.coverage" NAME="testAdv Coverage Results" MODIFIED="1533558525769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
-    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1537179383638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1537361625811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrTest.coverage" NAME="lrTest Coverage Results" MODIFIED="1533552448074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrNewTest.coverage" NAME="lrNewTest Coverage Results" MODIFIED="1533558213359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
   </component>
@@ -62,12 +444,13 @@
     <session id="1566594586">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="17" />
+          <entry key="project.open.time.4" value="18" />
           <entry key="project.open.time.5" value="7" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,7 +458,7 @@
           <entry key="groovy" value="1" />
           <entry key="ideas" value="1" />
           <entry key="pxd" value="1" />
-          <entry key="py" value="40" />
+          <entry key="py" value="63" />
           <entry key="pyx" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -85,7 +468,7 @@
           <entry key="Python Console" value="342" />
           <entry key="dummy" value="52" />
           <entry key="ideas" value="788" />
-          <entry key="py" value="20443" />
+          <entry key="py" value="22994" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -93,14 +476,14 @@
         <counts>
           <entry key="Cython" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="40" />
+          <entry key="Python" value="63" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="840" />
-          <entry key="Python" value="20785" />
+          <entry key="Python" value="23336" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -114,11 +497,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2159">
-              <caret line="127" column="164" selection-start-line="127" selection-start-column="164" selection-end-line="127" selection-end-column="164" />
+            <state relative-caret-position="2105">
+              <caret line="177" column="39" selection-start-line="177" selection-start-column="39" selection-end-line="177" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1537190836509" expanded="true" signature="5155:5161" ph="..." />
+                <marker date="1537361977213" expanded="true" signature="5155:5161" ph="..." />
               </folding>
             </state>
           </provider>
@@ -127,24 +510,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="198" column="35" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
+            <state relative-caret-position="280">
+              <caret line="247" lean-forward="true" selection-start-line="247" selection-end-line="247" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1537187925046" expanded="true" signature="1789:2976" ph="..." />
+                <marker date="1537372239251" expanded="true" signature="1873:3060" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            <state relative-caret-position="391">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1537192736548" expanded="true" signature="1541:1852" ph="..." />
+                <marker date="1537373943396" expanded="true" signature="2388:2699" ph="..." />
               </folding>
             </state>
           </provider>
@@ -153,66 +536,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
+            <state relative-caret-position="363">
+              <caret line="191" column="46" lean-forward="true" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+            <state relative-caret-position="444">
+              <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1537199316514" expanded="true" signature="4867:5998" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="67" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/math.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -266,7 +603,6 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/envExample.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/envi.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/mainTF.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/myFitsLawGame.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/__init__.py" />
@@ -282,12 +618,13 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/ideas" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/actorTF.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
       </list>
     </option>
   </component>
@@ -306,8 +643,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="2220" />
+    <option name="y" value="139" />
     <option name="width" value="974" />
     <option name="height" value="1167" />
   </component>
@@ -316,6 +653,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,7 +716,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -603,8 +940,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Test" />
-        <item itemvalue="Python.calcScore" />
         <item itemvalue="Python.consoleExample" />
+        <item itemvalue="Python.calcScore" />
         <item itemvalue="Python tests.Unittests in mainTF.py" />
         <item itemvalue="Python.simpleLRwithoutScale" />
       </list>
@@ -632,15 +969,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415778" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.30980393" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -681,21 +1018,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/core.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/wrappers/time_limit.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/gym/envs/mujoco/inverted_pendulum.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/numpy/ma/core.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/sklearn/preprocessing/data.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/h5py/__init__.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/models.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pygame/examples/aliens.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/layers/core.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -733,21 +1055,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/base_layer.py" />
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/merge.py" />
     <entry file="file://C:/Program Files/Python36/Lib/tkinter/__init__.py" />
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training.py" />
     <entry file="file://C:/Program Files/Python36/Lib/csv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/consoleExample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -801,34 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1536840457373" expanded="true" signature="1726:1727" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/math.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -846,31 +1131,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="198" column="35" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1537187925046" expanded="true" signature="1789:2976" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/core/framework/graph_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="77" column="4" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,31 +1150,30 @@
         <state relative-caret-position="-357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/numpy/core/multiarray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2159">
-          <caret line="127" column="164" selection-start-line="127" selection-start-column="164" selection-end-line="127" selection-end-column="164" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1537190836509" expanded="true" signature="5155:5161" ph="..." />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="5708" column="4" selection-start-line="5708" selection-start-column="4" selection-end-line="5708" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1537192736548" expanded="true" signature="1541:1852" ph="..." />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="1039" selection-start-line="1039" selection-end-line="1039" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/consoleExample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="85">
           <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="67" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
@@ -918,13 +1181,136 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/input_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-190">
+          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/math.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="1112" column="8" selection-start-line="1112" selection-start-column="8" selection-end-line="1112" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="191" column="46" lean-forward="true" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/framework/tensor_shape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="827" selection-start-line="827" selection-end-line="827" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/backend/tensorflow_backend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="3564" selection-start-line="3564" selection-end-line="3564" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="247" selection-start-line="247" selection-end-line="247" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/base_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="456" selection-start-line="456" selection-end-line="456" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="247" lean-forward="true" selection-start-line="247" selection-end-line="247" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1537372239251" expanded="true" signature="1873:3060" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2105">
+          <caret line="177" column="39" selection-start-line="177" selection-start-column="39" selection-end-line="177" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1537361977213" expanded="true" signature="5155:5161" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/convolutional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="324" column="32" selection-start-line="324" selection-start-column="32" selection-end-line="324" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+        <state relative-caret-position="444">
+          <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
-            <marker date="1537199316514" expanded="true" signature="4867:5998" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1537373943396" expanded="true" signature="2388:2699" ph="..." />
           </folding>
         </state>
       </provider>

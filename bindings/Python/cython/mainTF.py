@@ -2,17 +2,35 @@ import _thread
 import myFitsLawGame, SimulatorTest
 from ml import advLR, recurrentSim, actorTF
 from queue import Queue
+from numpy import genfromtxt
+from glob import glob
+from random import shuffle
+import os
 #import itertools,collections
 import time
 
 def main():
+    modelname="sim_tconvAdv_fitg_20dx_20dist_sizeo.h5"
     #dataQueue with sample data from fitsLawGame, every Thread has Acces to
     simuQueue = Queue()
     actorQueueUser = Queue()
     actorQueueSimu = Queue()
-    trainSimThread = trainSimulator(simuQueue)
-    gameThread = collectData(simuQueue, actorQueueUser)
-    #testSimThread = testSimulator(actorQueueSimu)
+    trainAll = True
+    i=0
+    while trainAll and i <10:
+        allCSVData = glob('thesis/logData/adaptive/system*.csv')
+        shuffle(allCSVData)
+        for each in allCSVData:
+            if os.path.getsize(each) >400000:
+                trainingSet = genfromtxt(each, delimiter=',', skip_header=1)
+                print(each, trainingSet.shape)
+                myTrainThread = trainSimulator(simuQueue, trainingSet, modelname)
+                time.sleep(10)
+        time.sleep(30)
+        i+=1
+    #trainSimThread = trainSimulator(simuQueue, trainingSet, modelname)
+    #gameThread = collectData(simuQueue, actorQueueUser)
+    testSimThread = testSimulator(actorQueueSimu, modelname)
 
 def collectData(dataQueue, actorQueue):
     try:
@@ -28,20 +46,24 @@ def collectData(dataQueue, actorQueue):
 
 
 
-def trainSimulator(dataQueue):
+def trainSimulator(dataQueue, trainingSet, modelname):
     try:
-        print("trying to init Simulator thread")
-        simulatorThread = advLR.Simulator(dataQueue)
-        print("trying to start Simulator thread")
+        print("trying to init TrainSimulator thread")
+        simulatorThread = advLR.Simulator(dataQueue, trainingSet, modelname)
+        print("trying to start TrainSimulator thread")
         simulatorThread.start()
-        print("Simulator thread started")
+        print("TrainSimulator thread started")
     except:
-        print("unable to start Simulator thread")
+        print("unable to start TrainSimulator thread")
+        return
 
-def testSimulator(actorQueue):
+    if trainingSet.size !=0:
+        simulatorThread.join()
+
+def testSimulator(actorQueue, modelname):
     try:
         print("trying to init SimTest thread")
-        simTestThread = SimulatorTest.SimTest(actorQueue)
+        simTestThread = SimulatorTest.SimTest(actorQueue, modelname)
         print("trying to start SimTest thread")
         simTestThread.start()
         print("SimTest thread started")

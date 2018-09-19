@@ -67,10 +67,12 @@ class ActorCritic:
     # ========================================================================= #
 
     def create_actor_model(self):
+        #dx,dy, button, posx, posy, distx, disty, targetx, targety, size, time,
         state_input = Input(shape=self.env.observation_space.shape)
         h1 = Dense(24, activation='relu')(state_input)
         h2 = Dense(48, activation='relu')(h1)
         h3 = Dense(24, activation='relu')(h2)
+        #rx,ry
         output = Dense(self.env.action_space.shape[0], activation='relu')(h3)
 
         model = Model(input=state_input, output=output)

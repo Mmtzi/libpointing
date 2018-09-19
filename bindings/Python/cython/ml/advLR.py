@@ -1,5 +1,5 @@
 from keras.models import Sequential, load_model, Model
-from keras.layers import Dense, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
+from keras.layers import Dense, Reshape, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
 from keras.optimizers import Adam
 from keras import regularizers
 from keras.layers.recurrent import LSTM, GRU
@@ -9,6 +9,7 @@ from numpy import genfromtxt
 from sklearn.datasets import make_regression
 from sklearn.preprocessing import MinMaxScaler
 from thesis import plotData
+from keras import backend as K
 import os
 import numpy as np
 from threading import Thread
@@ -19,8 +20,10 @@ from random import randint
 
 
 class Simulator(Thread):
-    def __init__(self, q):
+    def __init__(self, q, trainingSet, modelname):
         self.dataQueue = q
+        self.trainingSet = trainingSet
+        self.modelname = modelname
         self.sleepInterval = 0.2
         self.pastTimeSteps = 20
         self.batchSize = 128
@@ -42,26 +45,28 @@ class Simulator(Thread):
         sleepTime = 0
 
         #wait till dataqsize > batchsize
-        while self.dataQueue.qsize() <= (self.batchSize):
+        while self.dataQueue.qsize() <= (self.batchSize) and self.trainingSet.size ==0:
             time.sleep(self.sleepInterval)
             sleepTime +=self.sleepInterval
 
         # load or define the model
 
-        if os.path.exists('ml\\models/sim_tconv_fitg_20dx_20dist_sizeo.h5'):
-            model = load_model('ml\\models/sim_tconv_fitg_20dx_20dist_sizeo.h5')
-            print("loaded model")
+        if os.path.exists('ml\\models\\'+str(self.modelname)):
+            model = load_model('ml\\models\\'+str(self.modelname))
+            print("loaded model: "+str(self.modelname))
         else:
-            timeInput = Input(shape=(None, 20,4, 1) , dtype='float32', name='timeInput')
-            conv = TimeDistributed(Conv2D(32, (2,2), strides=1 , padding='same', activation='relu'))(timeInput)
-            flat = Flatten()(conv)
+            print("new model: "+ str(self.modelname))
+            timeInput = Input(shape=(20, 4), dtype='float32', name='timeInput')
+            resh = Reshape((20,4) + (1, ), input_shape=( 20, 4)) (timeInput)
+            tDense = TimeDistributed(Conv1D(128, (4), activation='relu'))(resh)
+            dense = Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(tDense)
+            flat= Flatten() (dense)
             sizeInput = Input(shape=(1,), name='sizeInput')
             x = concatenate([flat, sizeInput])
-            x = Dense(20, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(x)
             outDxDy = Dense(2, activation='linear')(x)
             outButton = Dense(1, activation='sigmoid')(x)
             model=Model([timeInput, sizeInput], [outDxDy, outButton])
-            model.compile(Adam(lr=0.0005), loss=['mse', 'binary_crossentropy'])
+            model.compile(Adam(lr=0.00025), loss=['mse', 'binary_crossentropy'])
 
         model.summary()
 
@@ -69,13 +74,18 @@ class Simulator(Thread):
         #while self.dataQueue.qsize() >= self.batchSize:
         #    print(self.dataQueue.qsize())
         model.fit_generator(generator=self.generator(),
-                            steps_per_epoch=500000/self.batchSize,
-                            nb_epoch=50, verbose=1, validation_data=self.validGenerator(), validation_steps=50000/self.batchSize)
+                            steps_per_epoch=50000/self.batchSize,
+                            epochs=20, verbose=1, validation_data=self.validGenerator(), validation_steps=50000/self.batchSize)
 
 
         # model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
-        model.save('ml\\models\\sim_tconv_fitg_20dx_20dist_sizeo.h5')
+        try:
+            model.save('ml\\models\\'+str(self.modelname))
+            print("saved model: "+str(str(self.modelname)))
+        except:
+            print("couldnt save model: "+str(self.modelname))
 
+        K.clear_session()
         #model.predict_generator(self.validGenerator(self.pastTSInputList, self.sizeInputList, self.batchSize), verbose=2)
 
         #predictedDX, realDX = self.predictTrainData(model)
@@ -83,13 +93,17 @@ class Simulator(Thread):
         #plotData.plotResults(predictedDX, realDX, self.epochs)
 
     def generator(self):
+        print("generateDataSets")
         while True:
-            #print("generateDataSet")
+
             pastTSInputList = []
             batch_pointSize = []
             batch_dxdy = []
             batch_button = []
-            l = list(self.dataQueue.queue)
+            if self.trainingSet.size == 0:
+                l = list(self.dataQueue.queue)
+            else:
+                l = self.trainingSet.tolist()
             for i in range(self.batchSize):
                 start = randint(0, len(l) - self.pastTimeSteps -1)
                 batchsample = np.array(l[start : start + self.pastTimeSteps + 1])

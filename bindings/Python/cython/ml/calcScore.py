@@ -70,9 +70,9 @@ def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetP
         movementToTargetPenalty = 1 / (length_old_beeline-length_new_beeline)
     movementToTargetPenalty = movementToTargetPenalty*distFkt
 
-    print("angleAtStart: "+str(round(angle_atStart,2)) + "  angleAtTarget: "+str(round(angle_atTarget,2)) +"  distance: "+str(round(distance,2))
-                + "  distFkt: "+str(round(distFkt,2)) +"  rx: "+str(round(actCursorPos[0]-oldCursorPos[0],2)) + "  ry: "+str(round(actCursorPos[1]- oldCursorPos[1],2))
-                + "  movement2target: "+str(round(movementToTargetPenalty,2))+ "  size: "+str(targetSize)+ "  time: "+str(time))
-    score = round(angle_atStart/distFkt+ angle_atTarget *distFkt + movementToTargetPenalty*log2(targetSize)+1,2)
+    #print("angleAtStart: "+str(round(angle_atStart,2)) + "  angleAtTarget: "+str(round(angle_atTarget,2)) +"  distance: "+str(round(distance,2))
+                #+ "  distFkt: "+str(round(distFkt,2)) +"  rx: "+str(round(actCursorPos[0]-oldCursorPos[0],2)) + "  ry: "+str(round(actCursorPos[1]- oldCursorPos[1],2))
+                #+ "  movement2target: "+str(round(movementToTargetPenalty,2))+ "  size: "+str(targetSize)+ "  time: "+str(time))
+    #score = round(angle_atStart/distFkt+ angle_atTarget *distFkt + movementToTargetPenalty*log2(targetSize)+1,2)
 
-    print(score)
+    #print(score)
