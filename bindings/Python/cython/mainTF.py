@@ -10,12 +10,14 @@ import os
 import time
 
 def main():
-    modelname="sim_tconvAdv_fitg_20dx_20dist_sizeo.h5"
+    modelname="tdense64dense16_fitg_20dx_20dist_sizeo.h5"
     #dataQueue with sample data from fitsLawGame, every Thread has Acces to
     simuQueue = Queue()
     actorQueueUser = Queue()
     actorQueueSimu = Queue()
     trainAll = True
+    epochs = 10
+    iter=0
     i=0
     while trainAll and i <10:
         allCSVData = glob('thesis/logData/adaptive/system*.csv')
@@ -24,13 +26,15 @@ def main():
             if os.path.getsize(each) >400000:
                 trainingSet = genfromtxt(each, delimiter=',', skip_header=1)
                 print(each, trainingSet.shape)
-                myTrainThread = trainSimulator(simuQueue, trainingSet, modelname)
+                myTrainThread = trainSimulator(simuQueue, trainingSet, modelname, epochs)
+                iter += 1
+                print("number_epochs: "+str(iter*epochs))
                 time.sleep(10)
         time.sleep(30)
         i+=1
     #trainSimThread = trainSimulator(simuQueue, trainingSet, modelname)
     #gameThread = collectData(simuQueue, actorQueueUser)
-    testSimThread = testSimulator(actorQueueSimu, modelname)
+    #testSimThread = testSimulator(actorQueueSimu, modelname)
 
 def collectData(dataQueue, actorQueue):
     try:
@@ -46,10 +50,10 @@ def collectData(dataQueue, actorQueue):
 
 
 
-def trainSimulator(dataQueue, trainingSet, modelname):
+def trainSimulator(dataQueue, trainingSet, modelname, epochs):
     try:
         print("trying to init TrainSimulator thread")
-        simulatorThread = advLR.Simulator(dataQueue, trainingSet, modelname)
+        simulatorThread = advLR.Simulator(dataQueue, trainingSet, modelname, epochs)
         print("trying to start TrainSimulator thread")
         simulatorThread.start()
         print("TrainSimulator thread started")

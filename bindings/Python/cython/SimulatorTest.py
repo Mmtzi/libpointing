@@ -80,7 +80,7 @@ class SimTest(Thread):
 
         # logfilelocation w timestamp
         self.outfile = open(
-            "thesis\\logData\\simTest\\" + self.tf_short + "mouseData_timestamp" + time.strftime(
+            "thesis\\logData\\simTest\\" + self.modelname + "mouseData_timestamp" + time.strftime(
                 "%Y%m%d%H%M%S") + ".csv",
             'w', newline='')
 

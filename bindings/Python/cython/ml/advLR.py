@@ -1,5 +1,5 @@
 from keras.models import Sequential, load_model, Model
-from keras.layers import Dense, Reshape, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
+from keras.layers import Dense,BatchNormalization, Activation, Reshape, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
 from keras.optimizers import Adam
 from keras import regularizers
 from keras.layers.recurrent import LSTM, GRU
@@ -20,13 +20,16 @@ from random import randint
 
 
 class Simulator(Thread):
-    def __init__(self, q, trainingSet, modelname):
+    def __init__(self, q, trainingSet, modelname, epochs):
         self.dataQueue = q
         self.trainingSet = trainingSet
         self.modelname = modelname
+        self.tbCallBack = TensorBoard(log_dir='ml\\logs\\tb/'+str(modelname), histogram_freq=0,
+          write_graph=True, write_images=True)
         self.sleepInterval = 0.2
         self.pastTimeSteps = 20
-        self.batchSize = 128
+        self.batchSize = 64
+        self.epochs = epochs
         #past dx dy distX distY list length: pastTimeSteps*4
         self.pastTempList = []
         #inputLists
@@ -57,16 +60,16 @@ class Simulator(Thread):
         else:
             print("new model: "+ str(self.modelname))
             timeInput = Input(shape=(20, 4), dtype='float32', name='timeInput')
-            resh = Reshape((20,4) + (1, ), input_shape=( 20, 4)) (timeInput)
-            tDense = TimeDistributed(Conv1D(128, (4), activation='relu'))(resh)
-            dense = Dense(32, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(tDense)
-            flat= Flatten() (dense)
+            norm = BatchNormalization()(timeInput)
+            dense1 = TimeDistributed(Dense(64, input_shape=(20,4), activation='relu', kernel_regularizer=regularizers.l2(0.0001)))(norm)
+            flat = Flatten()(dense1)
             sizeInput = Input(shape=(1,), name='sizeInput')
             x = concatenate([flat, sizeInput])
-            outDxDy = Dense(2, activation='linear')(x)
-            outButton = Dense(1, activation='sigmoid')(x)
+            dense = Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(x)
+            outDxDy = Dense(2, activation='linear')(dense)
+            outButton = Dense(1, activation='sigmoid')(dense)
             model=Model([timeInput, sizeInput], [outDxDy, outButton])
-            model.compile(Adam(lr=0.00025), loss=['mse', 'binary_crossentropy'])
+            model.compile(Adam(lr=0.0005), loss=['mse', 'binary_crossentropy'])
 
         model.summary()
 
@@ -74,8 +77,8 @@ class Simulator(Thread):
         #while self.dataQueue.qsize() >= self.batchSize:
         #    print(self.dataQueue.qsize())
         model.fit_generator(generator=self.generator(),
-                            steps_per_epoch=50000/self.batchSize,
-                            epochs=20, verbose=1, validation_data=self.validGenerator(), validation_steps=50000/self.batchSize)
+                            steps_per_epoch=self.trainingSet.size/self.batchSize,
+                            epochs=self.epochs, verbose=2, validation_data=self.validGenerator(), validation_steps=50000/self.batchSize, callbacks=[self.tbCallBack])
 
 
         # model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
