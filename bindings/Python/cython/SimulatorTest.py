@@ -20,10 +20,11 @@ from pylibpointing import PointingDevice, DisplayDevice, TransferFunction
 from pylibpointing import PointingDeviceManager, PointingDeviceDescriptor
 
 class SimTest(Thread):
-    def __init__(self, qactor, modelname):
+    def __init__(self, qactor, modelname, pastTimeStepsSimulator):
         super().__init__()
         # used transferfunction
         self.modelname = modelname
+        self.pastTimeSteps = pastTimeStepsSimulator
         self.tf = "system:?slider=1&epp=false"
         # alias for tf name, include dpi and samplerate
         self.tf_short = "system_1_false_easy_1800_125"
@@ -47,7 +48,6 @@ class SimTest(Thread):
         self.PAUSE = False
         self.END = False
 
-        self.pastTimeSteps = 20
         self.pastList = []
         self.mySampleData = []
 
@@ -133,8 +133,6 @@ class SimTest(Thread):
                     self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
                         self.pointSize / 2)
 
-                    self.pastData = [self.pointSize]
-
                     self.screen.fill((255, 255, 255))
                     self.screen.blit(self.cursor.image, self.cursor.pos)
                     if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
@@ -175,12 +173,12 @@ class SimTest(Thread):
 
                 #init pastDataList
                 if len(self.pastList) == 0:
-                    self.pastList = [0,0,self.pastDir[0], self.pastDir[1]]*self.pastTimeSteps
+                    self.pastList = [0,0,self.pastDir[0], self.pastDir[1], self.pointSize]*self.pastTimeSteps
 
                 #convert pastList to a np array with one Element which has 4 columns and 20 rows (dx, dy, distanceX2Target, distanceY2Target)
                 timeSeries = []
                 timeSeries.append(self.pastList)
-                timeSeries = np.reshape(timeSeries, (-1, 4))
+                timeSeries = np.reshape(timeSeries, (-1, 5))
                 timeSeries = np.expand_dims(timeSeries, axis=0)
                 timeSeries = np.array(timeSeries)
 
@@ -190,7 +188,7 @@ class SimTest(Thread):
                 sizeInput = np.array(sizeInput)
                 #print(timeSeries, sizeInput)
                 #predict next output with the data from the past 20 timesteps
-                predictionsDxDy, predictButton = self.model.predict([timeSeries, sizeInput])
+                predictionsDxDy, predictButton = self.model.predict([timeSeries])
 
                 # if predictionsDxDy[0][0] >0:
                 #     pdx = int(math.ceil(predictionsDxDy[0][0]))
@@ -252,10 +250,12 @@ class SimTest(Thread):
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
+                self.pastList.pop(0)
                 self.pastList.append(pdx)
                 self.pastList.append(pdy)
                 self.pastList.append(self.pastDir[0])
                 self.pastList.append(self.pastDir[1])
+                self.pastList.append(self.pointSize)
 
                 self.screen.blit(self.cursor.image, self.getCursorPos())
 
@@ -275,7 +275,6 @@ class SimTest(Thread):
                 print("new targetX: " + str(self.targetPosition[0]) + " new targetY: " + str(self.targetPosition[1]) +
                       " distance: " + str(math.sqrt(pow(self.targetPosition[0], 2) + pow(self.targetPosition[1], 2))) +
                       " new Size: " + str(self.pointSize))
-                self.pastData = [self.pointSize]
                 self.startTime = time.time()
 
 

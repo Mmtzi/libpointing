@@ -17,9 +17,9 @@ from collections import deque
 # determines how to assign values to each state, i.e. takes the state
 # and action (two-input model) and determines the corresponding value
 class ActorCritic:
-    def __init__(self, env, sess):
-        self.env = env
-        self.sess = sess
+    def __init__(self, queueUser, queueSimu, trainingSet):
+        #self.env = env
+        #self.sess = sess
 
         self.learning_rate = 0.001
         self.epsilon = 1.0
@@ -34,7 +34,12 @@ class ActorCritic:
         # Calculate de/dA as = de/dC * dC/dA, where e is error, C critic, A act #
         # ===================================================================== #
 
-        self.memory = deque(maxlen=2000)
+        if trainingSet.size == 0:
+            pass
+        else:
+            # env: dx,dy, button, distance, dirtx, dirty, targetx, targety, size, time,
+            self.memory = trainingSet[:,[0,1,2,5,6,7,8,9,10,11]]
+
         self.actor_state_input, self.actor_model = self.create_actor_model()
         _, self.target_actor_model = self.create_actor_model()
 
