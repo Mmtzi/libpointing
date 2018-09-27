@@ -1,10 +1,17 @@
 import numpy as np
+
+
 #import calcScore
 myData = []
 for i in range (0,20):
     myData.append((0, 1, 0, 1, 0, 1, -300, 100, -300 , 100, -300, 100))
-print(myData)
-mySecondData = [[0,1],[1,0], [4,0]]
+#print(myData)
+myFirstData = np.array([[[0,0], [1,0], [3,0]],[[0,0], [1,0], [3,0]]])
+mySecondData = np.array([[[0,1],[1,0], [4,0]],[[0,1],[1,0], [4,0]]])
+print(myFirstData)
+print(myFirstData[1][0][0])
+#if myFirstData[0][1] == mySecondData[0][1]:
+    #print("yeah")
 
 mynewList = []
 mynewList.append(myData[0])
@@ -25,3 +32,29 @@ distance = 500
 targetPosition = 1000, 1500
 targetSize = 30
 #calcScore.calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetPosition, targetSize)
+
+lr=0.001
+
+
+myarray = np.random.randint(16, size=(4,4))
+print(myarray)
+newarray= myarray[:,[2,3]]
+print(newarray)
+newarray = np.roll(newarray, 1, axis=0)
+print(newarray)
+myarray[:,[2,3]] = newarray
+print(myarray)
+
+
+param_grid = [
+  {'C': [1, 10, 100, 1000], 'kernel': ['linear']},
+  {'C': [1, 10, 100, 1000], 'gamma': [0.001, 0.0001], 'kernel': ['rbf']},
+ ]
+
+
+def lrrek(lr):
+    lr = lr*(1-lr*100)
+    print(lr)
+    if lr >0.00001:
+        lrrek(lr)
+#lrrek(lr)

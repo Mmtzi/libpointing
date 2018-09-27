@@ -1,9 +1,10 @@
 from keras.models import Sequential, load_model, Model
-from keras.layers import Dense,BatchNormalization, Activation, Reshape, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
+from keras.layers import Dense,BatchNormalization, Activation, Dropout, Reshape, Input, Softmax, Conv2D, Conv1D, MaxPooling2D, concatenate, Flatten, TimeDistributed
 from keras.optimizers import Adam
 from keras import regularizers
 from keras.layers.recurrent import LSTM, GRU
 from keras.callbacks import TensorBoard
+from keras.callbacks import Callback, ModelCheckpoint
 import tensorboard
 from numpy import genfromtxt
 from sklearn.datasets import make_regression
@@ -17,67 +18,67 @@ from queue import Queue
 import time
 import itertools
 from random import randint
+import tensorflow as tf
+from multiprocessing import Pool
 
 
 class Simulator(Thread):
-    def __init__(self, q, trainingSet, modelname, epochs, pastTS):
-        self.dataQueue = q
-        self.trainingSet = trainingSet
+    def __init__(self, q, trainingSet, validSet, modelname, epochs, lr, batchSize, pastTS):
+        self.lr = lr
         self.modelname = modelname
         self.tbCallBack = TensorBoard(log_dir='ml\\logs\\tb/'+str(modelname), histogram_freq=0,
           write_graph=True, write_images=True)
+        self.chk = ModelCheckpoint("ml\\models\\"+str(modelname), monitor='val_loss', save_best_only=False)
         self.sleepInterval = 0.2
         self.pastTimeSteps = pastTS
-        self.batchSize = 64
+        self.batchSize = batchSize
         self.epochs = epochs
-        #past dx dy distX distY list length: pastTimeSteps*4
-        self.pastTempList = []
-        #inputLists
-        self.pastTSInputList = [] #x*20*4
-        self.sizeInputList = [] #x*1
-        #labelLists
-        self.labelDxDyList = [] #x*2
-        self.labelButtonList = [] #x*1
-        self.validData = genfromtxt('thesis\\logData\\myValData.csv', delimiter=',', skip_header=1)
+
+        self.inputNP, self.outDxDyNP, self.outButtonNP = self.prepareData(q, trainingSet)
+
+        self.validInputNP, self. validOutDxDyNP, self.validOutButtonNP = self.prepareData(q, validSet)
+
         super().__init__()
 
     def run(self):
-        # load Data
-        # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'targetID', 'directionX', 'directionY',
-        # 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize'
-        sleepTime = 0
+    # load Data
+    # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'targetID', 'directionX', 'directionY',
+    # 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize'
 
-        #wait till dataqsize > batchsize
-        while self.dataQueue.qsize() <= (self.batchSize) and self.trainingSet.size ==0:
-            time.sleep(self.sleepInterval)
-            sleepTime +=self.sleepInterval
-
-        # load or define the model
+    # load or define the model
 
         if os.path.exists('ml\\models\\'+str(self.modelname)):
             model = load_model('ml\\models\\'+str(self.modelname))
             print("loaded model: "+str(self.modelname))
+            print(K.get_value(model.optimizer.lr))
+            K.set_value(model.optimizer.lr, self.lr)
         else:
             print("new model: "+ str(self.modelname))
             timeInput = Input(shape=(self.pastTimeSteps, 5), dtype='float32', name='timeInput')
-            norm = BatchNormalization()(timeInput)
-            resh = Reshape((self.pastTimeSteps,5) + (1, ), input_shape=( self.pastTimeSteps, 5)) (norm)
-            tDense = TimeDistributed(Conv1D(64, (5), activation='relu', input_shape=(self.pastTimeSteps,5)))(resh)
-            dense = Dense(16, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(tDense)
-            flat = Flatten()(dense)
-            outDxDy = Dense(2, activation='linear')(flat)
-            outButton = Dense(1, activation='sigmoid')(flat)
+            #norm = BatchNormalization()(timeInput)
+            conv1 = Conv1D(512, kernel_size=3, padding="same", activation="relu", kernel_regularizer=regularizers.l2(0.0001))(timeInput)
+            norm = BatchNormalization()(conv1)
+            conv2 = Conv1D(512, kernel_size=3, padding="same", activation='relu', kernel_regularizer=regularizers.l2(0.0001))(norm)
+            flat = Flatten()(conv2)
+            dense1 = Dense(32, activation="relu", kernel_regularizer=regularizers.l2(0.0001))(flat)
+            outDxDy = Dense(2, activation='linear')(dense1)
+            outButton = Dense(1, activation='sigmoid')(dense1)
             model=Model([timeInput], [outDxDy, outButton])
-            model.compile(Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=10^-8), loss=['mse', 'binary_crossentropy'])
+            model.compile(Adam(lr=self.lr), loss=['mse', 'binary_crossentropy'])
 
         model.summary()
 
         #fit_generator as long as dataqueue has enough elements, always create a new input set from which generator chooses random samples
         #while self.dataQueue.qsize() >= self.batchSize:
         #    print(self.dataQueue.qsize())
+
         model.fit_generator(generator=self.generator(),
-                            steps_per_epoch=self.trainingSet.size/self.batchSize,
-                            epochs=self.epochs, verbose=2, validation_data=self.validGenerator(), validation_steps=self.validData.size/self.batchSize, callbacks=[self.tbCallBack])
+                        steps_per_epoch=int(self.inputNP.shape[0]/self.batchSize),
+                        epochs=self.epochs,
+                        verbose=1,
+                        validation_data=self.validGenerator(),
+                        validation_steps=int(self.validInputNP.shape[0]/self.batchSize),
+                        callbacks=[self.tbCallBack, self.chk])
 
 
         # model.fit([convInputSet, sizeInputSet], [outDxDySet, outButtonSet], epochs=self.epochs, verbose=2, batch_size=20, shuffle=True, validation_split=0.1)
@@ -95,221 +96,91 @@ class Simulator(Thread):
         #plotData.plotResults(predictedDX, realDX, self.epochs)
 
     def generator(self):
-        print("generateDataSets")
+        print("generateTrainDataSets")
+        self.indexList = np.arange(0, self.inputNP.shape[0], 1)
+        print(self.inputNP.shape[0], self.outButtonNP.shape[0], self.outDxDyNP.shape[0], self.indexList.size)
+        input = np.zeros((self.batchSize, self.pastTimeSteps, self.inputNP.shape[2]))
+        outdxdy = np.zeros((self.batchSize, self.outDxDyNP.shape[1]))
+        outbutton = np.zeros((self.batchSize, 1))
+        pickedIndex = np.zeros((self.batchSize,1))
+        print(input.shape, outdxdy.shape, outbutton.shape)
         while True:
-            pastTSInputList = []
-            #batch_pointSize = []
-            batch_dxdy = []
-            batch_button = []
-            if self.trainingSet.size == 0:
-                l = list(self.dataQueue.queue)
+            if self.indexList.shape[0] >= self.batchSize:
+                yield self.createTrainBatch(input, outdxdy, outbutton, pickedIndex)
             else:
-                l = self.trainingSet.tolist()
-            j=0
-            for i in range(self.batchSize):
-                if i <= self.batchSize/4:
-                    #print(i ,l[j + self.pastTimeSteps + 1][2])
-                    while int(l[j+self.pastTimeSteps][2]) == 0:
-                        j+=1
-                        if j+self.pastTimeSteps+1 == len(l):
-                            j=0
-                    else:
-                        batchsample =np.array(l[j: j+self.pastTimeSteps+1])
-                        j+=1
+                self.indexList = np.arange(0, self.inputNP.shape[0], 1)
 
-                else:
-                    if i == self.batchSize - 1:
-                        batchsample = np.array(l[0: 0 + self.pastTimeSteps + 1])
-                    else:
-                        start = randint(0, len(l) - self.pastTimeSteps -1)
-                        batchsample = np.array(l[start : start + self.pastTimeSteps + 1])
-                #print(batchsample.shape)
-                #print(batchsample)
-                #batch_pointSize.append(batchsample[19, 14])
-                #print("sizeShape:"+str(np.array(batch_pointSize).shape))
-                #print(batchsample)
-                batch_button.append(batchsample[self.pastTimeSteps, 2])
-                #print("buttonShape:"+str(np.array(batch_button).shape))
-
-                pastTSInputList.append(batchsample[:self.pastTimeSteps, [0,1,8,9,14]])
-                #print("pastTSSape:"+str(np.array(pastTSInputList).shape))
-                #print(batchsample[:20, [0,1,8,9]], batchsample[20, [0,1]])
-                batch_dxdy.append(batchsample[self.pastTimeSteps, [0,1]])
-                #print("dxdyShappe:"+str(np.array(batch_dxdy).shape))
-
-                #print(pastTSInputList[i])
-                #print(batch_dxdy[i])
-                #print(batch_button[i])
-
-
-            yield [np.array(pastTSInputList)], [np.array(batch_dxdy), np.array(batch_button)]
-
+    def createTrainBatch(self, input, outdxdy, outbutton, pickedIndex):
+        for i in range(0, self.batchSize):
+            index = randint(0, self.indexList.shape[0]-1)
+            pick = self.indexList.item(index)
+            pickedIndex[i] = index
+            input[i] = self.inputNP[pick]
+            outdxdy[i] = self.outDxDyNP[pick]
+            outbutton[i] = self.outButtonNP[pick]
+            #print(i, index, pick, input[i], outdxdy[i], outbutton[i])
+        self.indexList = np.delete(self.indexList, pickedIndex)
+        return [input], [outdxdy, outbutton]
 
     def validGenerator(self):
-        l = list(self.validData)
+        print("generateValidDataSets")
+        self.validIndexList = np.arange(0, self.validInputNP.shape[0], 1)
+        print(self.validInputNP.shape[0], self.validOutButtonNP.shape[0], self.validOutDxDyNP.shape[0], self.validIndexList.size)
+        input = np.zeros((self.batchSize, self.pastTimeSteps, self.validInputNP.shape[2]))
+        outdxdy = np.zeros((self.batchSize, self.validOutDxDyNP.shape[1]))
+        outbutton = np.zeros((self.batchSize, 1))
+        pickedIndex = np.zeros((self.batchSize, 1))
+        print(input.shape, outdxdy.shape, outbutton.shape)
         while True:
-            pastTSInputList = []
-            #batch_pointSize = []
-            batch_dxdy = []
-            batch_button = []
-            for i in range(self.batchSize):
-                start = randint(0, len(l) - self.pastTimeSteps - 1)
-                batchsample = np.array(l[start: start + self.pastTimeSteps + 1])
-                # print(batchsample.shape)
-
-                #batch_pointSize.append(batchsample[19, 14])
-                # print("sizeShape:"+str(np.array(batch_pointSize).shape))
-
-                batch_button.append(batchsample[self.pastTimeSteps, 2])
-                # print("buttonShape:"+str(np.array(batch_button).shape))
-
-                pastTSInputList.append(batchsample[:self.pastTimeSteps, [0, 1, 8, 9, 14]])
-                # print("pastTSSape:"+str(np.array(pastTSInputList).shape))
-                # print(batchsample[:20, [0,1,8,9]], batchsample[20, [0,1]])
-                batch_dxdy.append(batchsample[self.pastTimeSteps, [0, 1]])
-                # print("dxdyShappe:"+str(np.array(batch_dxdy).shape))
-
-            yield [np.array(pastTSInputList)], [np.array(batch_dxdy), np.array(batch_button)]
-
-
-    def generator2(self):
-        self.createInputSet()
-        pastTSInputList = self.pastTSInputList
-        sizeInputList = self.sizeInputList
-        labelDxDyList = self.labelDxDyList
-        labelButtonList = self.labelButtonList
-        batch_size = self.batchSize
-        #Create empty arrays to contain batch of features and labels
-
-        batch_pastTS = np.zeros((batch_size, 20, 4))
-        batch_pointSize = np.zeros((batch_size, 1))
-        batch_dxdy = np.zeros((batch_size, 2))
-        batch_button = np.zeros((batch_size, 1))
-        while True:
-            for i in range(0, batch_size-1):
-                    # choose random index in input
-                index = np.random.choice(len(pastTSInputList), 1)
-                batch_pastTS[i] = np.array(pastTSInputList)[index][0]
-                batch_pointSize[i] = np.array(sizeInputList)[index][0]
-                batch_dxdy[i] = np.array(labelDxDyList)[index][0]
-                batch_button[i] = np.array(labelButtonList)[index][0]
-            yield [pastTSInputList, batch_pointSize], [batch_dxdy, batch_button]
-
-    def createInputSet(self):
-        #get batchsize samples
-        for i in range(0, self.batchSize):
-            myTempSample = list(self.dataQueue.get())
-            #if pasttemplist is empty: init
-            if len(self.pastTempList) == 0:
-                self.pastTempList = [0 , 0, myTempSample[8], myTempSample[9]] * self.pastTimeSteps
-            #pop "last" 4 elements and add the 4 from the sample before
+            if self.validIndexList.shape[0] >= self.batchSize:
+                yield self.createValidBatch(input, outdxdy, outbutton, pickedIndex)
             else:
-                self.pastTempList.pop(0)
-                self.pastTempList.pop(0)
-                self.pastTempList.pop(0)
-                self.pastTempList.pop(0)
+                self.validIndexList = np.arange(0, self.validInputNP.shape[0], 1)
 
-                self.pastTempList.append(self.myPreTempSample[0])
-                self.pastTempList.append(self.myPreTempSample[1])
-                self.pastTempList.append(self.myPreTempSample[8])
-                self.pastTempList.append(self.myPreTempSample[9])
-
-            #fill the input lists with elements from act sample
-            self.sizeInputList.append([myTempSample[14]])
-            self.labelDxDyList.append([myTempSample[0], myTempSample[1]])
-            self.labelButtonList.append([myTempSample[2]])
-
-            #convert and reshape to 20x4
-            timeSeries = np.array(self.pastTempList)
-            timeSeries = np.reshape(timeSeries, (-1,4))
-            #timeSeries.tolist()
-            #print(timeSeries)
-
-            #add timeseries to input list
-            self.pastTSInputList.append(timeSeries)
-            #remember sample for next ts
-            self.myPreTempSample = myTempSample
-
-
-
-
-
-    # TODO not done jet
-    def validGenerator2(self, pastTSInputList, sizeInputList, batch_size):
-
-        # Create empty arrays to contain batch of features and labels#
-
-        batch_pastTS = np.zeros((batch_size, 20, 4))
-        batch_pointSize = np.zeros((batch_size, 1))
-
-        while (self.dataQueue.qsize() >= batch_size):
-            print(len(pastTSInputList))
-            for i in range(0, batch_size - 1):
-                # choose random index in features
-                index = np.random.choice(len(pastTSInputList), 1)
-                batch_pastTS[i] = np.array(pastTSInputList)[index][0]
-                batch_pointSize[i] = np.array(sizeInputList)[index][0]
-            yield [batch_pastTS, batch_pointSize]
-
-    def createValidSet(self):
+    def createValidBatch(self, input, outdxdy, outbutton, pickedIndex):
         for i in range(0, self.batchSize):
+            index = randint(0, self.validIndexList.shape[0]-1)
+            pick = self.validIndexList.item(index)
+            pickedIndex[i] = pick
+            input[i] = self.validInputNP[pick]
+            outdxdy[i] = self.validOutDxDyNP[pick]
+            outbutton[i] = self.validOutButtonNP[pick]
+        self.validIndexList = np.delete(self.validIndexList, pickedIndex)
+        return [input], [outdxdy, outbutton]
 
-            myTempSample = list(self.dataQueue.get())
-            if len(self.pastTempList) == 0:
-                self.pastTempList = [0, 0, myTempSample[8], myTempSample[9]] * self.pastTimeSteps
+    def prepareData(self, q, dataSet):
+        print("preparing Data...")
+        print(dataSet.shape[0])
+        input=[]
+        outdxdy= []
+        outbutton =[]
+        clicks = 0
+        noclicks =0
+        if dataSet.shape[0] == 0:
+            dataSet = np.array(list(q.queue))
+        dataSet = dataSet[:, [0, 1, 2, 7, 8, 9, 14]]
+        for i in range(self.pastTimeSteps, dataSet.shape[0]):
+            batchsample = dataSet[i - self.pastTimeSteps: i + 1, :]
+            #print(batchsample)
+            if ((98 in batchsample[:, 3] or 99 in batchsample[:, 3] or 100 in batchsample[:, 3]) and 1 in batchsample[:, 3]):
+                #print(batchsample)
+                continue
             else:
-                self.pastTempList.pop(0)
-                self.pastTempList.pop(0)
-                self.pastTempList.pop(0)
-                self.pastTempList.pop(0)
+                inputSlice = batchsample[:self.pastTimeSteps, [0,1,4,5,6]]
+                outdxdySlice = batchsample[self.pastTimeSteps, [0,1]]
+                outbuttonSlice = batchsample[self.pastTimeSteps, 2]
+                input.append(inputSlice)
+                outdxdy.append(outdxdySlice)
+                outbutton.append(outbuttonSlice)
+                if int(outbuttonSlice) == 1:
+                    clicks += 1
+                    for k in range(0, 20):
+                        input.append(inputSlice)
+                        outdxdy.append(outdxdySlice)
+                        outbutton.append(outbuttonSlice)
+                        clicks += 1
+                else:
+                    noclicks += 1
+        print(clicks/(noclicks+clicks))
+        return np.array(input), np.array(outdxdy), np.array(outbutton)
 
-                self.pastTempList.append(self.myPreTempSample[0])
-                self.pastTempList.append(self.myPreTempSample[1])
-                self.pastTempList.append(self.myPreTempSample[8])
-                self.pastTempList.append(self.myPreTempSample[9])
-
-            self.sizeInputList.append([myTempSample[14]])
-            self.labelDxDyList.append([myTempSample[0], myTempSample[1]])
-            self.labelButtonList.append([myTempSample[2]])
-
-            timeSeries = np.array(self.pastTempList)
-            timeSeries = np.reshape(timeSeries, (-1, 4))
-
-            #print(timeSeries)
-            self.pastTSInputList.append(timeSeries)
-            self.myPreTempSample = myTempSample
-
-    def predictTrainData(self, model):
-        convInputSet, sizeInputSet, outDxDySet, outButtonSet = self.createValidSet()
-        convInputSet = np.array(convInputSet)
-        sizeInputSet = np.array(sizeInputSet)
-        outDxDySet = np.array(outDxDySet)
-        outButtonSet = np.array(outButtonSet)
-        print(convInputSet.shape)
-        print(sizeInputSet.shape)
-        print(outDxDySet.shape)
-        print(outButtonSet.shape)
-        # print(convInputSet)
-        # print(sizeInputSet)
-        predictedDXDY, predictedButton = model.predict([convInputSet, sizeInputSet])
-        # print(myValidInData)
-        predictedDX = []
-        realDX = []
-        convInputSet = convInputSet.tolist()
-        # print(convInputSet)
-        sizeInputSet = sizeInputSet.tolist()
-        # print(sizeInputSet)
-        outDxDySet = outDxDySet.tolist()
-        # print(outDxDySet)
-        outButtonSet = outButtonSet.tolist()
-        # print(outButtonSet)
-
-        for i in range(0, self.validSize):
-            predictedRaw = (int(round(predictedDXDY[i][0], 0)), int(round(predictedDXDY[i][1], 0)),
-                            int(round(predictedButton[i][0], 0)))
-            if i % 20 == 0 or outButtonSet[i][0] == 1:
-                print("line=%s, XY=%s, Predicted=%s, Real=%s" % (
-                i, (convInputSet[i], sizeInputSet[i][0]), predictedRaw, (outDxDySet[i], outButtonSet[i][0])))
-            predictedDX.append(predictedDXDY[i][0])
-            realDX.append(outDxDySet[i][0])
-        return predictedDX, realDX

@@ -2,31 +2,83 @@
 solving pendulum using actor-critic model
 """
 import numpy as np
-from keras.models import Sequential, Model
-from keras.layers import Dense, Dropout, Input
+from keras.models import Sequential, Model, load_model
+from keras.layers import Dense, Dropout, Input, Conv1D, BatchNormalization,Flatten, regularizers
 from keras.layers.merge import Add, Multiply
 from keras.optimizers import Adam
 import keras.backend as K
-
 import tensorflow as tf
-
+import os
 import random
 from collections import deque
-
+from threading import Thread
+from random import randint
 
 # determines how to assign values to each state, i.e. takes the state
 # and action (two-input model) and determines the corresponding value
-class ActorCritic:
-    def __init__(self, queueUser, queueSimu, trainingSet):
-        #self.env = env
-        #self.sess = sess
-
-        self.learning_rate = 0.001
+class ActorCritic(Thread):
+    def __init__(self, queueUser, queueSimu, trainingSet, actorname):
+        self.batchSize = 32
+        self.epochs = 20
+        self.actorname = actorname
+        self.lr = 0.001
         self.epsilon = 1.0
         self.epsilon_decay = .995
         self.gamma = .95
         self.tau = .125
 
+        if trainingSet.size == 0:
+            pass
+        else:
+            # 'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
+            # 'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
+            # env: dx,dy, button, time-1, distance-1, dirtx-1, dirty-1, targetx, targety, size
+            self.outRxRy = trainingSet[:,[3,4]]
+            self.shiftUp = trainingSet[:,[5,6,7,8]]
+            self.shiftUp = np.roll(self.shiftUp, -1, axis =0)
+            self.env = trainingSet[:,[0,1,2,5,6,7,8,9,10]]
+            self.env[:,[3,4,5,6]] = self.shiftUp
+            self.env = self.env[:-1,:]
+            self.loadActorModel()
+        super().__init__()
+
+
+    def run(self):
+
+        self.actorModel.fit_generator(generator=self.generator(),
+                                      steps_per_epoch=int(self.env.shape[0]/self.batchSize),
+                                      epochs=self.epochs,
+                                      verbose=1,
+                                      validation_data=self.validGenerator(),
+                                      validation_steps=int(self.validInputNP.shape[0]/self.batchSize),
+                                      callbacks=[self.tbCallBack, self.chk])
+        try:
+            self.actorModel.save('ml\\models\\actor\\'+str(self.actorname))
+            print("saved model: "+str(str(self.actorname)))
+        except:
+            print("couldnt save model: "+str(self.actorname))
+
+        K.clear_session()
+
+        pass
+
+    def loadActorModel(self):
+        if os.path.exists('ml\\models\\actor\\' + str(self.actorname)):
+            self.actorModel = load_model('ml\\models\\actor\\' + str(self.actorname))
+            print("loaded model: " + str(self.actorname))
+            print(K.get_value(self.actorModel.optimizer.lr))
+            K.set_value(self.actorModel.optimizer.lr, self.lr)
+        else:
+            print("new model: " + str(self.actorname))
+            stateInput = Input(shape=(self.env.shape[1]), dtype='float32', name='timeInput')
+            norm = BatchNormalization()(stateInput)
+            dense1 = Dense(512, activation="relu", kernel_regularizer=regularizers.l2(0.0001))(norm)
+            norm = BatchNormalization()(dense1)
+            dense2 = Dense(512, activation='relu', kernel_regularizer=regularizers.l2(0.0001))(norm)
+            outRxRy = Dense(2, activation='linear')(dense2)
+            self.actorModel = Model([stateInput], [outRxRy])
+            self.actorModel.compile(Adam(lr=self.lr), loss=['mse'])
+        self.actorModel.summary()
         # ===================================================================== #
         #                               Actor Model                             #
         # Chain rule: find the gradient of chaging the actor network params in  #
@@ -34,14 +86,76 @@ class ActorCritic:
         # Calculate de/dA as = de/dC * dC/dA, where e is error, C critic, A act #
         # ===================================================================== #
 
-        if trainingSet.size == 0:
-            pass
-        else:
-            # env: dx,dy, button, distance, dirtx, dirty, targetx, targety, size, time,
-            self.memory = trainingSet[:,[0,1,2,5,6,7,8,9,10,11]]
+    def generator(self):
+        print("generateTrainDataSets")
+        self.indexList = np.arange(0, self.env[0], 1)
+        print(self.env.shape[0], self.outRxRy.shape[0], self.indexList.size)
+        input = np.zeros((self.batchSize, self.env.shape[1]))
+        outRxRy = np.zeros((self.batchSize, self.outRxRy.shape[1]))
+        pickedIndex = np.zeros((self.batchSize, 1))
+        print(input.shape, outRxRy.shape)
+        while True:
+            if self.indexList.shape[0] >= self.batchSize:
+                yield self.createTrainBatch(input, outRxRy, pickedIndex)
+            else:
+                self.indexList = np.arange(0, self.env.shape[0], 1)
 
-        self.actor_state_input, self.actor_model = self.create_actor_model()
-        _, self.target_actor_model = self.create_actor_model()
+    def createTrainBatch(self, input, outdxdy, outbutton, pickedIndex):
+        for i in range(0, self.batchSize):
+            index = randint(0, self.indexList.shape[0] - 1)
+            pick = self.indexList.item(index)
+            pickedIndex[i] = index
+            input[i] = self.inputNP[pick]
+            outdxdy[i] = self.outDxDyNP[pick]
+            outbutton[i] = self.outButtonNP[pick]
+            # print(i, index, pick, input[i], outdxdy[i], outbutton[i])
+        self.indexList = np.delete(self.indexList, pickedIndex)
+        return [input], [outdxdy, outbutton]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #
+        self.actor_model = self.create_actor_model()
+        self.target_actor_model = self.create_actor_model()
 
         self.actor_critic_grad = tf.placeholder(tf.float32,
                                                 [None, self.env.action_space.shape[
@@ -66,6 +180,7 @@ class ActorCritic:
 
         # Initialize for later gradient calculations
         self.sess.run(tf.initialize_all_variables())
+
 
     # ========================================================================= #
     #                              Model Definitions                            #
@@ -205,7 +320,3 @@ def main():
         actor_critic.train()
 
         cur_state = new_state
-
-
-if __name__ == "__main__":
-    main()

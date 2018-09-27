@@ -2,13 +2,334 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d38d2b1-fe99-4ed7-b794-c45be943a071" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537448199.MCI-PAWELSDOG" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537448199.MCI-PAWELSDOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/tdense64dense16_fitg_20dx_20dist_sizeo.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/tdense64dense16_fitg_20dx_20dist_sizeo.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537439400.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537439493.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537440069.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537440646.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537441222.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537441769.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537442444.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537443014.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537443656.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537444209.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537444842.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537445379.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537445954.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537446554.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/conv64dense8_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537447094.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/newtconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537536525.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/sim_convbnd_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537439127.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/sim_convbnd_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537439206.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/sim_convbnd_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537439278.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532154.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532164.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532175.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532186.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532197.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532208.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532219.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532234.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532281.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532337.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532524.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537532866.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537533118.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537533437.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537533689.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537534036.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537534307.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537534571.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537534737.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535091.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535121.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535218.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535401.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535413.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535517.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535542.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535636.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537535699.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537536052.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_1dx_1dist_1size.h5/events.out.tfevents.1537536356.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537521115.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537521126.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537521635.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537521727.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537521811.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537522098.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537522417.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537522751.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537523105.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537523387.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537523643.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537523900.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537524245.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537524561.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537524860.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537525153.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537525425.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537525735.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537526005.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537526208.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537526521.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537526806.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527080.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527165.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527222.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527311.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527370.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527410.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527774.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537527935.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537528017.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537528393.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537528716.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537529047.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537529413.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537529707.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537530021.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537530302.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537530575.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537530871.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537531204.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537531490.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tconv1D16dense_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537531757.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537478057.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537478374.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537478653.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537478933.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537479213.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537479565.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537479832.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537480087.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537480357.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537480628.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537480943.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537481215.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537481570.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537481878.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537482164.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537482537.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537482818.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537483128.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537483426.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537483712.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537484038.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537484351.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537484612.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537484923.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537485201.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537485470.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537485742.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537486032.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537486314.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537486650.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537486922.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537487217.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537487510.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537487841.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537488129.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537488416.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537488710.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537489003.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537489264.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537489593.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537489904.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537490219.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537490526.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537490785.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537491057.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537491369.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537491660.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537492002.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537492271.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537492548.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537492829.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537493035.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537493318.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537493611.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537493911.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537494197.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537494534.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537494848.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537495127.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537495392.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537495683.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537495964.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537496277.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537496558.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537496846.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537497119.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537497399.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537497657.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537497947.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537498231.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537498515.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537498811.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537499148.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537499464.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537499776.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537500084.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537500366.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537500573.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537500905.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537501185.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537501530.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537501801.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537502091.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537502413.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537502685.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537502958.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537503251.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537503544.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537503802.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537504074.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537504371.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537504670.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537504927.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537505207.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537505579.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537505841.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537506128.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537506449.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537506727.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537507015.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537507307.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537507598.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537507865.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537508181.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537508536.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537508802.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537509118.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537509403.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537509688.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537509965.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537510304.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537510598.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537510881.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537511196.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537511556.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537511871.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537512143.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537512456.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537512769.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60dense20_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537513498.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537513540.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537513814.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537514124.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537514443.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537514729.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537515028.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537515294.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537515575.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537515865.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537516172.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537516494.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537516795.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537517125.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537517401.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537517708.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537517985.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537518298.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537518630.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537518944.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537519248.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537519502.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense60flat_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537519783.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537453295.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537453454.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537453556.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537453819.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537454128.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537454443.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537454782.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537455095.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537455361.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537455646.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537455952.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537456242.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537456524.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537456788.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537457066.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537457331.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537457618.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537457895.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537458237.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537458488.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537458824.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537459082.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537459388.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537459750.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537460052.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537460336.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537460623.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537460900.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537461096.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537461444.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537461752.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537462048.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537462368.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537462641.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537462914.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537463184.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537463476.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537463739.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537464049.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537464351.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537464630.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537464903.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537465177.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537465459.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537465808.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537466081.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537466331.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537466579.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537466858.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537467118.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537467399.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537467671.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537467977.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537468242.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537468514.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537468778.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537469103.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537469420.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537469705.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_20size.h5/events.out.tfevents.1537469955.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537447733.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537447970.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537448199.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537448434.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537448715.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537448973.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537449259.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537449540.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537449771.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537449982.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537450203.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537450446.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537450659.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537450919.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537451157.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537451418.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537451638.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537451872.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537452189.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537452416.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537452622.MCI-PAWELSDOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/tdense64dense16_fitg_20dx_20dist_sizeo.h5/events.out.tfevents.1537452913.MCI-PAWELSDOG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180906105005.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907123515.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914134641.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914135217.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919123732.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/myValData.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +340,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame__1_.coverage" NAME="myFitsLawGame (1) Coverage Results" MODIFIED="1534260531203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$consoleExample__1_.coverage" NAME="consoleExample (1) Coverage Results" MODIFIED="1529491121421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/libpointingjs/libpointing-1.0.7/libpointing-1.0.7/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1537536519744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1538055759116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$kerasTest__1_.coverage" NAME="kerasTest (1) Coverage Results" MODIFIED="1530706565950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/TensorFlow" />
     <SUITE FILE_PATH="coverage/libpointing$SimulatorTest.coverage" NAME="SimulatorTest Coverage Results" MODIFIED="1536161950329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$myActorCritic.coverage" NAME="myActorCritic Coverage Results" MODIFIED="1533809843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
@@ -31,7 +352,7 @@
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame.coverage" NAME="myFitsLawGame Coverage Results" MODIFIED="1535106966636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$calcScore.coverage" NAME="calcScore Coverage Results" MODIFIED="1536841331342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$envExample.coverage" NAME="envExample Coverage Results" MODIFIED="1533807317253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
-    <SUITE FILE_PATH="coverage/libpointing$simpleLRworking.coverage" NAME="simpleLRworking Coverage Results" MODIFIED="1535464947186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$simpleLRworking.coverage" NAME="simpleLRworking Coverage Results" MODIFIED="1537877989455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$apiExample.coverage" NAME="apiExample Coverage Results" MODIFIED="1529488084711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$tfFunctionWriter.coverage" NAME="tfFunctionWriter Coverage Results" MODIFIED="1530533405809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/thesis" />
     <SUITE FILE_PATH="coverage/libpointing$pendulum.coverage" NAME="pendulum Coverage Results" MODIFIED="1533812894845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
@@ -39,7 +360,7 @@
     <SUITE FILE_PATH="coverage/libpointing$consoleExample.coverage" NAME="consoleExample Coverage Results" MODIFIED="1537346218372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$actorCriticTest.coverage" NAME="actorCriticTest Coverage Results" MODIFIED="1533805070386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$testAdv.coverage" NAME="testAdv Coverage Results" MODIFIED="1533558525769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
-    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1537361625811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1538055141108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrTest.coverage" NAME="lrTest Coverage Results" MODIFIED="1533552448074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrNewTest.coverage" NAME="lrNewTest Coverage Results" MODIFIED="1533558213359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
   </component>
@@ -61,13 +382,14 @@
     <session id="1566594586">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="18" />
-          <entry key="project.open.time.5" value="7" />
+          <entry key="project.open.time.5" value="10" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="29" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,17 +397,17 @@
           <entry key="groovy" value="1" />
           <entry key="ideas" value="1" />
           <entry key="pxd" value="1" />
-          <entry key="py" value="65" />
+          <entry key="py" value="77" />
           <entry key="pyx" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="382" />
-          <entry key="dummy" value="52" />
+          <entry key="Python Console" value="1390" />
+          <entry key="dummy" value="64" />
           <entry key="ideas" value="788" />
-          <entry key="py" value="25213" />
+          <entry key="py" value="33646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -93,14 +415,14 @@
         <counts>
           <entry key="Cython" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="65" />
+          <entry key="Python" value="77" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="840" />
-          <entry key="Python" value="25595" />
+          <entry key="PLAIN_TEXT" value="852" />
+          <entry key="Python" value="35036" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -114,8 +436,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1244">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+            <state relative-caret-position="295">
+              <caret line="116" column="111" selection-start-line="115" selection-start-column="8" selection-end-line="116" selection-end-column="111" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1537361977213" expanded="true" signature="5155:5161" ph="..." />
@@ -125,36 +447,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3426">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="442">
+              <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1537534310230" expanded="true" signature="1917:3105" ph="..." />
+                <marker date="1538052491649" expanded="true" signature="1272:1277" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1537536510463" expanded="true" signature="2773:3103" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="391">
+              <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
               <folding>
                 <element signature="e#50#68#0" expanded="true" />
               </folding>
@@ -163,24 +471,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+            <state relative-caret-position="666">
+              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1538056077190" expanded="true" signature="3802:4132" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="179" column="28" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1538047278437" expanded="true" signature="1917:3105" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <marker date="1538055755532" expanded="true" signature="4405:4411" ph="..." />
+                <marker date="1538055755532" expanded="true" signature="5285:5791" ph="..." />
               </folding>
             </state>
           </provider>
@@ -207,6 +542,8 @@
       <find>plot</find>
       <find>termina</find>
       <find>print</find>
+      <find>tf</find>
+      <find>clock</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,7 +575,6 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/mainTF.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/myFitsLawGame.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/__init__.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
@@ -251,12 +587,13 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/actorTF.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" />
       </list>
     </option>
   </component>
@@ -275,8 +612,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2265" />
-    <option name="y" value="249" />
+    <option name="y" value="64" />
     <option name="width" value="974" />
     <option name="height" value="1167" />
   </component>
@@ -318,15 +654,6 @@
               <item name="Python" type="462c0819:PsiDirectoryNode" />
               <item name="cython" type="462c0819:PsiDirectoryNode" />
               <item name="ml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="libpointing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="libpointing" type="462c0819:PsiDirectoryNode" />
-              <item name="bindings" type="462c0819:PsiDirectoryNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="cython" type="462c0819:PsiDirectoryNode" />
-              <item name="ml" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="libpointing" type="b2602c69:ProjectViewProjectNode" />
@@ -500,20 +827,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simpleLRwithoutScale" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="simpleLRworking" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="libpointing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\muntzingml\AppData\Local\Programs\Python\Python36\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bindings/Python/cython/" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bindings/Python/cython/ml" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -565,17 +892,17 @@
       <item itemvalue="Python.mainTF" />
       <item itemvalue="Python.Test" />
       <item itemvalue="Python.consoleExample" />
-      <item itemvalue="Python.simpleLRwithoutScale" />
       <item itemvalue="Python tests.Unittests in mainTF.py" />
       <item itemvalue="Python.calcScore" />
+      <item itemvalue="Python.simpleLRworking" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Test" />
+        <item itemvalue="Python.simpleLRworking" />
         <item itemvalue="Python.consoleExample" />
         <item itemvalue="Python.calcScore" />
         <item itemvalue="Python tests.Unittests in mainTF.py" />
-        <item itemvalue="Python.simpleLRwithoutScale" />
       </list>
     </recent_temporary>
   </component>
@@ -601,26 +928,26 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20415778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095949" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.33333334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.2637255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3288889" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3288889" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.2872549" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32941177" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32843137" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -646,16 +973,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/layers/core.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="915" selection-start-line="915" selection-end-line="915" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython/ml/advLR.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/pyautogui/__init__.py" />
     <entry file="file://F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython/myFitsLawGame.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/layers/recurrent.py" />
     <entry file="file://$PROJECT_DIR$/bindings/__init__.py" />
@@ -745,37 +1062,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/core/framework/graph_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_utils.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_generator.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/core/framework/graph_pb2.py" />
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
           <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/lrTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/numpy/core/multiarray.py">
@@ -785,13 +1079,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="1039" selection-start-line="1039" selection-end-line="1039" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/client/session.py" />
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/consoleExample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -799,34 +1087,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/input_layer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/input_layer.py" />
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/math.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="70" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -837,58 +1102,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training.py">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/framework/tensor_shape.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/ops/nn_ops.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/backend/tensorflow_backend.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/wrappers.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/base_layer.py" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/convolutional.py" />
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/lrTest.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1112" column="8" selection-start-line="1112" selection-start-column="8" selection-end-line="1112" selection-end-column="8" />
+        <state relative-caret-position="170">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/framework/tensor_shape.py">
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/IPython/core/interactiveshell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        <state relative-caret-position="219">
+          <caret line="2962" selection-start-line="2962" selection-end-line="2962" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/ops/nn_ops.py">
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/IPython/core/magic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="827" selection-start-line="827" selection-end-line="827" />
+        <state relative-caret-position="219">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/backend/tensorflow_backend.py">
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="3564" selection-start-line="3564" selection-end-line="3564" />
+        <state relative-caret-position="166">
+          <caret line="3601" column="8" selection-start-line="3601" selection-start-column="8" selection-end-line="3601" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/wrappers.py">
+    <entry file="file://C:/Program Files/Python36/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="247" selection-start-line="247" selection-end-line="247" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/base_layer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="456" selection-start-line="456" selection-end-line="456" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/convolutional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="324" column="32" selection-start-line="324" selection-start-column="32" selection-end-line="324" selection-end-column="32" />
+        <state relative-caret-position="241">
+          <caret line="915" selection-start-line="915" selection-end-line="915" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="666">
           <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -896,10 +1160,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="179" column="28" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1538047278437" expanded="true" signature="1917:3105" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1244">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state relative-caret-position="295">
+          <caret line="116" column="111" selection-start-line="115" selection-start-column="8" selection-end-line="116" selection-end-column="111" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <marker date="1537361977213" expanded="true" signature="5155:5161" ph="..." />
@@ -907,44 +1182,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="442">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
           <folding>
-            <element signature="e#50#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3426">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1537534310230" expanded="true" signature="1917:3105" ph="..." />
+            <marker date="1538052491649" expanded="true" signature="1272:1277" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="26" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <marker date="1538055755532" expanded="true" signature="4405:4411" ph="..." />
+            <marker date="1538055755532" expanded="true" signature="5285:5791" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1537536510463" expanded="true" signature="2773:3103" ph="..." />
+            <marker date="1538056077190" expanded="true" signature="3802:4132" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+          <folding>
+            <element signature="e#50#68#0" expanded="true" />
           </folding>
         </state>
       </provider>

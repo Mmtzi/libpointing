@@ -1,5 +1,5 @@
 from keras.models import Sequential, load_model
-from keras.layers import Dense
+from keras.layers import Dense, Conv1D, Flatten
 from keras.layers.recurrent import GRU, LSTM
 from numpy import genfromtxt
 from sklearn.datasets import make_regression
@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import os
 
-epochs=10
+epochs=20
 
 # load Data
 loaddata = genfromtxt('dataTest.csv', delimiter=',', skip_header=1)
@@ -40,20 +40,21 @@ xTrain = create_dataset(X, 20)
 yTrain= y
 
 
-if os.path.exists('models/easy_lr_model.h5'):
-    model = load_model('models/easy_lr_model.h5')
+if os.path.exists('models/conv1_lr_model.h5'):
+    model = load_model('models/conv1_lr_model.h5')
     print("loaded model")
 else:
     model = Sequential()
-    model.add(LSTM(4, return_sequences=True, input_shape=(20, 2), activation='relu'))
-    model.add(LSTM(4))
+    model.add(Conv1D(32, kernel_size=3, padding="same", input_shape=(20, 2), activation='relu'))
+    model.add(Dense(12, activation='relu'))
+    model.add(Flatten())
     model.add(Dense(1, activation='linear'))
     model.compile(loss='mse', optimizer='adam')
     model.summary()
     print("created model")
 model.get_weights()
-model.fit(xTrain, yTrain, epochs=epochs, verbose=2, batch_size=5)
-model.save('models\\easy_lr_model.h5')
+model.fit(xTrain, yTrain, epochs=epochs, verbose=1, batch_size=16)
+model.save('models\\conv1_lr_model.h5')
 #data to test the model
 Xnew = loaddata[2000:2500]
 ynew= Xnew[:,1]

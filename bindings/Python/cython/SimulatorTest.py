@@ -132,7 +132,8 @@ class SimTest(Thread):
                         int(self.targetPosition[1] - self.oldTarget[1]))
                     self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
                         self.pointSize / 2)
-
+                    if len(self.pastList) == 0:
+                        self.pastList = [0, 0, self.pastDir[0], self.pastDir[1], self.pointSize] * self.pastTimeSteps
                     self.screen.fill((255, 255, 255))
                     self.screen.blit(self.cursor.image, self.cursor.pos)
                     if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
@@ -172,8 +173,6 @@ class SimTest(Thread):
                 pygame.gfxdraw.filled_circle(self.screen, self.targetPosition[0], self.targetPosition[1], self.pointSize, (255, 0, 0))
 
                 #init pastDataList
-                if len(self.pastList) == 0:
-                    self.pastList = [0,0,self.pastDir[0], self.pastDir[1], self.pointSize]*self.pastTimeSteps
 
                 #convert pastList to a np array with one Element which has 4 columns and 20 rows (dx, dy, distanceX2Target, distanceY2Target)
                 timeSeries = []
@@ -181,12 +180,7 @@ class SimTest(Thread):
                 timeSeries = np.reshape(timeSeries, (-1, 5))
                 timeSeries = np.expand_dims(timeSeries, axis=0)
                 timeSeries = np.array(timeSeries)
-
-                #sizeInput needs to be shaped also as np array with one element [[size]]
-                sizeInput =[]
-                sizeInput.append(self.pointSize)
-                sizeInput = np.array(sizeInput)
-                #print(timeSeries, sizeInput)
+                #print(timeSeries)
                 #predict next output with the data from the past 20 timesteps
                 predictionsDxDy, predictButton = self.model.predict([timeSeries])
 
@@ -244,15 +238,17 @@ class SimTest(Thread):
 
                 self.actorQueue.put(self.writeline)
 
-                print(pdx, pdy, self.pastDir[0], self.pastDir[1], self.button)
+                print(pdx, pdy, self.button, self.pastDir[0], self.pastDir[1], self.pointSize)
 
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
+                #self.pastList.pop(0)
                 self.pastList.append(pdx)
                 self.pastList.append(pdy)
+                #self.pastList.append(int(round(self.button, 0)))
                 self.pastList.append(self.pastDir[0])
                 self.pastList.append(self.pastDir[1])
                 self.pastList.append(self.pointSize)
@@ -260,7 +256,7 @@ class SimTest(Thread):
                 self.screen.blit(self.cursor.image, self.getCursorPos())
 
             # check targetHit
-            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0):# and self.button >0.1:
+            if self.screen.get_at(self.getCursorPos()) == (255, 0, 0)and self.button >0.5:
                 print("startCursorPosition:" + str(self.initCursorPos))
                 self.targetID += 1
                 self.oldTarget = self.targetPosition
@@ -280,3 +276,4 @@ class SimTest(Thread):
 
             pygame.display.flip()
             self.clock.tick(self.desiredFPS)
+            #print(self.clock.get_fps())

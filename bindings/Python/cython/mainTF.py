@@ -6,37 +6,29 @@ from numpy import genfromtxt
 from glob import glob
 from random import shuffle
 import os
+import numpy as np
 #import itertools,collections
 import time
+import tensorflow as tf
+from tensorflow.python.client import device_lib
+
 
 def main():
-    modelname="newtconv1D16dense_fitg_1dx_1dist_1size.h5"
+    epochs = 30
+    lr = 0.0001
+    batchsize = 64
+    pastTS = 20
+    modelexp = "512conv1r0001_bnorm_512conv1r0001_32denser0001"
+    specials = "noButtonInClickAug20n"
+    modelname=str(epochs)+"e_"+str(lr)+"lr_"+str(batchsize)+"b_"+str(pastTS)+"TS_"+str(modelexp)+"_"+str(specials)+".h5"
     #dataQueue with sample data from fitsLawGame, every Thread has Acces to
-    pastTimeStepsSimulator = 1
     simuQueue = Queue()
     actorQueueUser = Queue()
     actorQueueSimu = Queue()
-    trainAll = True
-    epochs = 10
-    iter=0
-    i=0
-    while trainAll and i <10:
-        allCSVData = glob('thesis/logData/adaptive/system*.csv')
-        shuffle(allCSVData)
-        for each in allCSVData:
-            if os.path.getsize(each) >400000:
-                trainingSet = genfromtxt(each, delimiter=',', skip_header=1)
-                print(each, trainingSet.shape)
-                myTrainThread = trainSimulator(simuQueue, trainingSet, modelname, epochs, pastTimeStepsSimulator)
-                #myActorCriticThread = trainActor()
-                iter += 1
-                print("number_epochs: "+str(iter*epochs))
-                time.sleep(10)
-        time.sleep(30)
-        i+=1
-    #trainSimThread = trainSimulator(simuQueue, trainingSet, modelname)
+    onTheFly = False
+    trainSimThread = trainSimulator(simuQueue,  modelname, onTheFly, epochs, lr, batchsize, pastTS)
     #gameThread = collectData(simuQueue, actorQueueUser)
-    #testSimThread = testSimulator(actorQueueSimu, modelname, pastTimeStepsSimulator)
+    #testSimThread = testSimulator(actorQueueSimu, modelname, pastTS)
 
 def collectData(dataQueue, actorQueue):
     try:
@@ -52,19 +44,47 @@ def collectData(dataQueue, actorQueue):
 
 
 
-def trainSimulator(dataQueue, trainingSet, modelname, epochs, pastTimeStepsSimulator):
-    try:
-        print("trying to init TrainSimulator thread")
-        simulatorThread = advLR.Simulator(dataQueue, trainingSet, modelname, epochs, pastTimeStepsSimulator)
-        print("trying to start TrainSimulator thread")
+def trainSimulator(dataQueue, modelname, onTheFly, epochs, lr, batchSize, pastTS):
+    trainingSet = []
+    validSet = []
+    if onTheFly:
+        print("trying to init on the fly TrainSimulator thread")
+        simulatorThread = advLR.Simulator(dataQueue, trainingSet, modelname, epochs, lr, batchSize,pastTS)
+        print("trying to start on the fly TrainSimulator thread")
         simulatorThread.start()
-        print("TrainSimulator thread started")
-    except:
-        print("unable to start TrainSimulator thread")
-        return
-
-    if trainingSet.size !=0:
-        simulatorThread.join()
+        print("on the fly TrainSimulator thread started")
+    else:
+        allTrainData = glob('thesis/logData/adaptive/system*.csv')
+        allValidData = glob('thesis/logData/valid/system*.csv')
+        sorted(allTrainData, key=os.path.getmtime)
+        first = True
+        for each in allTrainData:
+            if os.path.getsize(each) > 500000:
+                loadedTSet = genfromtxt(each, delimiter=',', skip_header=1)
+                print(each, loadedTSet.shape)
+                if first == True:
+                    trainingSet = loadedTSet
+                    first = False
+                else:
+                    trainingSet = np.append(trainingSet, loadedTSet, axis=0)
+        first = True
+        for each in allValidData:
+            if os.path.getsize(each) > 500000:
+                loadedVSet = genfromtxt(each, delimiter=',', skip_header=1)
+                print(each, loadedVSet.shape)
+                if first == True:
+                    validSet = loadedVSet
+                    first = False
+                else:
+                    validSet = np.append(validSet, loadedVSet, axis=0)
+        try:
+            print("trying to init TrainSimulator thread")
+            simulatorThread = advLR.Simulator(dataQueue, trainingSet, validSet, modelname, epochs, lr, batchSize,pastTS)
+            print("trying to start TrainSimulator thread")
+            simulatorThread.start()
+            print("TrainSimulator thread started")
+        except:
+            print("unable to start TrainSimulator thread")
 
 def testSimulator(actorQueue, modelname, pastTimeStepsSimulator):
     try:

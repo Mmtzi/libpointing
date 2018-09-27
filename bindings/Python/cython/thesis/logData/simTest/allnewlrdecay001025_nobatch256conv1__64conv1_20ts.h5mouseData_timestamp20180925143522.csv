@@ -1,0 +1,2 @@
+dx,dy,button,rx,ry,time,distance,targetID,directionX,directionY,targetX,targetY,initMouseX,initMouseY,targetSize
+0,0,0.47,-0.0,-0.0,0.883206844329834,656.1005930037895,1,617,251,1577,851,960,600,20
