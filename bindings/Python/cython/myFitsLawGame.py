@@ -221,7 +221,7 @@ class Game(Thread):
                     print("startCursorPosition:"+str(self.initCursorPos))
                     self.targetID += 1
                     self.oldTarget = self.targetPosition
-                    self.pointSize = random.randint(2, 75)
+                    self.pointSize = random.randint(5, 75)
                     #select new target (not in the border or in the radius of the old one)
                     self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize), random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
                     while (abs(self.targetPosition[0] - self.oldTarget[0]) <= self.pointSize) or ((abs(self.targetPosition[1] - self.oldTarget[1]) <= self.pointSize)):

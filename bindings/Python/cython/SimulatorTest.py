@@ -50,7 +50,6 @@ class SimTest(Thread):
 
         self.pastList = []
         self.mySampleData = []
-
         self.actorQueue = qactor
 
         print("loading model...")
@@ -133,7 +132,7 @@ class SimTest(Thread):
                     self.pastDistance = math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
                         self.pointSize / 2)
                     if len(self.pastList) == 0:
-                        self.pastList = [0, 0, self.pastDir[0], self.pastDir[1], self.pointSize] * self.pastTimeSteps
+                        self.pastList = [0, 0, math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)), self.pastDir[0], self.pastDir[1], self.pointSize] * self.pastTimeSteps
                     self.screen.fill((255, 255, 255))
                     self.screen.blit(self.cursor.image, self.cursor.pos)
                     if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
@@ -177,7 +176,7 @@ class SimTest(Thread):
                 #convert pastList to a np array with one Element which has 4 columns and 20 rows (dx, dy, distanceX2Target, distanceY2Target)
                 timeSeries = []
                 timeSeries.append(self.pastList)
-                timeSeries = np.reshape(timeSeries, (-1, 5))
+                timeSeries = np.reshape(timeSeries, (-1, 6))
                 timeSeries = np.expand_dims(timeSeries, axis=0)
                 timeSeries = np.array(timeSeries)
                 #print(timeSeries)
@@ -224,8 +223,7 @@ class SimTest(Thread):
                 self.writeline.append(prx)
                 self.writeline.append(pry)
                 self.writeline.append(time.time()-self.startTime)
-                self.writeline.append(math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)) - int(
-                        self.pointSize / 2))
+                self.writeline.append(math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)))
                 self.writeline.append(self.targetID)
                 self.writeline.append(self.pastDir[0])
                 self.writeline.append(self.pastDir[1])
@@ -238,17 +236,17 @@ class SimTest(Thread):
 
                 self.actorQueue.put(self.writeline)
 
-                print(pdx, pdy, self.button, self.pastDir[0], self.pastDir[1], self.pointSize)
+                print(pdx, pdy, self.button, math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)), self.pastDir[0], self.pastDir[1], self.pointSize)
 
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
                 self.pastList.pop(0)
-                #self.pastList.pop(0)
+                self.pastList.pop(0)
                 self.pastList.append(pdx)
                 self.pastList.append(pdy)
-                #self.pastList.append(int(round(self.button, 0)))
+                self.pastList.append(math.sqrt(pow(self.pastDir[0], 2) + pow(self.pastDir[1], 2)))
                 self.pastList.append(self.pastDir[0])
                 self.pastList.append(self.pastDir[1])
                 self.pastList.append(self.pointSize)

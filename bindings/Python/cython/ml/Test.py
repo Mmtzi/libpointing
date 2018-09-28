@@ -1,6 +1,5 @@
 import numpy as np
 
-
 #import calcScore
 myData = []
 for i in range (0,20):
@@ -37,14 +36,18 @@ lr=0.001
 
 
 myarray = np.random.randint(16, size=(4,4))
-print(myarray)
-newarray= myarray[:,[2,3]]
-print(newarray)
-newarray = np.roll(newarray, 1, axis=0)
-print(newarray)
-myarray[:,[2,3]] = newarray
-print(myarray)
+bla = [[[5,4],[3,2]],[[1,2],[7,8]]]
+bla = np.array(bla)
+print(bla)
 
+mean = np.mean(bla, axis=1)
+st = np.std(bla,axis=1)
+print(mean)
+print(st)
+bla = np.subtract(bla, mean)
+print(bla)
+bla = np.divide(bla, st)
+print(bla)
 
 param_grid = [
   {'C': [1, 10, 100, 1000], 'kernel': ['linear']},

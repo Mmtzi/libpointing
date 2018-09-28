@@ -9,17 +9,16 @@ import os
 import numpy as np
 #import itertools,collections
 import time
-import tensorflow as tf
 from tensorflow.python.client import device_lib
-
+#os.environ["CUDA_VISIBLE_DEVICES"]="-1"
 
 def main():
     epochs = 30
     lr = 0.0001
     batchsize = 64
     pastTS = 20
-    modelexp = "512conv1r0001_bnorm_512conv1r0001_32denser0001"
-    specials = "noButtonInClickAug20n"
+    modelexp = "512conv13_drop25_512conv13_drop25_32denser0001"
+    specials = "inDistanceAug20nAdv"
     modelname=str(epochs)+"e_"+str(lr)+"lr_"+str(batchsize)+"b_"+str(pastTS)+"TS_"+str(modelexp)+"_"+str(specials)+".h5"
     #dataQueue with sample data from fitsLawGame, every Thread has Acces to
     simuQueue = Queue()
