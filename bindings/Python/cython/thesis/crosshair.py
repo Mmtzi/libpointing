@@ -11,13 +11,20 @@ class crosshair:
         self.screenheight = sh
         print("init cursor" + str(self.pos))
 
-    def move(self, dx, dy):
-        self.pos = self.pos.move(dx,dy)
-        if self.pos[0] < 0:
+    def move(self, rx, ry):
+        if self.pos[0]+rx < 0:
+            print(self.pos[0])
             self.pos[0] = 1
-        if self.pos[0] > self.screenwidth:
+        elif self.pos[0]+rx > self.screenwidth:
+            print(self.pos[0])
             self.pos[0] = self.screenwidth-1
-        if self.pos[1] < 0:
+        else:
+            self.pos[0] = self.pos[0] + rx
+        if self.pos[1]+ry < 0:
+            print(self.pos[1])
             self.pos[1] = 1
-        if self.pos[1] > self.screenheight:
+        elif self.pos[1]+ry > self.screenheight:
+            print(self.pos[1])
             self.pos[1] = self.screenheight-1
+        else:
+            self.pos[1] = self.pos[1] + ry

@@ -50,6 +50,8 @@ class SimTest(Thread):
 
         self.pastList = []
         self.mySampleData = []
+        self.dirXQueue = []
+        self.dirYQueue = []
         self.actorQueue = qactor
 
         print("loading model...")
@@ -196,6 +198,23 @@ class SimTest(Thread):
                 pdx = int(round(predictionsDxDy[0][0],0))
                 pdy = int(round(predictionsDxDy[0][1],0))
                 self.button = round(predictButton[0][0],2)
+                newDir = self.targetPosition[0] - (self.getCursorPos()[0] + self.tfct.applyd(pdx, pdy, 0)[0]), self.targetPosition[1] - (self.getCursorPos()[1] + self.tfct.applyd(pdx, pdy, 0)[1])
+                print(self.pastDir, newDir)
+                self.dirXQueue.append(abs(self.pastDir[0])-abs(newDir[0]))
+                self.dirYQueue.append(abs(self.pastDir[1])-abs(newDir[1]))
+                sumDirX = sum(self.dirXQueue)
+                sumDirY = sum(self.dirYQueue)
+                if len(self.dirXQueue) >= 10:
+                    self.dirXQueue.pop(0)
+                    self.dirYQueue.pop(0)
+                if sumDirX < 0:
+                    pdx = -(pdx)
+                if sumDirX == 0:
+                    pdx = pdx+int(newDir[0]/max(abs(newDir[0]),1))
+                if sumDirY < 0:
+                    pdy = -(pdy)
+                if sumDirY == 0:
+                    pdy = pdy+int(newDir[1]/max(abs(newDir[1]),1))
 
                 #useTF on output
                 prx, pry = self.tfct.applyd(pdx, pdy, 0)
@@ -258,7 +277,7 @@ class SimTest(Thread):
                 print("startCursorPosition:" + str(self.initCursorPos))
                 self.targetID += 1
                 self.oldTarget = self.targetPosition
-                self.pointSize = random.randint(2, 75)
+                self.pointSize = random.randint(5, 75)
                 self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize),
                                        random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
                 self.initCursorPos = self.getCursorPos()

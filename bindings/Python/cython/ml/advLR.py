@@ -21,23 +21,29 @@ from random import randint
 import tensorflow as tf
 from multiprocessing import Pool
 from sklearn.preprocessing import normalize
+from math import sqrt
 
 
 class Simulator(Thread):
     def __init__(self, q, trainingSet, validSet, modelname, epochs, lr, batchSize, pastTS):
+        self.q = q
         self.lr = lr
         self.modelname = modelname
         self.tbCallBack = TensorBoard(log_dir='ml\\logs\\tb/'+str(modelname), histogram_freq=0,
           write_graph=True, write_images=True)
         self.chk = ModelCheckpoint("ml\\models\\cp"+str(modelname), monitor='val_loss', save_best_only=True)
-        self.sleepInterval = 0.2
         self.pastTimeSteps = pastTS
         self.batchSize = batchSize
         self.epochs = epochs
-
-        self.inputNP, self.outDxDyNP, self.outButtonNP = self.prepareData(q, trainingSet)
+        if trainingSet.size == 0:
+            while self.q.qsize() < 5000:
+                print(self.q.qsize())
+                time.sleep(0.5)
+            else:
+                trainingSet = np.array(list(self.q.queue))
+        self.inputNP, self.outDxDyNP, self.outButtonNP = self.prepareData(trainingSet)
         print("prepared Trainingdata!")
-        self.validInputNP, self. validOutDxDyNP, self.validOutButtonNP = self.prepareData(q, validSet)
+        self.validInputNP, self. validOutDxDyNP, self.validOutButtonNP = self.prepareData(validSet)
         print("prepared Validationdata!")
 
         super().__init__()
@@ -53,20 +59,20 @@ class Simulator(Thread):
             model = load_model('ml\\models\\'+str(self.modelname))
             print("loaded model: "+str(self.modelname))
             print(K.get_value(model.optimizer.lr))
-            K.set_value(model.optimizer.lr, self.lr)
+            #K.set_value(model.optimizer.lr, self.lr/sqrt(model.nb_epoch))
         else:
             print("new model: "+ str(self.modelname))
             timeInput = Input(shape=(self.pastTimeSteps, self.inputNP.shape[2]), dtype='float32', name='timeInput')
-            conv1 = Conv1D(512, kernel_size=3, padding="same",activation="relu")(timeInput)
-            drop1 = Dropout(0.25) (conv1)
-            conv2 = Conv1D(512, kernel_size=3, padding="same", activation="relu")(drop1)
-            drop2 = Dropout(0.25) (conv2)
-            flat = Flatten()(drop2)
-            dense1 = Dense(32, activation="relu", kernel_regularizer=regularizers.l2(0.0001))(flat)
-            outDxDy = Dense(2, activation='linear')(dense1)
-            outButton = Dense(1, activation='sigmoid')(dense1)
+            d1 = Dense(512, activation="relu", kernel_regularizer=regularizers.l2(0.0001),
+                       input_shape=(self.pastTimeSteps, self.inputNP.shape[2]))(timeInput)
+            d2 = Dense(512, activation="relu", kernel_regularizer=regularizers.l2(0.0001),
+                       input_shape=(self.pastTimeSteps, self.inputNP.shape[2]))(d1)
+            flat = Flatten()(d2)
+            dense2 = Dense(64, activation="relu", kernel_regularizer=regularizers.l2(0.0001))(flat)
+            outDxDy = Dense(2, activation='linear')(dense2)
+            outButton = Dense(1, activation='sigmoid')(dense2)
             model=Model([timeInput], [outDxDy, outButton])
-            model.compile(Adam(lr=self.lr), loss=['mse', 'binary_crossentropy'])
+            model.compile(Adam(lr=self.lr), loss=['mse', 'binary_crossentropy'], metrics=['accuracy'])
 
         model.summary()
 
@@ -111,6 +117,8 @@ class Simulator(Thread):
             if self.IterPickIndex < self.inputNP.shape[0]-self.batchSize:
                 yield self.createTrainBatch(input, outdxdy, outbutton)
             else:
+                #self.prepareData(np.array(list(self.q.queue)))
+                #self.indexList = np.arange(0, self.inputNP.shape[0], 1)
                 np.random.shuffle(self.indexList)
                 self.IterPickIndex=0
 
@@ -127,45 +135,48 @@ class Simulator(Thread):
     def validGenerator(self):
         print("generateValidDataSets")
         self.validIndexList = np.arange(0, self.validInputNP.shape[0], 1)
+        np.random.shuffle(self.validIndexList)
         print(self.validInputNP.shape[0], self.validOutButtonNP.shape[0], self.validOutDxDyNP.shape[0], self.validIndexList.size)
         input = np.zeros((self.batchSize, self.pastTimeSteps, self.validInputNP.shape[2]))
         outdxdy = np.zeros((self.batchSize, self.validOutDxDyNP.shape[1]))
         outbutton = np.zeros((self.batchSize, 1))
-        pickedIndex = np.zeros((self.batchSize, 1))
         print(input.shape, outdxdy.shape, outbutton.shape)
+        self.IterValidIndex =0
         while True:
-            if self.validIndexList.shape[0] >= self.batchSize:
-                yield self.createValidBatch(input, outdxdy, outbutton, pickedIndex)
+            if self.IterValidIndex < self.validInputNP.shape[0]-self.batchSize:
+                yield self.createValidBatch(input, outdxdy, outbutton)
             else:
-                self.validIndexList = np.arange(0, self.validInputNP.shape[0], 1)
+                np.random.shuffle(self.validIndexList)
+                self.IterValidIndex = 0
 
-    def createValidBatch(self, input, outdxdy, outbutton, pickedIndex):
+    def createValidBatch(self, input, outdxdy, outbutton):
         for i in range(0, self.batchSize):
-            index = randint(0, self.validIndexList.shape[0]-1)
-            pick = self.validIndexList.item(index)
-            pickedIndex[i] = pick
-            input[i] = self.validInputNP[pick]
-            outdxdy[i] = self.validOutDxDyNP[pick]
-            outbutton[i] = self.validOutButtonNP[pick]
-        self.validIndexList = np.delete(self.validIndexList, pickedIndex)
+            pickedIndex = self.validIndexList[self.IterValidIndex]
+            input[i] = self.validInputNP[pickedIndex]
+            outdxdy[i] = self.validOutDxDyNP[pickedIndex]
+            outbutton[i] = self.validOutButtonNP[pickedIndex]
+            self.IterValidIndex+=1
         return [input], [outdxdy, outbutton]
 
-    def prepareData(self, q, dataSet):
+    def prepareData(self, dataSet):
         print("preparing Data...")
         print(dataSet.shape[0])
         input=[]
         outdxdy= []
         outbutton =[]
+        invalidBatchSample = False
         clicks = 0
         noclicks =0
-        if dataSet.shape[0] == 0:
-            dataSet = np.array(list(q.queue))
         dataSet = dataSet[:, [0, 1, 2, 6, 7, 8, 9, 14]]
         for i in range(self.pastTimeSteps, dataSet.shape[0]):
             batchsample = dataSet[i - self.pastTimeSteps: i + 1, :]
-            #print(batchsample)
-            if ((98 in batchsample[:, 4] or 99 in batchsample[:, 4] or 100 in batchsample[:, 4]) and 1 in batchsample[:, 4]):
-                #print(batchsample)
+            for x in range(0, self.pastTimeSteps):
+                if (batchsample[x, 4] > batchsample[x+1, 4]):
+                    print(batchsample)
+                    invalidBatchSample = True
+                    break
+            if invalidBatchSample:
+                invalidBatchSample= False
                 continue
             else:
                 inputSlice = batchsample[:self.pastTimeSteps, [0,1,3,5,6,7]]
@@ -177,7 +188,7 @@ class Simulator(Thread):
                 if int(outbuttonSlice) == 1 and \
                         (inputSlice[self.pastTimeSteps-1,2] <= inputSlice[self.pastTimeSteps-1,5]):
                     clicks += 1
-                    for k in range(0, 20):
+                    for k in range(0, 10):
                         input.append(inputSlice)
                         outdxdy.append(outdxdySlice)
                         outbutton.append(outbuttonSlice)

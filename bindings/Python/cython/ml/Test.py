@@ -61,3 +61,6 @@ def lrrek(lr):
     if lr >0.00001:
         lrrek(lr)
 #lrrek(lr)
+action_space = np.zeros(shape=(2,))
+action_space[0] = 5
+print(action_space)

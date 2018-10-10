@@ -7,9 +7,92 @@
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/30e_0.0001lr_64b_20TS_512conv1r0001_bnorm_512conv1r0001_32denser0001_noButtonInClickAug20n.h5/events.out.tfevents.1538055781.MCI-PAWELSDOG" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/logs/tb/30e_0.0001lr_64b_20TS_512conv1r0001_bnorm_512conv1r0001_32denser0001_noButtonInClickAug20n.h5/events.out.tfevents.1538055781.MCI-PAWELSDOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/models/30e_0.0001lr_64b_20TS_512conv1r0001_bnorm_512conv1r0001_32denser0001_noButtonInClickAug20n.h5" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/models/30e_0.0001lr_64b_20TS_512conv1r0001_bnorm_512conv1r0001_32denser0001_noButtonInClickAug20n.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/ml/ActorCritic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/suspect/system_1_false_easy_1800_125mouseData_timestamp20180906105005.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903134211.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903160118.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_0_true_easy_1800_125mouseData_timestamp20180903160215.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903160730.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903160730.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903171904.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903171904.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903172222.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903172222.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903172721.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180903172721.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904113609.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904113609.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904114343.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904114343.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904115227.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904115227.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904125005.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904125005.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904125302.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904125302.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904130229.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904130229.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904130457.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904130457.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904130748.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904130748.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904131232.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904131232.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904131636.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904131636.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904135400.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904135958.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904135958.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904141141.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904141358.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904141358.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904141751.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904141751.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904142456.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904142456.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180904143025.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905104936.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905104936.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905124651.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905134602.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905164458.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905164458.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905170103.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905170103.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905170717.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905170717.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905171049.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905171049.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905171508.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905171508.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905171907.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905171907.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905174704.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905174704.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905174900.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180905174900.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907105313.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907105313.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907110343.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907110343.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907112803.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907112803.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907115556.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907115556.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907122528.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907122528.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907161155.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907161155.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907162014.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180907162014.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910170108.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910170108.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910172238.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910172238.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910174131.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910174131.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910174617.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910174617.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910174850.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180910174850.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912142259.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912142259.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912143718.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912143718.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912150813.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912150813.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912151737.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912151737.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912152821.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912152821.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912154859.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912154859.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912155133.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180912155133.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180913143215.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180913143215.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914123319.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914123319.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914125459.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914125459.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914125751.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914125751.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914135857.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180914135857.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917115452.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917115452.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917133155.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917133155.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917133518.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917133518.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917151829.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917151829.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917170509.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180917170509.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919123238.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919123238.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919124306.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919124306.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919124809.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919124809.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919144341.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919144341.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919145417.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919145417.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919150110.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180919150110.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180921133251.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180921133251.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140039.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140039.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140318.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140318.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140507.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140507.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140756.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928140756.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928143245.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/adaptive/system_1_false_easy_1800_125mouseData_timestamp20180928143245.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180917235526.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180917235526.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180927094810.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180927094810.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180927094943.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180927094943.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180927095113.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bindings/Python/cython/thesis/logData/valid/system_1_false_easy_1800_125mouseData_timestamp20180927095113.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +103,14 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame__1_.coverage" NAME="myFitsLawGame (1) Coverage Results" MODIFIED="1534260531203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$consoleExample__1_.coverage" NAME="consoleExample (1) Coverage Results" MODIFIED="1529491121421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/libpointingjs/libpointing-1.0.7/libpointing-1.0.7/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1538151977974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$mainTF.coverage" NAME="mainTF Coverage Results" MODIFIED="1539176618408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$kerasTest__1_.coverage" NAME="kerasTest (1) Coverage Results" MODIFIED="1530706565950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/TensorFlow" />
     <SUITE FILE_PATH="coverage/libpointing$SimulatorTest.coverage" NAME="SimulatorTest Coverage Results" MODIFIED="1536161950329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$myActorCritic.coverage" NAME="myActorCritic Coverage Results" MODIFIED="1533809843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$simpleLRwithoutScale.coverage" NAME="simpleLRwithoutScale Coverage Results" MODIFIED="1535466654327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/" />
     <SUITE FILE_PATH="coverage/libpointing$kerasTest.coverage" NAME="kerasTest Coverage Results" MODIFIED="1533552352087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$fitsTest.coverage" NAME="fitsTest Coverage Results" MODIFIED="1528813033556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/thesis" />
-    <SUITE FILE_PATH="coverage/libpointing$advLR.coverage" NAME="advLR Coverage Results" MODIFIED="1536143875940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$advLR.coverage" NAME="advLR Coverage Results" MODIFIED="1538404780715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame__2_.coverage" NAME="myFitsLawGame Coverage Results" MODIFIED="1530531752471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$myFitsLawGame.coverage" NAME="myFitsLawGame Coverage Results" MODIFIED="1535106966636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$calcScore.coverage" NAME="calcScore Coverage Results" MODIFIED="1536841331342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
@@ -35,12 +118,13 @@
     <SUITE FILE_PATH="coverage/libpointing$simpleLRworking.coverage" NAME="simpleLRworking Coverage Results" MODIFIED="1537877989455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$apiExample.coverage" NAME="apiExample Coverage Results" MODIFIED="1529488084711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$tfFunctionWriter.coverage" NAME="tfFunctionWriter Coverage Results" MODIFIED="1530533405809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/thesis" />
-    <SUITE FILE_PATH="coverage/libpointing$pendulum.coverage" NAME="pendulum Coverage Results" MODIFIED="1533812894845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$pendulum.coverage" NAME="pendulum Coverage Results" MODIFIED="1539164316833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$Unittests_in_mainTF_py.coverage" NAME="Unittests in mainTF.py Coverage Results" MODIFIED="1536225433480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
-    <SUITE FILE_PATH="coverage/libpointing$consoleExample.coverage" NAME="consoleExample Coverage Results" MODIFIED="1537346218372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
+    <SUITE FILE_PATH="coverage/libpointing$consoleExample.coverage" NAME="consoleExample Coverage Results" MODIFIED="1539175592515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython" />
     <SUITE FILE_PATH="coverage/libpointing$actorCriticTest.coverage" NAME="actorCriticTest Coverage Results" MODIFIED="1533805070386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$testAdv.coverage" NAME="testAdv Coverage Results" MODIFIED="1533558525769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
-    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1538151606119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$Test.coverage" NAME="Test Coverage Results" MODIFIED="1538993881884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
+    <SUITE FILE_PATH="coverage/libpointing$myActorCritic2.coverage" NAME="myActorCritic2 Coverage Results" MODIFIED="1539161129151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrTest.coverage" NAME="lrTest Coverage Results" MODIFIED="1533552448074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
     <SUITE FILE_PATH="coverage/libpointing$lrNewTest.coverage" NAME="lrNewTest Coverage Results" MODIFIED="1533558213359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bindings/Python/cython/ml" />
   </component>
@@ -62,47 +146,47 @@
     <session id="1566594586">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="31" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="18" />
-          <entry key="project.open.time.5" value="10" />
+          <entry key="project.open.time.4" value="19" />
+          <entry key="project.open.time.5" value="11" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="groovy" value="1" />
           <entry key="ideas" value="1" />
-          <entry key="pxd" value="1" />
-          <entry key="py" value="77" />
-          <entry key="pyx" value="1" />
+          <entry key="pxd" value="2" />
+          <entry key="py" value="141" />
+          <entry key="pyx" value="2" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="1390" />
-          <entry key="dummy" value="64" />
+          <entry key="dummy" value="91" />
           <entry key="ideas" value="788" />
-          <entry key="py" value="35655" />
+          <entry key="py" value="49622" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Cython" value="2" />
+          <entry key="Cython" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="77" />
+          <entry key="Python" value="141" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="852" />
-          <entry key="Python" value="37045" />
+          <entry key="PLAIN_TEXT" value="879" />
+          <entry key="Python" value="51012" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -113,27 +197,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/ActorCritic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
+            <state relative-caret-position="254">
+              <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1538137889835" expanded="true" signature="5155:5161" ph="..." />
+                <element signature="e#1#19#0" expanded="true" />
+                <marker date="1539176618402" expanded="true" signature="9031:9036" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/testActorCritic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+            <state relative-caret-position="73">
+              <caret line="127" column="63" selection-start-line="127" selection-start-column="63" selection-end-line="127" selection-end-column="63" />
               <folding>
-                <marker date="1538151605029" expanded="true" signature="1331:1336" ph="..." />
+                <element signature="e#50#60#0" expanded="true" />
+                <marker date="1539166970932" expanded="true" signature="7737:7738" ph="..." />
+                <marker date="1539166970932" expanded="true" signature="7841:7850" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/keras/engine/training.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19023">
+              <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
             </state>
           </provider>
         </entry>
@@ -141,8 +236,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+            <state relative-caret-position="578">
+              <caret line="45" column="36" selection-start-line="44" selection-start-column="12" selection-end-line="45" selection-end-column="36" />
               <folding>
                 <element signature="e#50#68#0" expanded="true" />
               </folding>
@@ -151,10 +246,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
+        <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/envs/classic_control/pendulum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+            <state relative-caret-position="697">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="37" column="70" lean-forward="true" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/environment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -162,27 +278,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-                <marker date="1538151935883" expanded="true" signature="3816:4146" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+        <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/environment2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="156" column="45" selection-start-line="156" selection-start-column="45" selection-end-line="156" selection-end-column="45" />
+            <state relative-caret-position="340">
+              <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1538151768713" expanded="true" signature="1916:3104" ph="..." />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,12 +293,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-                <marker date="1538151906170" expanded="true" signature="4448:4454" ph="..." />
-                <marker date="1538151906170" expanded="true" signature="5354:5773" ph="..." />
+                <marker date="1539069732875" expanded="true" signature="4804:4810" ph="..." />
+                <marker date="1539069732875" expanded="true" signature="5847:6266" ph="..." />
               </folding>
             </state>
           </provider>
@@ -222,9 +324,15 @@
       <find>new target</find>
       <find>plot</find>
       <find>termina</find>
-      <find>print</find>
       <find>tf</find>
       <find>clock</find>
+      <find>graph</find>
+      <find>env</find>
+      <find>sample</find>
+      <find>memory</find>
+      <find>print</find>
+      <find>fit</find>
+      <find>scoreplot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -252,14 +360,12 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/sessionEndScreen.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/envExample.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/envi.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/mainTF.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/myFitsLawGame.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/__init__.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/a3c.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/a3cTest.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/models/mya3c.py" />
@@ -267,14 +373,22 @@
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/ideas" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/actorTF.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py" />
+        <option value="C:/Program Files/Python36/Lib/site-packages/gym/envs/classic_control/pendulum.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/Test.py" />
-        <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic2.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/environment.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/testActorCritic.py" />
         <option value="$PROJECT_DIR$/bindings/Python/cython/mainTF.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/environment2.py" />
+        <option value="$PROJECT_DIR$/bindings/Python/cython/ml/ActorCritic.py" />
       </list>
     </option>
   </component>
@@ -293,7 +407,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="64" />
+    <option name="x" value="2181" />
+    <option name="y" value="-17" />
     <option name="width" value="974" />
     <option name="height" value="1167" />
   </component>
@@ -302,7 +417,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -356,6 +470,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,16 +487,16 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython" />
-      <recent name="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython\ml" />
-      <recent name="D:\bachelorthesis\libpointingfork\libpointing\bindings\Python\cython\ml" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython\thesis" />
       <recent name="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython" />
       <recent name="D:\bachelorthesis\libpointingfork\libpointing\bindings\Python\cython" />
       <recent name="D:\bachelorthesis\libpointingfork\libpointing\bindings\Python\cython\thesis" />
+      <recent name="D:\bachelorthesis\libpointingfork\libpointing\bindings\Python\cython\ml" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython\ml" />
+      <recent name="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython" />
       <recent name="D:\bachelorthesis\libpointingfork\libpointing\bindings\Python\cython\ml" />
     </key>
   </component>
@@ -442,7 +557,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="calcScore" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="advLR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="libpointing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -455,7 +570,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -508,7 +623,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="simpleLRworking" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="myActorCritic2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="libpointing" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -521,7 +636,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRworking.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pendulum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="libpointing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bindings/Python/cython/ml" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\muntzingml\machineLearningTF\libpointing\bindings\Python\cython\ml\ActorCritic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -537,21 +674,6 @@
       <tasks />
       <arguments />
       <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in mainTF.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="libpointing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bindings/Python/cython" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/bindings/Python/cython/mainTF.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -573,17 +695,17 @@
       <item itemvalue="Python.mainTF" />
       <item itemvalue="Python.Test" />
       <item itemvalue="Python.consoleExample" />
-      <item itemvalue="Python tests.Unittests in mainTF.py" />
-      <item itemvalue="Python.calcScore" />
-      <item itemvalue="Python.simpleLRworking" />
+      <item itemvalue="Python.advLR" />
+      <item itemvalue="Python.pendulum" />
+      <item itemvalue="Python.myActorCritic2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Test" />
-        <item itemvalue="Python.simpleLRworking" />
         <item itemvalue="Python.consoleExample" />
-        <item itemvalue="Python.calcScore" />
-        <item itemvalue="Python tests.Unittests in mainTF.py" />
+        <item itemvalue="Python.pendulum" />
+        <item itemvalue="Python.myActorCritic2" />
+        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.advLR" />
       </list>
     </recent_temporary>
   </component>
@@ -608,20 +730,29 @@
       <configuration name="Unittests in mainTF.py" configurationId="tests" />
     </history-entry>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20095949" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.16078432" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.30222222" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.45333335" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32843137" />
@@ -634,8 +765,33 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Data View" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
-      <window_info anchor="right" id="SciView" order="5" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32995737" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.3288889" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.30222222" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.45333335" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32843137" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32843137" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.2872549" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32843137" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32995737" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -654,132 +810,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://F:/bachelorthesis/libpointingfork/libpointing/bindings/Python/cython/myFitsLawGame.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/keras/layers/recurrent.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/SimulatorTest.py" />
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/saving.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/csubpixelfunction.pxd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/pylibpointing.pyx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5831">
-          <caret line="350" column="27" selection-start-line="350" selection-start-column="27" selection-end-line="350" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/simpleLRwithoutScale.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/layers/merge.py" />
-    <entry file="file://C:/Program Files/Python36/Lib/tkinter/__init__.py" />
-    <entry file="file://C:/Program Files/Python36/Lib/csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/a3cTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/models/mya3c.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/TODO.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/ideas">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/_collections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/a3c.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="106" column="30" selection-start-line="106" selection-start-column="30" selection-end-line="106" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/actorTF.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_utils.py" />
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/training_generator.py" />
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/core/framework/graph_pb2.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/recurrentSim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/numpy/core/multiarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="5708" column="4" selection-start-line="5708" selection-start-column="4" selection-end-line="5708" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/tensorflow/python/client/session.py" />
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/consoleExample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python36/site-packages/keras/engine/input_layer.py" />
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/math.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/pendulum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -817,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="3601" column="8" selection-start-line="3601" selection-start-column="8" selection-end-line="3601" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Python36/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -831,77 +858,297 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/plotData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/curi.pxd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/pylibpointing.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="320" column="8" selection-start-line="320" selection-start-column="8" selection-end-line="320" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/contextlib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/tensorflow/python/framework/op_def_library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="393" selection-start-line="393" selection-end-line="393" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/tensorflow/python/ops/gen_array_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="6038" selection-start-line="6038" selection-end-line="6038" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/tensorflow/python/ops/array_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="1744" selection-start-line="1744" selection-end-line="1744" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/keras/engine/input_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-1120166012/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="3962" column="6" selection-start-line="3962" selection-start-column="6" selection-end-line="3962" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/utils/closer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/thesis/crosshair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/envs/registration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="165" column="4" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/envs/robotics/fetch_env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/spaces/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/spaces/box.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="53" column="39" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/keras/layers/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="825" column="8" selection-start-line="825" selection-start-column="8" selection-end-line="825" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="214" column="32" selection-start-line="214" selection-start-column="32" selection-end-line="214" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="10" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/calcScore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/wrappers/time_limit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/keras/engine/training_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/tensorflow/python/ops/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="2594" column="4" selection-start-line="2594" selection-start-column="4" selection-end-line="2594" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="3566" selection-start-line="3566" selection-end-line="3566" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/keras/backend/tensorflow_backend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="2694" selection-start-line="2694" selection-end-line="2694" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="118" column="113" selection-start-line="118" selection-start-column="113" selection-end-line="118" selection-end-column="113" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1539174606995" expanded="true" signature="5251:5257" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19023">
+          <caret line="1146" selection-start-line="1146" selection-end-line="1146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/myActorCritic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
+        <state relative-caret-position="578">
+          <caret line="45" column="36" selection-start-line="44" selection-start-column="12" selection-end-line="45" selection-end-column="36" />
           <folding>
             <element signature="e#50#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/myFitsLawGame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1538137889835" expanded="true" signature="5155:5161" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding>
-            <marker date="1538151605029" expanded="true" signature="1331:1336" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/SimulatorTest.py">
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/gym/envs/classic_control/pendulum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="156" column="45" selection-start-line="156" selection-start-column="45" selection-end-line="156" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1538151768713" expanded="true" signature="1916:3104" ph="..." />
-          </folding>
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/advLR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
-            <marker date="1538151906170" expanded="true" signature="4448:4454" ph="..." />
-            <marker date="1538151906170" expanded="true" signature="5354:5773" ph="..." />
+            <marker date="1539069732875" expanded="true" signature="4804:4810" ph="..." />
+            <marker date="1539069732875" expanded="true" signature="5847:6266" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/consoleExample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="55" column="38" lean-forward="true" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/environment2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="74" column="39" lean-forward="true" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bindings/Python/cython/mainTF.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        <state relative-caret-position="-442">
+          <caret line="37" column="70" lean-forward="true" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1538151935883" expanded="true" signature="3816:4146" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/testActorCritic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="127" column="63" selection-start-line="127" selection-start-column="63" selection-end-line="127" selection-end-column="63" />
+          <folding>
+            <element signature="e#50#60#0" expanded="true" />
+            <marker date="1539166970932" expanded="true" signature="7737:7738" ph="..." />
+            <marker date="1539166970932" expanded="true" signature="7841:7850" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bindings/Python/cython/ml/ActorCritic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="122" column="12" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#19#0" expanded="true" />
+            <marker date="1539176618402" expanded="true" signature="9031:9036" ph="..." />
           </folding>
         </state>
       </provider>

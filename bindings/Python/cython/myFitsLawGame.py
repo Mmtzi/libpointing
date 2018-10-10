@@ -88,7 +88,7 @@ class Game(Thread):
 
         # header of the logfile
         self.mouse_field = ['dx', 'dy', 'button', 'rx', 'ry', 'time',  'distance',
-                            'targetID', 'directionX', 'directionY', 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize']
+                            'targetID', 'directionX', 'directionY', 'targetX', 'targetY', 'initMouseX', 'initMouseY', 'targetSize','reward']
         # mouse_field = ['dx', 'rx']
 
         self.writerMouse = csv.DictWriter(self.outfile, fieldnames=self.mouse_field)
@@ -113,19 +113,20 @@ class Game(Thread):
         #print("%s: %d %d %d -> %.2f %.2f"%(str(newTimestamp), dx, dy, button, rx, ry ))
         direction = (self.targetPosition[0] - self.getCursorPos()[0], self.targetPosition[1] - self.getCursorPos()[1])
         distance = math.sqrt(pow(direction[0], 2) + pow(direction[1], 2))
-        #'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance',
-        #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', 'targetID'
+        reward = calcScore.calcScoreOfAction(self.getCursorPos(), self.pastCursorPos, distance, self.pastDistance,
+                                             self.targetPosition, self.pointSize, self.newTimestamp, button)
+        #'dx', 'dy', 'button', 'rx', 'ry', 'time', 'distance', 'targetID'
+        #'directionX', 'directionY', 'targetX', 'targetY', 'targetSize', 'initMouseX', 'initMouseY', size, reward
         sampleSimu = (dx0, dy0, button, rx0, ry0, self.newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
-                    self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
+                    self.initCursorPos[0], self.initCursorPos[1], self.pointSize, reward)
         sampleActor = (dx0, dy0, button, rx0, ry0, self.newTimestamp, distance, self.targetID, direction[0], direction[1], self.targetPosition[0], self.targetPosition[1],
-                    self.initCursorPos[0], self.initCursorPos[1], self.pointSize)
+                    self.initCursorPos[0], self.initCursorPos[1], self.pointSize, reward)
         self.myPlotDx.append(dx0)
         #add data only in playstate
         if self.PLAY:
             self.mySampleData.append(sampleSimu)
             self.queueSimu.put(sampleSimu)
             self.queueActor.put(sampleActor)
-            calcScore.calcScoreOfAction(self.getCursorPos(), self.pastCursorPos, distance, self.pastDistance, self.targetPosition, self.pointSize, self.newTimestamp)
             self.pastCursorPos = self.getCursorPos()
             self.pastDistance = distance
         sys.stdout.flush()
@@ -187,7 +188,7 @@ class Game(Thread):
 
                 #if mouse wheel pressed
                 if event.type == pygame.MOUSEBUTTONDOWN and event.button == 2:
-                    print(event.button, "close")
+                    #print(event.button, "close")
                     print("TimeInSeconds: " + str(self.timeMS / 1000) + " Frames: " + str(self.frames) + " FPS: " + str(
                         int(self.frames / (self.timeMS / 1000))))
                     #write Data in csv
@@ -200,13 +201,13 @@ class Game(Thread):
                                                     'directionX': str(dataPoint[8]), 'directionY': str(dataPoint[9]),
                                                     'targetX': str(dataPoint[10]), 'targetY': str(dataPoint[11]),
                                                     'initMouseX': str(dataPoint[12]), 'initMouseY': str(dataPoint[13]),
-                                                    'targetSize': str(dataPoint[14])
+                                                    'targetSize': str(dataPoint[14]), 'reward': str(dataPoint[15])
                                                   })
                     print("saved data")
                     #plot Histogramm of dx
                     #plotData.plotHistogramm(self.myPlotDx, self.dpi, self.hertz)
-                    plotData.plotFitsDependencies(self.scorePlotList, self.dpi, self.hertz)
-                    calcScore.calcRegressionLine(*zip(*self.scorePlotList))
+                    #plotData.plotFitsDependencies(self.scorePlotList, self.dpi, self.hertz)
+                    #calcScore.calcRegressionLine(*zip(*self.scorePlotList))
 
                     self.END = True
                     self.PLAY = False
@@ -215,10 +216,10 @@ class Game(Thread):
                 if self.PLAY and event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and (
                         self.screen.get_at(self.getCursorPos()) == (255, 0, 0)):
                     self.scorePlotList.append((math.log2(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2))/self.pointSize*2), self.newTimestamp))
-                    print("score:" +str(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2)) / (self.newTimestamp*self.pointSize)))
+                    #print("score:" +str(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2)) / (self.newTimestamp*self.pointSize)))
                     #print position or. new start stroke position
                     self.initCursorPos = self.getCursorPos()
-                    print("startCursorPosition:"+str(self.initCursorPos))
+                    #print("startCursorPosition:"+str(self.initCursorPos))
                     self.targetID += 1
                     self.oldTarget = self.targetPosition
                     self.pointSize = random.randint(5, 75)
@@ -227,8 +228,8 @@ class Game(Thread):
                     while (abs(self.targetPosition[0] - self.oldTarget[0]) <= self.pointSize) or ((abs(self.targetPosition[1] - self.oldTarget[1]) <= self.pointSize)):
                         self.targetPosition = (random.randint(0 + self.pointSize, self.screen_width - self.pointSize), random.randint(0 + self.pointSize, self.screen_height - self.pointSize))
 
-                    print("oldtime:"+str(self.newTimestamp)+ "new targetX: " + str(self.targetPosition[0]) + " new targetY: " + str(self.targetPosition[1]) +
-                          " distance: " + str(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2))) + " new Size: " + str(self.pointSize))
+                    #print("oldtime:"+str(self.newTimestamp)+ "new targetX: " + str(self.targetPosition[0]) + " new targetY: " + str(self.targetPosition[1]) +
+                          #" distance: " + str(math.sqrt(pow((self.targetPosition[0]-self.initCursorPos[0]), 2) + pow(self.targetPosition[1]-self.initCursorPos[1], 2))) + " new Size: " + str(self.pointSize))
                     #start new timer for new stroke
                     self.startTime = time.time()
 

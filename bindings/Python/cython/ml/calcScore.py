@@ -44,7 +44,7 @@ def plot_regression_line(x, y, b):
     # function to show plot
     plt.show()
 
-def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetPosition, targetSize, time):
+def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetPosition, targetSize, time, button):
     old_beeline = targetPosition[0] -oldCursorPos[0] , targetPosition[1] -oldCursorPos[1]
     new_beeline = targetPosition[0] -actCursorPos[0] , targetPosition[1] -actCursorPos[1]
     movement = actCursorPos[0] - oldCursorPos[0] , actCursorPos[1]- oldCursorPos[1]
@@ -65,14 +65,21 @@ def calcScoreOfAction(actCursorPos, oldCursorPos, distance, olddistance, targetP
 
     movement = length_old_beeline-length_new_beeline
     if (movement) <= 0:
-        movementToTargetPenalty = abs(length_old_beeline-length_new_beeline)
+        movementToTargetPenalty = abs(movement)
     else:
-        movementToTargetPenalty = 1 / (length_old_beeline-length_new_beeline)
-    movementToTargetPenalty = movementToTargetPenalty*distFkt
-
+        movementToTargetPenalty = 1 / (movement)
+    movementToTargetPenalty = (movementToTargetPenalty*targetSize)
+    if button and distance <=targetSize:
+        hit = 10
+    else:
+        hit = 0
     #print("angleAtStart: "+str(round(angle_atStart,2)) + "  angleAtTarget: "+str(round(angle_atTarget,2)) +"  distance: "+str(round(distance,2))
                 #+ "  distFkt: "+str(round(distFkt,2)) +"  rx: "+str(round(actCursorPos[0]-oldCursorPos[0],2)) + "  ry: "+str(round(actCursorPos[1]- oldCursorPos[1],2))
-                #+ "  movement2target: "+str(round(movementToTargetPenalty,2))+ "  size: "+str(targetSize)+ "  time: "+str(time))
-    #score = round(angle_atStart/distFkt+ angle_atTarget *distFkt + movementToTargetPenalty*log2(targetSize)+1,2)
+                #+ "  movement2targetp: "+str(round(movementToTargetPenalty,2))+ "  size: "+str(targetSize)+ "  time: "+str(time))
+
+    score = round(log2(100/(angle_atStart + angle_atTarget*10+1))+(10/(movementToTargetPenalty+1))*distFkt,2)+hit
+
+    #print("anglescore:"+str(round(100/(angle_atStart+ angle_atTarget*10+1),2)) +" movementScore"+str(round(10/(movementToTargetPenalty+1),2)))
 
     #print(score)
+    return score
